@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1RGTFDEEG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1RGTFDEEG8');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>星球小捕手 · 免费PDF工具箱 - PDF转Word/Excel/图片/合并/拆分</title>
+<meta name="description" content="星球小捕手一站式免费PDF工具箱，提供PDF转Word、PDF转Excel、PDF转图片、PDF合并、PDF拆分、PDF删除页面、PDF加水印等功能。全部永久免费、无水印，浏览器本地处理，隐私安全。">
+<meta name="keywords" content="PDF工具箱,PDF转Word,PDF转Excel,PDF转图片,PDF合并,PDF拆分,PDF删除页面,PDF加水印,免费PDF工具,星球小捕手,在线PDF转换">
+<meta name="author" content="星球小捕手">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://planet-catcher.example.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="星球小捕手">
+<meta property="og:title" content="星球小捕手 · 免费PDF工具箱 - PDF转Word/Excel/图片/合并/拆分">
+  <meta property="og:description" content="一站式免费PDF工具箱，PDF转Word、PDF转Excel、PDF转图片、PDF合并、PDF拆分，全部永久免费、无水印，浏览器本地处理。">
+<meta property="og:url" content="https://planet-catcher.example.com/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="星球小捕手 · 免费PDF工具箱">
+  <meta name="twitter:description" content="一站式免费PDF工具箱，PDF转Word、PDF转Excel、PDF转图片、PDF合并、PDF拆分，全部永久免费无水印。">
+
+<!-- 结构化数据: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "星球小捕手 PDF工具箱",
+  "url": "https://planet-catcher.example.com/",
+  "description": "一站式免费PDF工具箱，提供PDF转Word、PDF转Excel、PDF转图片、PDF合并、PDF拆分等功能。全部永久免费、无水印，浏览器本地处理保护隐私。",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web Browser",
+  "browserRequirements": "Requires JavaScript. Supports Chrome, Edge, Firefox, Safari.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "CNY"
+  },
+  "featureList": [
+    "PDF转Word免费转换",
+    "PDF转Excel表格提取",
+    "PDF转PNG/JPG图片",
+    "PDF多文件合并",
+    "PDF按页拆分",
+    "PDF删除页面",
+    "PDF加水印",
+    "无水印无次数限制",
+    "文件本地处理不上传",
+    "支持扫描版OCR识别"
+  ]
+}
+</script>
+<!-- 结构化数据: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://planet-catcher.example.com/"
+    }
+  ]
+}
+</script>
+<style>
+/* ===== 重置与基础 ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg-deep:#070716;
+  --bg-card:rgba(20,20,45,0.65);
+  --bg-card-hover:rgba(30,30,65,0.8);
+  --purple:#8b5cf6;
+  --purple-light:#a78bfa;
+  --purple-deep:#7c3aed;
+  --cyan:#06b6d4;
+  --blue:#3b82f6;
+  --pink:#ec4899;
+  --green:#22c55e;
+  --amber:#f59e0b;
+  --text:#f1f5f9;
+  --text-dim:#94a3b8;
+  --text-faint:#64748b;
+  --border:rgba(139,92,246,0.18);
+  --border-bright:rgba(139,92,246,0.4);
+  --radius:18px;
+  --shadow:0 8px 32px rgba(0,0,0,0.4);
+  --shadow-glow:0 0 40px rgba(139,92,246,0.25);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+  background:var(--bg-deep);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+/* ===== 星空背景 ===== */
+.starfield{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;overflow:hidden;pointer-events:none}
+.starfield .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.4}
+.starfield .orb-1{width:500px;height:500px;background:radial-gradient(circle,#7c3aed,transparent);top:-100px;left:-100px;animation:float1 20s ease-in-out infinite}
+.starfield .orb-2{width:600px;height:600px;background:radial-gradient(circle,#06b6d4,transparent);bottom:-200px;right:-150px;animation:float2 25s ease-in-out infinite}
+.starfield .orb-3{width:400px;height:400px;background:radial-gradient(circle,#ec4899,transparent);top:40%;left:50%;animation:float3 18s ease-in-out infinite;opacity:0.25}
+@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-30px)}}
+@keyframes float3{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-50px)}}
+.stars{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--dur,3s) ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:0.15}50%{opacity:0.9}}
+
+/* ===== 导航栏 ===== */
+.nav{
+  position:fixed;top:0;left:0;width:100%;z-index:100;
+  padding:18px 0;
+  background:rgba(7,7,22,0.7);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:padding 0.3s;
+}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.logo-icon{
+  width:38px;height:38px;border-radius:50%;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 20px rgba(139,92,246,0.3);
+  position:relative;
+}
+.logo-text{background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:var(--text-dim);text-decoration:none;font-size:15px;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active-link{color:var(--purple-light);font-weight:600}
+.nav-cta{
+  padding:9px 22px;border-radius:50px;
+  background:linear-gradient(135deg,var(--purple-deep),var(--blue));
+  color:#fff;text-decoration:none;font-size:14px;font-weight:600;
+  box-shadow:0 4px 16px rgba(124,58,237,0.4);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(124,58,237,0.55)}
+
+/* ===== Hero ===== */
+.hero{padding:160px 24px 50px;max-width:900px;margin:0 auto;text-align:center;position:relative}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 18px;border-radius:50px;
+  background:rgba(139,92,246,0.12);
+  border:1px solid var(--border-bright);
+  font-size:13px;color:var(--purple-light);
+  margin-bottom:28px;
+  animation:fadeInUp 0.8s ease;
+}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{
+  font-size:clamp(34px,5.5vw,58px);
+  font-weight:800;
+  line-height:1.15;
+  letter-spacing:-1px;
+  margin-bottom:20px;
+  animation:fadeInUp 0.8s ease 0.1s both;
+}
+.hero h1 .grad{background:linear-gradient(90deg,var(--purple-light),var(--cyan),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.sub{
+  font-size:clamp(15px,2vw,19px);
+  color:var(--text-dim);
+  max-width:650px;margin:0 auto;
+  animation:fadeInUp 0.8s ease 0.2s both;
+}
+.hero .hero-stat{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 20px;border-radius:50px;
+  background:rgba(34,197,94,0.1);
+  border:1px solid rgba(34,197,94,0.3);
+  font-size:14px;color:var(--green);
+  margin-top:28px;
+  animation:fadeInUp 0.8s ease 0.3s both;
+}
+.hero .hero-stat svg{width:16px;height:16px}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ===== 工具卡片网格 ===== */
+.tools-section{max-width:1100px;margin:0 auto;padding:60px 24px 40px;animation:fadeInUp 0.8s ease 0.4s both}
+.tools-section .section-label{
+  text-align:center;margin-bottom:50px;
+}
+.tools-section .section-label h2{font-size:clamp(24px,4vw,36px);font-weight:800;margin-bottom:12px;letter-spacing:-0.5px}
+.tools-section .section-label h2 .grad{background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.tools-section .section-label p{color:var(--text-dim);font-size:16px;max-width:480px;margin:0 auto}
+.tools-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+.tool-card-link{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  border-radius:var(--radius);
+  transition:transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94),box-shadow 0.35s,border-color 0.35s;
+}
+.tool-card-link:hover{transform:translateY(-8px);box-shadow:var(--shadow-glow)}
+.tool-card-link:hover .tool-card-inner{border-color:var(--border-bright);background:var(--bg-card-hover)}
+.tool-card-inner{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:36px;
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:flex-start;
+  gap:24px;
+  min-height:180px;
+  position:relative;
+  overflow:hidden;
+  transition:all 0.35s;
+}
+.tool-card-icon{
+  width:64px;height:64px;border-radius:18px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  transition:transform 0.35s;
+}
+.tool-card-link:hover .tool-card-icon{transform:scale(1.08)}
+.tool-card-icon svg{width:30px;height:30px}
+.tool-card-content{flex:1;min-width:0}
+.tool-card-content h3{font-size:20px;font-weight:700;margin-bottom:10px;color:var(--text)}
+.tool-card-content p{font-size:14px;color:var(--text-dim);line-height:1.7}
+.tool-card-tag{
+  display:inline-block;padding:3px 10px;border-radius:6px;
+  font-size:11px;font-weight:600;
+  margin-top:12px;
+}
+.tool-card-arrow{
+  position:absolute;
+  bottom:24px;right:28px;
+  width:36px;height:36px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text-faint);
+  transition:all 0.35s;
+  flex-shrink:0;
+}
+.tool-card-link:hover .tool-card-arrow{border-color:var(--purple-light);color:var(--purple-light);background:rgba(139,92,246,0.1)}
+.tool-card-arrow svg{width:16px;height:16px;transition:transform 0.35s}
+.tool-card-link:hover .tool-card-arrow svg{transform:translateX(3px)}
+
+/* 工具卡片颜色主题 */
+.tci-purple .tool-card-icon{background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(59,130,246,0.2));color:var(--purple-light)}
+.tci-cyan .tool-card-icon{background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(59,130,246,0.2));color:var(--cyan)}
+.tci-green .tool-card-icon{background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(6,182,212,0.2));color:var(--green)}
+.tci-pink .tool-card-icon{background:linear-gradient(135deg,rgba(236,72,153,0.2),rgba(139,92,246,0.2));color:var(--pink)}
+.tci-purple .tool-card-tag{background:rgba(139,92,246,0.15);color:var(--purple-light)}
+.tci-cyan .tool-card-tag{background:rgba(6,182,212,0.15);color:var(--cyan)}
+.tci-green .tool-card-tag{background:rgba(34,197,94,0.15);color:var(--green)}
+.tci-pink .tool-card-tag{background:rgba(236,72,153,0.15);color:var(--pink)}
+
+/* ===== 特性区域 ===== */
+.section{max-width:1100px;margin:0 auto;padding:80px 24px}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{font-size:clamp(26px,4vw,38px);font-weight:800;margin-bottom:14px;letter-spacing:-0.5px}
+.section-title h2 .grad{background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.section-title p{color:var(--text-dim);font-size:16px;max-width:520px;margin:0 auto}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.feature-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px 24px;
+  transition:all 0.3s;
+  backdrop-filter:blur(10px);
+}
+.feature-card:hover{transform:translateY(-6px);border-color:var(--border-bright);background:var(--bg-card-hover);box-shadow:var(--shadow-glow)}
+.feature-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.feature-icon svg{width:24px;height:24px}
+.feature-card h3{font-size:18px;margin-bottom:10px;font-weight:700}
+.feature-card p{color:var(--text-dim);font-size:14px;line-height:1.7}
+.fi-purple{background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(59,130,246,0.2));color:var(--purple-light)}
+.fi-cyan{background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(59,130,246,0.2));color:var(--cyan)}
+.fi-green{background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(6,182,212,0.2));color:var(--green)}
+.fi-pink{background:linear-gradient(135deg,rgba(236,72,153,0.2),rgba(139,92,246,0.2));color:var(--pink)}
+
+/* ===== 博客推荐区域 ===== */
+.blog-section{max-width:1100px;margin:0 auto;padding:40px 24px 80px}
+.blog-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:24px;
+}
+.blog-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px 24px;
+  backdrop-filter:blur(10px);
+  transition:all 0.3s;
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+.blog-card:hover{transform:translateY(-6px);border-color:var(--border-bright);background:var(--bg-card-hover);box-shadow:var(--shadow-glow)}
+.blog-card-tag{
+  display:inline-block;padding:3px 10px;border-radius:6px;
+  background:rgba(139,92,246,0.15);color:var(--purple-light);
+  font-size:12px;font-weight:600;margin-bottom:14px;
+}
+.blog-card h3{font-size:17px;font-weight:700;margin-bottom:10px;color:var(--text);line-height:1.5}
+.blog-card p{font-size:14px;color:var(--text-dim);line-height:1.6}
+.blog-card-meta{font-size:13px;color:var(--text-faint);margin-top:14px}
+.blog-card .blog-arrow{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:14px;font-size:14px;color:var(--cyan);font-weight:600;
+  transition:gap 0.2s;
+}
+.blog-card:hover .blog-arrow{gap:10px}
+
+/* ===== CTA 区域 ===== */
+.cta-section{
+  text-align:center;
+  padding:60px 24px 80px;
+}
+.cta-box{
+  max-width:760px;margin:0 auto;
+  background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(6,182,212,0.1));
+  border:1px solid var(--border-bright);
+  border-radius:28px;
+  padding:50px 36px;
+}
+.cta-box h2{font-size:clamp(24px,4vw,34px);font-weight:800;margin-bottom:14px}
+.cta-box p{color:var(--text-dim);font-size:16px;margin-bottom:28px}
+.cta-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 36px;border-radius:50px;
+  background:linear-gradient(135deg,var(--purple-deep),var(--blue));
+  color:#fff;text-decoration:none;font-size:16px;font-weight:700;
+  box-shadow:0 8px 30px rgba(124,58,237,0.5);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.cta-btn:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(124,58,237,0.6)}
+
+/* ===== Footer ===== */
+.footer{border-top:1px solid var(--border);padding:50px 24px 30px;text-align:center}
+.footer-logo{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;font-size:18px;font-weight:700}
+.footer p{color:var(--text-faint);font-size:14px;margin-bottom:8px}
+.footer .copyright{margin-top:20px;padding-top:20px;border-top:1px solid var(--border);color:var(--text-faint);font-size:13px}
+.footer-links{display:flex;justify-content:center;gap:24px;margin:20px 0;flex-wrap:wrap}
+.footer-links a{color:var(--text-dim);text-decoration:none;font-size:14px;transition:color 0.2s}
+.footer-links a:hover{color:var(--purple-light)}
+
+/* ===== 响应式 ===== */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .tools-grid{grid-template-columns:1fr}
+  .hero{padding:130px 20px 40px}
+  .tool-card-inner{padding:24px}
+  .tool-card-icon{width:52px;height:52px;border-radius:14px}
+  .tool-card-icon svg{width:24px;height:24px}
+  .section{padding:60px 20px}
+  .blog-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .feature-card{padding:20px 18px}
+  .cta-box{padding:36px 24px}
+}
+@media(max-width:480px){
+  .features-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- 星空背景 -->
+<div class="starfield">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+<div class="stars" id="stars"></div>
+
+<!-- 导航 -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">
+        <img src="logo.png" alt="星球小捕手" style="width:38px;height:38px;border-radius:50%;object-fit:cover;">
+      </span>
+      <span class="logo-text">星球小捕手</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active-link">首页</a>
+      <a href="pdf-to-word.html">PDF转Word</a>
+      <a href="pdf-to-image.html">PDF转图片</a>
+      <a href="pdf-merge.html">PDF合并</a>
+      <a href="pdf-split.html">PDF拆分</a>
+      <a href="pdf-delete-pages.html">PDF删除页面</a>
+      <a href="pdf-watermark.html">PDF加水印</a>
+      <a href="blog.html">博客教程</a>
+      <a href="changelog.html">更新日志</a>
+      <a href="about.html">关于我们</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    <span>全部工具永久免费 · 无水印 · 浏览器本地处理</span>
+  </div>
+  <h1>一站式 PDF 工具箱，<span class="grad">全部永久免费</span></h1>
+  <p class="sub">PDF转Word、PDF转Excel、PDF转图片、PDF合并、PDF拆分、PDF删除页面、PDF加水印... 所有工具在浏览器本地处理，文件不离开你的设备</p>
+  <div class="hero-stat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+    已为 128,640+ 位用户免费服务
+  </div>
+  <a href="changelog.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:8px 18px;border-radius:50px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.25);color:var(--purple-light);font-size:14px;text-decoration:none;transition:all 0.2s" onmouseover="this.style.background='rgba(139,92,246,0.18)';this.style.borderColor='rgba(139,92,246,0.4)'" onmouseout="this.style.background='rgba(139,92,246,0.1)';this.style.borderColor='rgba(139,92,246,0.25)'">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+    新增 PDF 删除页面、PDF 加水印 — 查看更新日志
+  </a>
+</section>
+
+<!-- 工具卡片网格 -->
+<section class="tools-section">
+  <div class="section-label">
+    <h2>选择你需要<span class="grad">工具</span></h2>
+    <p>点击即可使用，所有工具完全免费</p>
+  </div>
+  <div class="tools-grid">
+
+    <!-- PDF转Word -->
+    <a href="pdf-to-word.html" class="tool-card-link tci-purple">
+      <div class="tool-card-inner">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="tool-card-content">
+          <h3>PDF 转 Word</h3>
+          <p>支持扫描版OCR识别，永久免费无水印</p>
+          <span class="tool-card-tag">热门</span>
+        </div>
+        <div class="tool-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- PDF转图片 -->
+    <a href="pdf-to-image.html" class="tool-card-link tci-cyan">
+      <div class="tool-card-inner">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <div class="tool-card-content">
+          <h3>PDF 转图片</h3>
+          <p>支持PNG/JPG格式，自定义分辨率</p>
+        </div>
+        <div class="tool-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- PDF合并 -->
+    <a href="pdf-merge.html" class="tool-card-link tci-green">
+      <div class="tool-card-inner">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8" rx="1"/><rect x="14" y="2" width="8" height="8" rx="1"/><rect x="8" y="14" width="8" height="8" rx="1"/><path d="M14 6l-4 4"/><path d="M12 10l4 4"/></svg>
+        </div>
+        <div class="tool-card-content">
+          <h3>PDF 合并</h3>
+          <p>拖拽排序，多文件一键拼接</p>
+        </div>
+        <div class="tool-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- PDF拆分 -->
+    <a href="pdf-split.html" class="tool-card-link tci-pink">
+      <div class="tool-card-inner">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-5"/><path d="M21 3l-7 7"/><path d="M3 3l7 7"/><line x1="12" y1="12" x2="12" y2="17"/></svg>
+        </div>
+        <div class="tool-card-content">
+          <h3>PDF 拆分</h3>
+          <p>按页码范围灵活拆分</p>
+        </div>
+        <div class="tool-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- PDF删除页面 -->
+    <a href="pdf-delete-pages.html" class="tool-card-link tci-cyan">
+      <div class="tool-card-inner">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="15" y1="18" x2="9" y2="18"/></svg>
+        </div>
+        <div class="tool-card-content">
+          <h3>PDF 删除页面</h3>
+          <p>可视化缩略图点选，精准移除不需要的页面</p>
+          <span class="tool-card-tag">新功能</span>
+        </div>
+        <div class="tool-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- PDF加水印 -->
+    <a href="pdf-watermark.html" class="tool-card-link tci-purple">
+      <div class="tool-card-inner">
+        <div class="tool-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="tool-card-content">
+          <h3>PDF 加水印</h3>
+          <p>自定义文字、平铺水印，保护文档版权</p>
+          <span class="tool-card-tag">新功能</span>
+        </div>
+        <div class="tool-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- 特性展示区域 -->
+<section class="section" id="features">
+  <div class="section-title">
+    <h2>为什么选择 <span class="grad">星球小捕手</span></h2>
+    <p>安全、免费、好用的 PDF 在线工具</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon fi-purple">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <h3>永久免费</h3>
+      <p>所有 PDF 工具完全免费使用，无水印、无次数限制、无隐藏收费。注册都不需要，打开即用。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fi-cyan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>隐私安全</h3>
+      <p>所有处理在浏览器本地完成，文件从不离开你的设备。不上传服务器，不收集任何数据。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fi-green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      </div>
+      <h3>无需注册</h3>
+      <p>打开网页就能直接使用，无需注册登录、无需安装插件。三步搞定，零门槛体验。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fi-pink">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </div>
+      <h3>多格式支持</h3>
+      <p>支持 PDF 转 Word、PNG、JPG 等多种格式，满足文档转换、图片导出等各种需求。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 博客推荐区域 -->
+<section class="section blog-section">
+  <div class="section-title">
+    <h2>最新<span class="grad">教程与技巧</span></h2>
+    <p>实用的 PDF 处理指南，帮你提高效率</p>
+  </div>
+  <div class="blog-grid">
+
+    <a href="blog/pdf-to-word-free-guide.html" class="blog-card">
+      <span class="blog-card-tag">教程</span>
+      <h3>PDF 转 Word 免费完整指南：5 种方法对比</h3>
+      <p>盘点5种免费PDF转Word方法的优缺点，包括在线工具、桌面软件、浏览器插件等，帮你找到最适合的免费转换方案。</p>
+      <div class="blog-card-meta">2026-07-27 · 8分钟阅读</div>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
+
+    <a href="blog/scanned-pdf-ocr-tips.html" class="blog-card">
+      <span class="blog-card-tag">OCR</span>
+      <h3>扫描版 PDF 如何提取文字？OCR 识别实用技巧</h3>
+      <p>扫描版PDF不能复制文字怎么办？详解OCR文字识别技术原理，教你把图片里的文字变成可编辑Word。</p>
+      <div class="blog-card-meta">2026-07-27 · 6分钟阅读</div>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
+
+    <a href="blog/pdf-conversion-quality.html" class="blog-card">
+      <span class="blog-card-tag">原理</span>
+      <h3>为什么 PDF 转 Word 后排版会乱？根本原因解析</h3>
+      <p>PDF转Word后排版错乱的根本原因是什么？从PDF和Word的底层格式差异讲起，解析如何减少格式丢失。</p>
+      <div class="blog-card-meta">2026-07-27 · 5分钟阅读</div>
+      <span class="blog-arrow">阅读全文 →</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-box">
+    <h2>立即免费使用 PDF 工具</h2>
+    <p>无需注册、无水印、文件不上传，打开就能用</p>
+    <a href="pdf-to-word.html" class="cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      开始转换 PDF
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-logo">
+    <span class="logo-icon" style="width:32px;height:32px">
+      <img src="logo.png" alt="星球小捕手" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
+    </span>
+    <span class="logo-text">星球小捕手</span>
+  </div>
+  <p>让每一个文档，都能自由转换</p>
+  <div class="footer-links">
+    <a href="index.html" style="color:var(--purple-light);font-weight:600">首页</a>
+    <a href="pdf-to-word.html">PDF转Word</a>
+    <a href="pdf-to-image.html">PDF转图片</a>
+    <a href="pdf-merge.html">PDF合并</a>
+    <a href="pdf-split.html">PDF拆分</a>
+    <a href="pdf-delete-pages.html">PDF删除页面</a>
+    <a href="pdf-watermark.html">PDF加水印</a>
+    <a href="blog.html">博客教程</a>
+    <a href="changelog.html">更新日志</a>
+    <a href="about.html">关于我们</a>
+  </div>
+  <div class="footer-links" style="margin-top:12px;font-size:13px">
+    <a href="privacy.html">隐私政策</a>
+    <a href="terms.html">服务条款</a>
+    <a href="about.html">联系我们</a>
+  </div>
+  <div class="copyright">
+    &copy; 2026 星球小捕手 &middot; 版权所有 &middot; PDF工具箱 永久免费<br>
+    本站所有转换服务均在本地浏览器完成，不收集任何用户数据
+  </div>
+</footer>
+
+<script>
+// ===== 星空背景 =====
+(function(){
+  const container = document.getElementById('stars');
+  for(let i = 0; i < 120; i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2 + 1;
+    s.style.cssText = 'width:'+size+'px;height:'+size+'px;top:'+Math.random()*100+'%;left:'+Math.random()*100+'%;--dur:'+(Math.random()*3+2)+'s;animation-delay:'+(Math.random()*3)+'s';
+    container.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>

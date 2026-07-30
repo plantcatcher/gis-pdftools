@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1RGTFDEEG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1RGTFDEEG8');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>如何给PDF加水印？保护文档版权的完整指南 - 星球小捕手</title>
+<meta name="description" content="PDF加水印怎么加？详解文字水印与图片水印的区别，教你用在线工具、Adobe Acrobat、Word三种方法给PDF添加水印保护文档版权，防止盗用与外泄。">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg-deep:#070716;--purple:#8b5cf6;--purple-light:#a78bfa;--cyan:#06b6d4;--blue:#3b82f6;--text:#f1f5f9;--text-dim:#94a3b8;--text-faint:#64748b;--border:rgba(139,92,246,0.18);--border-bright:rgba(139,92,246,0.4)}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg-deep);color:var(--text);line-height:1.8;overflow-x:hidden}
+.starfield{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;overflow:hidden;pointer-events:none}
+.starfield .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.3}
+.starfield .orb-1{width:400px;height:400px;background:radial-gradient(circle,#7c3aed,transparent);top:-100px;left:-100px}
+.starfield .orb-2{width:500px;height:500px;background:radial-gradient(circle,#06b6d4,transparent);bottom:-150px;right:-100px}
+.nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:18px 0;background:rgba(7,7,22,0.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:padding 0.3s}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.logo-icon{width:38px;height:38px;border-radius:50%;overflow:hidden;box-shadow:0 0 20px rgba(139,92,246,0.3);display:flex;align-items:center;justify-content:center;position:relative}
+.logo-text{background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:var(--text-dim);text-decoration:none;font-size:15px;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active-link{color:var(--purple-light);font-weight:600}
+.article{max-width:720px;margin:0 auto;padding:120px 24px 60px}
+.article .meta{color:var(--text-faint);font-size:14px;margin-bottom:16px}
+.article .tag{display:inline-block;padding:3px 10px;border-radius:6px;background:rgba(139,92,246,0.15);color:var(--purple-light);font-weight:600;font-size:12px;margin-right:10px}
+.article h1{font-size:32px;font-weight:800;margin-bottom:20px;line-height:1.3}
+.article h2{font-size:23px;font-weight:700;margin-top:36px;margin-bottom:14px;color:var(--purple-light)}
+.article h3{font-size:18px;font-weight:600;margin-top:24px;margin-bottom:10px;color:var(--text)}
+.article p{color:var(--text-dim);margin-bottom:16px;font-size:16px}
+.article ul,.article ol{margin:0 0 16px 22px;color:var(--text-dim);font-size:16px}
+.article li{margin-bottom:8px}
+.article strong{color:var(--text)}
+.article blockquote{border-left:3px solid var(--purple);padding:12px 20px;margin:20px 0;background:rgba(139,92,246,0.06);border-radius:0 8px 8px 0;color:var(--text-dim)}
+.cta-box{background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(6,182,212,0.1));border:1px solid var(--border-bright);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.cta-box h3{margin-top:0;color:var(--text)}
+.cta-box a{display:inline-block;padding:12px 28px;border-radius:50px;background:linear-gradient(135deg,#7c3aed,#3b82f6);color:#fff;text-decoration:none;font-weight:600;margin-top:12px}
+.related{margin-top:40px;padding-top:30px;border-top:1px solid var(--border)}
+.related h3{color:var(--text);margin-bottom:14px}
+.related a{display:block;color:var(--cyan);text-decoration:none;padding:8px 0;font-size:15px}
+.related a:hover{text-decoration:underline}
+.footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;color:var(--text-faint);font-size:13px}
+.footer a{color:var(--text-dim);text-decoration:none;margin:0 12px}
+</style>
+</head>
+<body>
+<div class="starfield"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<nav class="nav"><div class="nav-inner">
+  <a href="../index.html" class="logo"><span class="logo-icon"><img src="../logo.png" alt="星球小捕手" style="width:38px;height:38px;border-radius:50%;object-fit:cover;"></span><span class="logo-text">星球小捕手</span></a>
+  <div class="nav-links">
+    <a href="../index.html">首页</a>
+    <a href="../pdf-to-word.html">PDF转Word</a>
+    <a href="../pdf-to-image.html">PDF转图片</a>
+    <a href="../pdf-merge.html">PDF合并</a>
+    <a href="../pdf-split.html">PDF拆分</a>
+    <a href="../pdf-delete-pages.html">PDF删除页面</a>
+    <a href="../pdf-watermark.html">PDF加水印</a>
+    <a href="../blog.html">博客教程</a>
+    <a href="../changelog.html">更新日志</a>
+    <a href="../about.html">关于我们</a>
+  </div>
+</div></nav>
+
+<article class="article">
+  <div class="meta"><span class="tag">教程</span>2026-07-30 · 7分钟阅读</div>
+  <h1>如何给 PDF 加水印？保护文档版权的完整指南</h1>
+
+  <p>辛辛苦苦写好的方案、设计稿、作品集，转成 PDF 发出去之后却被别人随意转发、冒用？这种"成果被白嫖"的无奈，其实只要给 PDF 加上水印就能大幅避免。<strong>水印</strong>是保护文档版权最简单有效的方式之一。</p>
+
+  <p>本文会讲清楚 PDF 水印是什么、有哪几种加水印的方法，以及加水印时有哪些实用技巧，帮你把版权保护做到位。</p>
+
+  <h2>为什么要给 PDF 加水印？</h2>
+  <p>在日常办公和创作中，给 PDF 加水印主要有以下几类常见场景：</p>
+  <ul>
+    <li><strong>保护原创作品</strong>：设计师的作品集、摄影师的图集、作者的书稿，加上水印后即使被他人保存传播，也能追溯到原作者。</li>
+    <li><strong>公司内部资料防外泄</strong>：内部培训资料、财务报表、技术文档加上"内部资料"水印，能有效提醒阅卷人不要外传，一旦泄露也容易追责。</li>
+    <li><strong>作品集防盗用</strong>：求职作品集、投标方案在对外发送时加水印，可防止对方直接拿走当作自己的成果。</li>
+    <li><strong>合同、证书防伪造</strong>：电子合同、学历证书、资格证书加上水印后，被篡改或伪造的难度会大大增加。</li>
+  </ul>
+
+  <h2>什么是 PDF 水印？</h2>
+  <p>PDF 水印就是在 PDF 页面上叠加一层半透明的文字或图片，起到标识、声明或防伪的作用。根据形式不同，主要分两类：</p>
+
+  <h3>文字水印 vs 图片水印</h3>
+  <p><strong>文字水印</strong>是用一段文字作为水印内容，比如"仅供XX使用"、"内部资料"、"© 原作者姓名"。它的优点是内容灵活、信息明确，是最常用的水印形式。</p>
+  <p><strong>图片水印</strong>则是把 Logo、签名、印章等图片盖在 PDF 上，适合品牌展示或需要图形化标识的场合，但制作图片素材相对麻烦一些。</p>
+
+  <h3>平铺水印 vs 单个水印</h3>
+  <p><strong>平铺水印</strong>是让水印重复铺满整个页面（比如整页斜向排列多行"内部资料"），防裁剪能力强，别人很难通过截取局部就绕过水印。</p>
+  <p><strong>单个水印</strong>是在页面中央或角落放一个水印，视觉上更干净，但容易被裁掉或遮挡，保护性相对弱一些。对于版权保护场景，更推荐平铺水印。</p>
+
+  <h2>方法一：用在线工具加水印（推荐）</h2>
+  <p>如果你只是偶尔需要给几份 PDF 加水印，<strong>在线工具是最省事的选择</strong>，不用安装任何软件，打开网页就能用。</p>
+
+  <p>这里推荐星球小捕手的<strong> PDF 加水印功能</strong>。它完全免费，生成的水印 PDF 上不会附加任何工具自身的广告水印，而且整个加水印过程都在浏览器本地完成，源文件不会上传到服务器，隐私安全有保障。</p>
+
+  <p>使用步骤非常简单：打开功能页 → 选择 PDF 文件 → 填写水印文字 → 调整参数 → 下载加好水印的 PDF。可调整的参数包括：</p>
+  <ul>
+    <li><strong>水印文字内容</strong>：可自定义任意文字，如"仅供张三使用 未经授权禁止传播"。</li>
+    <li><strong>字号</strong>：控制水印文字大小，建议根据页面尺寸调整，常用 24-48px。</li>
+    <li><strong>颜色</strong>：可自定义水印颜色，灰色、红色用得最多。</li>
+    <li><strong>透明度</strong>：控制水印的浓淡，建议设置在 30%-50%，既能看清又不影响阅读正文。</li>
+    <li><strong>旋转角度</strong>：常见的有 0°（水平）、45°（斜向）。斜向平铺防裁剪效果更好。</li>
+    <li><strong>平铺密度</strong>：控制水印在页面上的排列间距，密度越高保护性越强，但也会更遮挡正文。</li>
+  </ul>
+
+  <h2>方法二：用专业软件（Adobe Acrobat）加水印</h2>
+  <p>如果你经常处理 PDF，电脑上装了 Adobe Acrobat，也可以用它来加水印。操作路径是：打开 PDF → 工具 → 编辑 PDF → 水印 → 添加水印。</p>
+  <p>Acrobat 的水印功能比较完善，支持文字和图片水印，可以设置字体、颜色、透明度、位置、外观选项，也能选择应用到哪些页面。不过它是<strong>付费商业软件</strong>，价格不低，对于只是偶尔加个水印的普通用户来说性价比不高。</p>
+
+  <h2>方法三：用 Word 加水印再导出 PDF</h2>
+  <p>如果你的 PDF 原本就是从 Word 导出的，也可以先在 Word 里加水印，再另存为 PDF。在 Word 中：设计 → 水印 → 自定义水印，可以设置文字水印或图片水印。</p>
+  <p>但这种方法有明显局限：<strong>只能针对 Word 源文件操作</strong>，如果你手上只有一个 PDF（没有 Word 原稿），就完全用不了这个方法。而且 Word 的水印是单个居中样式，不支持斜向平铺，防裁剪能力弱，自定义程度也远不如专业工具。</p>
+
+  <h2>三种方法对比</h2>
+  <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:14px">
+    <tr style="background:rgba(139,92,246,0.1)"><th style="padding:12px;border:1px solid var(--border);text-align:left">特征</th><th style="padding:12px;border:1px solid var(--border);text-align:left">在线工具（星球小捕手）</th><th style="padding:12px;border:1px solid var(--border);text-align:left">Adobe Acrobat</th><th style="padding:12px;border:1px solid var(--border);text-align:left">Word 导出</th></tr>
+    <tr><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是否免费</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">免费</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">付费</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">免费</td></tr>
+    <tr><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是否本地处理</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是</td></tr>
+    <tr><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">自定义程度</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">高</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">高</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">低</td></tr>
+    <tr><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">操作难度</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">简单</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">中等</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">简单</td></tr>
+    <tr><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是否需安装</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">否</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是</td></tr>
+  </table>
+
+  <h2>加水印的实用技巧</h2>
+
+  <h3>透明度建议 30%-50%</h3>
+  <p>水印太淡起不到保护作用，太浓又会严重影响阅读。把透明度控制在 30%-50% 是个比较平衡的范围——既能让人一眼看到水印的存在，又不会喧宾夺主。</p>
+
+  <h3>斜向平铺防裁剪</h3>
+  <p>如果只放一个居中水印，别人只要截掉中间部分就能绕过。采用 45° 斜向平铺，让水印铺满整页，这样无论截取哪一块区域都会带上水印，防裁剪效果最好。</p>
+
+  <h3>文字别太遮挡正文</h3>
+  <p>水印的目的是保护版权，不是把内容盖住。字号别设太大，平铺密度也别太高，确保正文依然清晰可读。可以先把透明度和密度调低一点预览，再根据效果微调。</p>
+
+  <h3>保护性文字要有指向性</h3>
+  <p>水印内容建议写上具体的使用范围和声明，比单写"机密"更有威慑力。例如：</p>
+  <ul>
+    <li>"仅供 XX 公司评估使用 未经授权禁止传播"</li>
+    <li>"内部资料 禁止外传 违者追责"</li>
+    <li>"© 原作者姓名 抄袭必究"</li>
+    <li>"本文件仅提供给 XXX 严禁复制转载"</li>
+  </ul>
+
+  <blockquote>星球小捕手的加水印功能完全在浏览器本地完成，源文件不会离开你的设备，既保护了文档版权，也保护了文档本身的隐私安全。</blockquote>
+
+  <div class="cta-box">
+    <h3>免费给 PDF 加水印</h3>
+    <p>自定义文字水印，保护文档版权，文件本地处理</p>
+    <a href="../pdf-watermark.html">开始加水印 →</a>
+  </div>
+
+  <div class="related">
+    <h3>相关文章</h3>
+    <a href="pdf-to-word-free-guide.html">→ PDF 转 Word 免费完整指南：5 种方法对比</a>
+    <a href="pdf-security-and-privacy.html">→ 在线 PDF 转换工具安全吗？</a>
+    <a href="pdf-delete-pages-guide.html">→ PDF 删除页面指南：轻松删掉多余页</a>
+  </div>
+</article>
+
+<footer class="footer">
+  © 2026 星球小捕手 · 版权所有<br>
+  <a href="../index.html">首页</a> <a href="../pdf-to-word.html">PDF转Word</a> <a href="../pdf-to-image.html">PDF转图片</a> <a href="../pdf-merge.html">PDF合并</a> <a href="../pdf-split.html">PDF拆分</a> <a href="../pdf-delete-pages.html">PDF删除页面</a> <a href="../pdf-watermark.html">PDF加水印</a> <a href="../blog.html">博客</a> <a href="../changelog.html">更新日志</a> <a href="../privacy.html">隐私政策</a> <a href="../about.html">关于我们</a>
+</footer>
+</body>
+</html>
