@@ -554,19 +554,19 @@ body{
       <span class="logo-icon">
         <img src="logo.png" alt="星球小捕手" style="width:38px;height:38px;border-radius:50%;object-fit:cover;">
       </span>
-      <span class="logo-text">星球小捕手</span>
+      <span class="logo-text" data-i18n="p2w.brand">星球小捕手</span>
     </a>
     <div class="nav-links">
-      <a href="index.html">首页</a>
-      <a href="pdf-to-word.html" class="active-link">PDF转Word</a>
-      <a href="pdf-to-image.html">PDF转图片</a>
-      <a href="pdf-merge.html">PDF合并</a>
-      <a href="pdf-split.html">PDF拆分</a>
-      <a href="pdf-delete-pages.html">PDF删除页面</a>
-      <a href="pdf-watermark.html">PDF加水印</a>
-      <a href="blog.html">博客教程</a>
-      <a href="changelog.html">更新日志</a>
-      <a href="about.html">关于我们</a>
+      <a href="index.html" data-i18n="nav.home">首页</a>
+      <a href="pdf-to-word.html" class="active-link" data-i18n="nav.pdf_to_word">PDF转Word</a>
+      <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
+      <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a>
+      <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
+      <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
+      <a href="pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a>
+      <a href="blog.html" data-i18n="nav.blog">博客教程</a>
+      <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+      <a href="about.html" data-i18n="nav.about">关于我们</a>
     </div>
   </div>
 </nav>
@@ -575,14 +575,14 @@ body{
 <section class="hero">
   <div class="hero-badge">
     <span class="dot"></span>
-    <span>已为 <strong style="color:#fff" id="userCount">128,640</strong> 位用户免费转换</span>
+    <span><span data-i18n="p2w.hero_badge_pre">已为</span> <strong style="color:#fff" id="userCount">128,640</strong> <span data-i18n="p2w.hero_badge_post">位用户免费转换</span></span>
   </div>
-  <h1>
+  <h1 data-i18n-html="p2w.hero_title">
     PDF 转 Word，<span class="grad">真正永久免费</span><br>
     <span class="free-tag">扫描版也能转</span>
   </h1>
-  <p class="sub">支持扫描版 OCR 文字识别 · 无水印 · 无次数限制 · 无需注册登录<br>你的文档，在浏览器里安全完成转换</p>
-  <p class="price-line">其他工具 <s>¥19.9/月</s> &nbsp;→&nbsp; 星球小捕手 <span class="now">¥0 永久</span></p>
+  <p class="sub" data-i18n-html="p2w.hero_sub">支持扫描版 OCR 文字识别 · 无水印 · 无次数限制 · 无需注册登录<br>你的文档，在浏览器里安全完成转换</p>
+  <p class="price-line" data-i18n-html="p2w.hero_price">其他工具 <s>¥19.9/月</s> &nbsp;→&nbsp; 星球小捕手 <span class="now">¥0 永久</span></p>
 </section>
 
 <!-- 转换器 -->
@@ -592,23 +592,23 @@ body{
     <div class="drop-zone" id="dropZone">
       <input type="file" id="fileInput" accept=".pdf" style="display:none">
       <div class="mode-tabs">
-        <button class="mode-tab active" data-mode="auto">自动识别<span class="auto-badge">推荐</span></button>
-        <button class="mode-tab" data-mode="text">文字版 PDF</button>
-        <button class="mode-tab" data-mode="scan">扫描版 OCR</button>
+        <button class="mode-tab active" data-mode="auto" data-i18n-html="p2w.mode_auto">自动识别<span class="auto-badge">推荐</span></button>
+        <button class="mode-tab" data-mode="text" data-i18n="p2w.mode_text">文字版 PDF</button>
+        <button class="mode-tab" data-mode="scan" data-i18n="p2w.mode_scan">扫描版 OCR</button>
       </div>
       <div class="lang-select" id="langSelect" style="display:none">
-        <span style="font-size:13px;color:var(--text-dim);align-self:center">识别语言:</span>
-        <button class="lang-chip active" data-lang="chi_sim">简体中文</button>
-        <button class="lang-chip" data-lang="eng">英文</button>
-        <button class="lang-chip" data-lang="chi_sim+eng">中英混合</button>
+        <span style="font-size:13px;color:var(--text-dim);align-self:center" data-i18n="p2w.ocr_lang_label">识别语言:</span>
+        <button class="lang-chip active" data-lang="chi_sim" data-i18n="p2w.lang_chi_sim">简体中文</button>
+        <button class="lang-chip" data-lang="eng" data-i18n="p2w.lang_eng">英文</button>
+        <button class="lang-chip" data-lang="chi_sim+eng" data-i18n="p2w.lang_mix">中英混合</button>
       </div>
       <div class="drop-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 12 15 15"/></svg>
       </div>
-      <h3 id="dropTitle">把 PDF 拖到这里</h3>
-      <p>或 <span class="browse">点击选择文件</span>，开始免费转换</p>
-      <p class="hint" id="dropHint">支持文字版和扫描版 PDF · 自动识别类型 · 无大小限制</p>
-      <div class="ocr-note" id="ocrNote" style="display:none">
+      <h3 id="dropTitle" data-i18n="p2w.drop_title">把 PDF 拖到这里</h3>
+      <p data-i18n-html="p2w.drop_sub">或 <span class="browse">点击选择文件</span>，开始免费转换</p>
+      <p class="hint" id="dropHint" data-i18n="p2w.drop_hint">支持文字版和扫描版 PDF · 自动识别类型 · 无大小限制</p>
+      <div class="ocr-note" id="ocrNote" style="display:none" data-i18n-html="p2w.ocr_note">
         <strong>💡 提示:</strong> 扫描版 OCR 首次使用会自动下载语言包（约 10-30MB），请耐心等待。之后即可离线使用。
       </div>
     </div>
@@ -629,64 +629,64 @@ body{
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="status-text" id="statusText"></div>
       <div class="ocr-progress-detail" id="ocrProgressDetail" style="display:none">
-        <span id="ocrPageText">第 1 页 / 共 1 页</span>
+        <span id="ocrPageText" data-i18n="p2w.ocr_page_progress">第 1 页 / 共 1 页</span>
         <span id="ocrPercent">0%</span>
       </div>
       <button class="download-btn" id="downloadBtn">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        下载 Word 文档
+        <span data-i18n="p2w.btn_download">下载 Word 文档</span>
       </button>
-      <button class="convert-again" id="convertAgain">再转一个文件</button>
+      <button class="convert-again" id="convertAgain" data-i18n="p2w.btn_again">再转一个文件</button>
     </div>
   </div>
 </div>
 
 <!-- 信任标签 -->
 <div class="trust-bar">
-  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 文件不离开你的设备</div>
-  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 零水印纯净输出</div>
-  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 支持扫描版OCR</div>
-  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 无限次免费使用</div>
-  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 无需注册账号</div>
-  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 秒级转换速度</div>
+  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> <span data-i18n="p2w.trust_1">文件不离开你的设备</span></div>
+  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="p2w.trust_2">零水印纯净输出</span></div>
+  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="p2w.trust_3">支持扫描版OCR</span></div>
+  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="p2w.trust_4">无限次免费使用</span></div>
+  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="p2w.trust_5">无需注册账号</span></div>
+  <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <span data-i18n="p2w.trust_6">秒级转换速度</span></div>
 </div>
 
 <!-- 特色功能 -->
 <section class="section" id="features">
   <div class="section-title">
-    <h2>为什么大家都选 <span class="grad">星球小捕手</span></h2>
-    <p>我们把"免费"做到了极致，每一项承诺都经得起检验</p>
+    <h2 data-i18n-html="p2w.features_title">为什么大家都选 <span class="grad">星球小捕手</span></h2>
+    <p data-i18n="p2w.features_sub">我们把"免费"做到了极致，每一项承诺都经得起检验</p>
   </div>
   <div class="features-grid">
     <div class="feature-card">
       <div class="feature-icon fi-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-      <h3>真正 0 元，永不收费</h3>
-      <p>不是"前3次免费"的套路，不是"基础免费高级收费"的陷阱。连 OCR 都免费，所有功能全部免费，永久免费。</p>
+      <h3 data-i18n="p2w.f1_title">真正 0 元，永不收费</h3>
+      <p data-i18n="p2w.f1_desc">不是"前3次免费"的套路，不是"基础免费高级收费"的陷阱。连 OCR 都免费，所有功能全部免费，永久免费。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-      <h3>扫描版 OCR 识别</h3>
-      <p>拍照、扫描的 PDF 也能转！智能 OCR 文字识别，支持中英文识别，图片秒变可编辑的 Word 文档。</p>
+      <h3 data-i18n="p2w.f2_title">扫描版 OCR 识别</h3>
+      <p data-i18n="p2w.f2_desc">拍照、扫描的 PDF 也能转！智能 OCR 文字识别，支持中英文识别，图片秒变可编辑的 Word 文档。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <h3>文件不上传，隐私零泄露</h3>
-      <p>所有转换和 OCR 识别都在你的浏览器本地完成，文件从不发送到任何服务器。你的合同、论文，只有你自己能看到。</p>
+      <h3 data-i18n="p2w.f3_title">文件不上传，隐私零泄露</h3>
+      <p data-i18n="p2w.f3_desc">所有转换和 OCR 识别都在你的浏览器本地完成，文件从不发送到任何服务器。你的合同、论文，只有你自己能看到。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
-      <h3>零水印，干净利落</h3>
-      <p>转换后的 Word 文档干干净净，没有任何水印、广告、推广链接。直接就能用，直接就能交，跟付费的一样干净。</p>
+      <h3 data-i18n="p2w.f4_title">零水印，干净利落</h3>
+      <p data-i18n="p2w.f4_desc">转换后的 Word 文档干干净净，没有任何水印、广告、推广链接。直接就能用，直接就能交，跟付费的一样干净。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
-      <h3>无次数限制，想转就转</h3>
-      <p>一天转 100 个也免费，一年转 10000 个也免费。文字版、扫描版都不限次数，没有每日额度，没有月度上限。</p>
+      <h3 data-i18n="p2w.f5_title">无次数限制，想转就转</h3>
+      <p data-i18n="p2w.f5_desc">一天转 100 个也免费，一年转 10000 个也免费。文字版、扫描版都不限次数，没有每日额度，没有月度上限。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-      <h3>无需注册，打开即用</h3>
-      <p>不用手机号，不用邮箱，不用扫码关注。打开网页，上传文件，下载 Word，三步搞定，零门槛上手。</p>
+      <h3 data-i18n="p2w.f6_title">无需注册，打开即用</h3>
+      <p data-i18n="p2w.f6_desc">不用手机号，不用邮箱，不用扫码关注。打开网页，上传文件，下载 Word，三步搞定，零门槛上手。</p>
     </div>
   </div>
 </section>
@@ -694,24 +694,24 @@ body{
 <!-- 使用方法 -->
 <section class="section" id="how" style="background:rgba(139,92,246,0.03)">
   <div class="section-title">
-    <h2>三步搞定，<span class="grad">简单到离谱</span></h2>
-    <p>从上传到下载，文字版几秒完成，扫描版也能轻松搞定</p>
+    <h2 data-i18n-html="p2w.how_title">三步搞定，<span class="grad">简单到离谱</span></h2>
+    <p data-i18n="p2w.how_sub">从上传到下载，文字版几秒完成，扫描版也能轻松搞定</p>
   </div>
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
-      <h3>上传 PDF</h3>
-      <p>拖拽文件到转换区，或点击选择，自动识别是文字版还是扫描版</p>
+      <h3 data-i18n="p2w.step1_title">上传 PDF</h3>
+      <p data-i18n="p2w.step1_desc">拖拽文件到转换区，或点击选择，自动识别是文字版还是扫描版</p>
     </div>
     <div class="step">
       <div class="step-num">2</div>
-      <h3>智能转换</h3>
-      <p>文字版极速提取，扫描版自动 OCR 识别，全在你本地浏览器完成</p>
+      <h3 data-i18n="p2w.step2_title">智能转换</h3>
+      <p data-i18n="p2w.step2_desc">文字版极速提取，扫描版自动 OCR 识别，全在你本地浏览器完成</p>
     </div>
     <div class="step">
       <div class="step-num">3</div>
-      <h3>下载 Word</h3>
-      <p>转换完成一键下载 .docx 文件，无水印，可直接编辑使用</p>
+      <h3 data-i18n="p2w.step3_title">下载 Word</h3>
+      <p data-i18n="p2w.step3_desc">转换完成一键下载 .docx 文件，无水印，可直接编辑使用</p>
     </div>
   </div>
 </section>
@@ -719,28 +719,28 @@ body{
 <!-- 对比 -->
 <section class="section" id="compare">
   <div class="section-title">
-    <h2>一比就知道，<span class="grad">差距有多大</span></h2>
-    <p>同样的 PDF 转 Word，别人收费我们免费，别人限制我们无限</p>
+    <h2 data-i18n-html="p2w.compare_title">一比就知道，<span class="grad">差距有多大</span></h2>
+    <p data-i18n="p2w.compare_sub">同样的 PDF 转 Word，别人收费我们免费，别人限制我们无限</p>
   </div>
   <div class="compare-wrap">
     <table class="compare-table">
       <thead>
         <tr>
-          <th>对比项</th>
-          <th>其他转换工具</th>
-          <th class="highlight">星球小捕手</th>
+          <th data-i18n="p2w.compare_col1">对比项</th>
+          <th data-i18n="p2w.compare_col2">其他转换工具</th>
+          <th class="highlight" data-i18n="p2w.compare_col3">星球小捕手</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>转换费用</td><td class="no">按次/按月收费 ¥9-50</td><td class="yes star-col">永久免费</td></tr>
-        <tr><td>扫描版 OCR</td><td class="no">需付费高级版</td><td class="yes star-col">免费支持</td></tr>
-        <tr><td>每日次数限制</td><td class="no">限 1-3 次</td><td class="yes star-col">无限制</td></tr>
-        <tr><td>文件水印</td><td class="no">有水印 / 需付费去除</td><td class="yes star-col">零水印</td></tr>
-        <tr><td>注册登录</td><td class="no">必须注册</td><td class="yes star-col">免注册</td></tr>
-        <tr><td>文件上传服务器</td><td class="no">上传，有泄露风险</td><td class="yes star-col">本地处理，不上传</td></tr>
-        <tr><td>文件大小限制</td><td class="no">限 2-10MB</td><td class="yes star-col">无限制</td></tr>
-        <tr><td>转换速度</td><td class="no">排队等待</td><td class="yes star-col">秒级完成</td></tr>
-        <tr><td>广告打扰</td><td class="no">满屏广告</td><td class="yes star-col">零广告</td></tr>
+        <tr><td data-i18n="p2w.cmp_row1">转换费用</td><td class="no" data-i18n="p2w.cmp_row1_other">按次/按月收费 ¥9-50</td><td class="yes star-col" data-i18n="p2w.cmp_row1_ours">永久免费</td></tr>
+        <tr><td data-i18n="p2w.cmp_row2">扫描版 OCR</td><td class="no" data-i18n="p2w.cmp_row2_other">需付费高级版</td><td class="yes star-col" data-i18n="p2w.cmp_row2_ours">免费支持</td></tr>
+        <tr><td data-i18n="p2w.cmp_row3">每日次数限制</td><td class="no" data-i18n="p2w.cmp_row3_other">限 1-3 次</td><td class="yes star-col" data-i18n="p2w.cmp_row3_ours">无限制</td></tr>
+        <tr><td data-i18n="p2w.cmp_row4">文件水印</td><td class="no" data-i18n="p2w.cmp_row4_other">有水印 / 需付费去除</td><td class="yes star-col" data-i18n="p2w.cmp_row4_ours">零水印</td></tr>
+        <tr><td data-i18n="p2w.cmp_row5">注册登录</td><td class="no" data-i18n="p2w.cmp_row5_other">必须注册</td><td class="yes star-col" data-i18n="p2w.cmp_row5_ours">免注册</td></tr>
+        <tr><td data-i18n="p2w.cmp_row6">文件上传服务器</td><td class="no" data-i18n="p2w.cmp_row6_other">上传，有泄露风险</td><td class="yes star-col" data-i18n="p2w.cmp_row6_ours">本地处理，不上传</td></tr>
+        <tr><td data-i18n="p2w.cmp_row7">文件大小限制</td><td class="no" data-i18n="p2w.cmp_row7_other">限 2-10MB</td><td class="yes star-col" data-i18n="p2w.cmp_row7_ours">无限制</td></tr>
+        <tr><td data-i18n="p2w.cmp_row8">转换速度</td><td class="no" data-i18n="p2w.cmp_row8_other">排队等待</td><td class="yes star-col" data-i18n="p2w.cmp_row8_ours">秒级完成</td></tr>
+        <tr><td data-i18n="p2w.cmp_row9">广告打扰</td><td class="no" data-i18n="p2w.cmp_row9_other">满屏广告</td><td class="yes star-col" data-i18n="p2w.cmp_row9_ours">零广告</td></tr>
       </tbody>
     </table>
   </div>
@@ -749,44 +749,44 @@ body{
 <!-- FAQ -->
 <section class="section" id="faq">
   <div class="section-title">
-    <h2>你可能想问的，<span class="grad">都在这里</span></h2>
+    <h2 data-i18n-html="p2w.faq_title">你可能想问的，<span class="grad">都在这里</span></h2>
   </div>
   <div class="faq-list">
     <details class="faq-item" open>
-      <summary class="faq-q">真的完全免费吗？OCR 也免费？<span class="arrow">+</span></summary>
-      <div class="faq-a">100% 完全免费，OCR 也免费。没有任何隐藏收费，不设会员，不设付费版，不设增值服务。文字版和扫描版都可以无限次免费转换。网站的运营成本很低，因为所有转换都在你的浏览器本地完成，不需要昂贵的服务器。我们坚持免费，是因为我们相信好工具应该人人都能用。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq1_q">真的完全免费吗？OCR 也免费？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq1_a">100% 完全免费，OCR 也免费。没有任何隐藏收费，不设会员，不设付费版，不设增值服务。文字版和扫描版都可以无限次免费转换。网站的运营成本很低，因为所有转换都在你的浏览器本地完成，不需要昂贵的服务器。我们坚持免费，是因为我们相信好工具应该人人都能用。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q">我的文件安全吗？会不会被泄露？<span class="arrow">+</span></summary>
-      <div class="faq-a">绝对安全。这是我们最大的优势之一：你的 PDF 文件从上传到转换完成，全程都在你自己的浏览器里进行，包括 OCR 文字识别，不会上传到任何服务器，不会被任何人看到，转换完成后也不会有任何留存。比那些需要上传文件到服务器的工具安全得多。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq2_q">我的文件安全吗？会不会被泄露？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq2_a">绝对安全。这是我们最大的优势之一：你的 PDF 文件从上传到转换完成，全程都在你自己的浏览器里进行，包括 OCR 文字识别，不会上传到任何服务器，不会被任何人看到，转换完成后也不会有任何留存。比那些需要上传文件到服务器的工具安全得多。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q">扫描版 PDF 也能转吗？识别准确率怎么样？<span class="arrow">+</span></summary>
-      <div class="faq-a">可以的！我们支持扫描版 PDF 的 OCR 文字识别。对于清晰的扫描件和拍照件，中文识别准确率在 95% 以上。支持简体中文、英文以及中英混合文档。注意：如果扫描件模糊、倾斜或文字太小，识别准确率会下降，建议使用清晰的扫描件以获得最佳效果。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq3_q">扫描版 PDF 也能转吗？识别准确率怎么样？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq3_a">可以的！我们支持扫描版 PDF 的 OCR 文字识别。对于清晰的扫描件和拍照件，中文识别准确率在 95% 以上。支持简体中文、英文以及中英混合文档。注意：如果扫描件模糊、倾斜或文字太小，识别准确率会下降，建议使用清晰的扫描件以获得最佳效果。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q">OCR 首次使用为什么要下载东西？<span class="arrow">+</span></summary>
-      <div class="faq-a">因为 OCR 识别需要语言模型数据才能工作。首次使用扫描版转换时，浏览器会自动下载中文语言包（约 10-30MB），这是为了让识别在你本地完成、不上传文件所必需的。下载完成后会缓存在浏览器里，之后再用就不需要重新下载了，离线也能用。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq4_q">OCR 首次使用为什么要下载东西？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq4_a">因为 OCR 识别需要语言模型数据才能工作。首次使用扫描版转换时，浏览器会自动下载中文语言包（约 10-30MB），这是为了让识别在你本地完成、不上传文件所必需的。下载完成后会缓存在浏览器里，之后再用就不需要重新下载了，离线也能用。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q">怎么判断我的 PDF 是文字版还是扫描版？<span class="arrow">+</span></summary>
-      <div class="faq-a">最简单的方法：用 PDF 阅读器打开文件，试试能不能选中文字。能选中的就是文字版，选不中（像图片一样）的就是扫描版。我们的工具默认会自动检测文件类型，选择最合适的转换方式，你也可以手动切换模式。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq5_q">怎么判断我的 PDF 是文字版还是扫描版？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq5_a">最简单的方法：用 PDF 阅读器打开文件，试试能不能选中文字。能选中的就是文字版，选不中（像图片一样）的就是扫描版。我们的工具默认会自动检测文件类型，选择最合适的转换方式，你也可以手动切换模式。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q">转换后的 Word 有水印吗？<span class="arrow">+</span></summary>
-      <div class="faq-a">没有，干干净净，零水印。下载的 .docx 文件可以直接打开编辑，不会有任何星球小捕手的 logo、文字水印或推广信息。我们宁可你不记得我们，也不愿在你的文档上留下痕迹。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq6_q">转换后的 Word 有水印吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq6_a">没有，干干净净，零水印。下载的 .docx 文件可以直接打开编辑，不会有任何星球小捕手的 logo、文字水印或推广信息。我们宁可你不记得我们，也不愿在你的文档上留下痕迹。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q">有文件大小或次数限制吗？<span class="arrow">+</span></summary>
-      <div class="faq-a">没有次数限制，想转多少次转多少次。文件大小方面，因为是在你的浏览器本地处理，理论上只受你电脑性能和内存限制，我们不设任何人为限制。不过超大文件（几百MB）转换和 OCR 识别速度会稍慢一些，这是浏览器性能决定的。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq7_q">有文件大小或次数限制吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq7_a">没有次数限制，想转多少次转多少次。文件大小方面，因为是在你的浏览器本地处理，理论上只受你电脑性能和内存限制，我们不设任何人为限制。不过超大文件（几百MB）转换和 OCR 识别速度会稍慢一些，这是浏览器性能决定的。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q">转换效果怎么样？排版会乱吗？<span class="arrow">+</span></summary>
-      <div class="faq-a">我们会尽力保留原文的文字内容和段落结构。对于纯文字 PDF，转换效果非常好。对于复杂排版（多栏、表格、图文混排），由于技术限制可能无法 100% 还原，文字内容会完整提取但排版需要手动微调。这是所有 PDF 转 Word 工具的共同挑战，但我们承诺文字内容不丢失。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq8_q">转换效果怎么样？排版会乱吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq8_a">我们会尽力保留原文的文字内容和段落结构。对于纯文字 PDF，转换效果非常好。对于复杂排版（多栏、表格、图文混排），由于技术限制可能无法 100% 还原，文字内容会完整提取但排版需要手动微调。这是所有 PDF 转 Word 工具的共同挑战，但我们承诺文字内容不丢失。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q">需要安装什么软件吗？<span class="arrow">+</span></summary>
-      <div class="faq-a">完全不需要。打开浏览器，访问我们的网站，直接使用。支持 Chrome、Edge、Firefox、Safari 等主流浏览器，电脑和手机都能用。OCR 功能也不需要额外安装任何插件。</div>
+      <summary class="faq-q"><span data-i18n="p2w.faq9_q">需要安装什么软件吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="p2w.faq9_a">完全不需要。打开浏览器，访问我们的网站，直接使用。支持 Chrome、Edge、Firefox、Safari 等主流浏览器，电脑和手机都能用。OCR 功能也不需要额外安装任何插件。</div>
     </details>
   </div>
 </section>
@@ -794,39 +794,39 @@ body{
 <!-- 使用场景 -->
 <section class="section" id="use-cases">
   <div class="section-title">
-    <h2>谁在<span class="grad">使用星球小捕手</span></h2>
-    <p>无论你是学生、职场人还是自由职业者，都能从中受益</p>
+    <h2 data-i18n-html="p2w.uc_title">谁在<span class="grad">使用星球小捕手</span></h2>
+    <p data-i18n="p2w.uc_sub">无论你是学生、职场人还是自由职业者，都能从中受益</p>
   </div>
   <div class="use-case-grid">
     <div class="use-case-card">
       <div class="use-case-icon" style="background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(59,130,246,0.2));color:var(--purple-light)">🎓</div>
-      <h3>学生党</h3>
-      <p>把课件、论文、电子教材从 PDF 转成 Word，方便做笔记、修改内容、整理复习资料。扫描版教材也能 OCR 提取文字。</p>
+      <h3 data-i18n="p2w.uc1_title">学生党</h3>
+      <p data-i18n="p2w.uc1_desc">把课件、论文、电子教材从 PDF 转成 Word，方便做笔记、修改内容、整理复习资料。扫描版教材也能 OCR 提取文字。</p>
     </div>
     <div class="use-case-card">
       <div class="use-case-icon" style="background:linear-gradient(135deg,rgba(34,197,94,0.2),rgba(6,182,212,0.2));color:#22c55e">💼</div>
-      <h3>职场办公</h3>
-      <p>合同、报告、会议纪要从 PDF 转 Word 编辑修改。本地处理保证商业文件安全，不泄露给任何第三方。</p>
+      <h3 data-i18n="p2w.uc2_title">职场办公</h3>
+      <p data-i18n="p2w.uc2_desc">合同、报告、会议纪要从 PDF 转 Word 编辑修改。本地处理保证商业文件安全，不泄露给任何第三方。</p>
     </div>
     <div class="use-case-card">
       <div class="use-case-icon" style="background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(236,72,153,0.2));color:#f59e0b">⚖️</div>
-      <h3>法律从业者</h3>
-      <p>法院文书、合同扫描件需要提取文字编辑。OCR 识别 + 本地处理，既高效又保护客户隐私。</p>
+      <h3 data-i18n="p2w.uc3_title">法律从业者</h3>
+      <p data-i18n="p2w.uc3_desc">法院文书、合同扫描件需要提取文字编辑。OCR 识别 + 本地处理，既高效又保护客户隐私。</p>
     </div>
     <div class="use-case-card">
       <div class="use-case-icon" style="background:linear-gradient(135deg,rgba(6,182,212,0.2),rgba(59,130,246,0.2));color:var(--cyan)">📚</div>
-      <h3>研究人员</h3>
-      <p>学术论文、研究报告转成 Word 进行引用整理和内容编辑。支持中英文混合识别，外语文献也能处理。</p>
+      <h3 data-i18n="p2w.uc4_title">研究人员</h3>
+      <p data-i18n="p2w.uc4_desc">学术论文、研究报告转成 Word 进行引用整理和内容编辑。支持中英文混合识别，外语文献也能处理。</p>
     </div>
     <div class="use-case-card">
       <div class="use-case-icon" style="background:linear-gradient(135deg,rgba(236,72,153,0.2),rgba(139,92,246,0.2));color:var(--pink)">📝</div>
-      <h3>自由撰稿人</h3>
-      <p>客户发来的 PDF 资料需要转成 Word 编辑排版。免费无限次转换，不花一分钱就能搞定所有文档。</p>
+      <h3 data-i18n="p2w.uc5_title">自由撰稿人</h3>
+      <p data-i18n="p2w.uc5_desc">客户发来的 PDF 资料需要转成 Word 编辑排版。免费无限次转换，不花一分钱就能搞定所有文档。</p>
     </div>
     <div class="use-case-card">
       <div class="use-case-icon" style="background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(236,72,153,0.2));color:var(--purple-light)">🏠</div>
-      <h3>日常使用</h3>
-      <p>电子发票、银行账单、各类表格从 PDF 转 Word 填写修改。简单快捷，手机也能操作。</p>
+      <h3 data-i18n="p2w.uc6_title">日常使用</h3>
+      <p data-i18n="p2w.uc6_desc">电子发票、银行账单、各类表格从 PDF 转 Word 填写修改。简单快捷，手机也能操作。</p>
     </div>
   </div>
 </section>
@@ -834,40 +834,40 @@ body{
 <!-- 用户评价 -->
 <section class="section" id="testimonials" style="background:rgba(139,92,246,0.03)">
   <div class="section-title">
-    <h2>用户<span class="grad">真实评价</span></h2>
-    <p>超过 12 万用户的共同选择</p>
+    <h2 data-i18n-html="p2w.testi_title">用户<span class="grad">真实评价</span></h2>
+    <p data-i18n="p2w.testi_sub">超过 12 万用户的共同选择</p>
   </div>
   <div class="testimonials">
     <div class="testimonial-card">
       <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"终于找到一个真正免费的 PDF 转 Word 工具了！之前用的那些要么有次数限制，要么转完带水印，这个完全没有，太良心了。"</p>
+      <p class="testimonial-text" data-i18n="p2w.testi1_text">"终于找到一个真正免费的 PDF 转 Word 工具了！之前用的那些要么有次数限制，要么转完带水印，这个完全没有，太良心了。"</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar">李</div>
         <div>
-          <div class="testimonial-name">李同学</div>
-          <div class="testimonial-role">大学生 · 北京</div>
+          <div class="testimonial-name" data-i18n="p2w.testi1_name">李同学</div>
+          <div class="testimonial-role" data-i18n="p2w.testi1_role">大学生 · 北京</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"最打动我的是文件不上传服务器这一点。处理公司合同的时候特别安心，不用担心商业机密泄露。转换效果也很不错。"</p>
+      <p class="testimonial-text" data-i18n="p2w.testi2_text">"最打动我的是文件不上传服务器这一点。处理公司合同的时候特别安心，不用担心商业机密泄露。转换效果也很不错。"</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar">王</div>
         <div>
-          <div class="testimonial-name">王经理</div>
-          <div class="testimonial-role">市场总监 · 上海</div>
+          <div class="testimonial-name" data-i18n="p2w.testi2_name">王经理</div>
+          <div class="testimonial-role" data-i18n="p2w.testi2_role">市场总监 · 上海</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"扫描版的合同也能识别出来，太厉害了。之前都要手动打字，现在几秒钟搞定。中英文混合的也能正确识别。"</p>
+      <p class="testimonial-text" data-i18n="p2w.testi3_text">"扫描版的合同也能识别出来，太厉害了。之前都要手动打字，现在几秒钟搞定。中英文混合的也能正确识别。"</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar">张</div>
         <div>
-          <div class="testimonial-name">张律师</div>
-          <div class="testimonial-role">执业律师 · 深圳</div>
+          <div class="testimonial-name" data-i18n="p2w.testi3_name">张律师</div>
+          <div class="testimonial-role" data-i18n="p2w.testi3_role">执业律师 · 深圳</div>
         </div>
       </div>
     </div>
@@ -877,67 +877,67 @@ body{
 <!-- SEO长内容区 -->
 <section class="section" style="padding-top:60px">
   <div class="long-content">
-    <h2>关于<span class="grad">PDF 转 Word</span>你还需要了解的</h2>
+    <h2 data-i18n-html="p2w.seo_title">关于<span class="grad">PDF 转 Word</span>你还需要了解的</h2>
 
-    <h3>什么是 PDF 转 Word 转换？</h3>
-    <p>PDF（便携式文档格式）和 Word（DOCX）是两种最常见的文档格式。PDF 适合分享和打印，因为它的排版在各种设备上都能保持一致；而 Word 则适合编辑和修改。PDF 转 Word 转换就是将不可编辑的 PDF 文件变成可以自由编辑的 Word 文档，方便你修改文字、调整排版、添加内容。</p>
+    <h3 data-i18n="p2w.seo1_h">什么是 PDF 转 Word 转换？</h3>
+    <p data-i18n="p2w.seo1_p">PDF（便携式文档格式）和 Word（DOCX）是两种最常见的文档格式。PDF 适合分享和打印，因为它的排版在各种设备上都能保持一致；而 Word 则适合编辑和修改。PDF 转 Word 转换就是将不可编辑的 PDF 文件变成可以自由编辑的 Word 文档，方便你修改文字、调整排版、添加内容。</p>
 
-    <h3>为什么选择在线 PDF 转 Word 工具？</h3>
-    <p>在线 PDF 转 Word 工具不需要下载安装任何软件，打开浏览器就能使用，跨平台兼容 Windows、Mac、Linux 甚至手机。相比桌面软件，在线工具更轻量、更便捷。而<strong>星球小捕手</strong>更进一步，采用浏览器本地处理技术，文件不离开你的设备，兼顾了在线工具的便捷性和桌面软件的安全性。</p>
+    <h3 data-i18n="p2w.seo2_h">为什么选择在线 PDF 转 Word 工具？</h3>
+    <p data-i18n-html="p2w.seo2_p">在线 PDF 转 Word 工具不需要下载安装任何软件，打开浏览器就能使用，跨平台兼容 Windows、Mac、Linux 甚至手机。相比桌面软件，在线工具更轻量、更便捷。而<strong>星球小捕手</strong>更进一步，采用浏览器本地处理技术，文件不离开你的设备，兼顾了在线工具的便捷性和桌面软件的安全性。</p>
 
-    <h3>OCR 文字识别是什么？</h3>
-    <p>OCR（Optical Character Recognition，光学字符识别）是一种将图片中的文字转换为可编辑文本的技术。当你用手机拍照或扫描仪扫描文档时，得到的是图片格式的 PDF，里面的文字无法直接复制编辑。OCR 技术可以"读取"图片中的文字，将其变成可编辑的文本。星球小捕手集成了 Tesseract.js OCR 引擎，支持简体中文、英文及中英混合识别。</p>
+    <h3 data-i18n="p2w.seo3_h">OCR 文字识别是什么？</h3>
+    <p data-i18n="p2w.seo3_p">OCR（Optical Character Recognition，光学字符识别）是一种将图片中的文字转换为可编辑文本的技术。当你用手机拍照或扫描仪扫描文档时，得到的是图片格式的 PDF，里面的文字无法直接复制编辑。OCR 技术可以"读取"图片中的文字，将其变成可编辑的文本。星球小捕手集成了 Tesseract.js OCR 引擎，支持简体中文、英文及中英混合识别。</p>
 
-    <h3>如何提高 PDF 转 Word 的转换质量？</h3>
-    <p>转换质量取决于 PDF 文件的类型和质量。对于<strong>文字版 PDF</strong>（由 Word 等软件直接导出的 PDF），转换效果通常很好，文字和段落结构都能完整保留。对于<strong>扫描版 PDF</strong>，OCR 识别准确率取决于原图清晰度——建议使用 300 DPI 以上的扫描件，确保文字清晰可辨。对于复杂排版（多栏、表格、图文混排），目前没有任何工具能做到 100% 还原，文字内容会完整提取但可能需要手动调整排版。</p>
+    <h3 data-i18n="p2w.seo4_h">如何提高 PDF 转 Word 的转换质量？</h3>
+    <p data-i18n-html="p2w.seo4_p">转换质量取决于 PDF 文件的类型和质量。对于<strong>文字版 PDF</strong>（由 Word 等软件直接导出的 PDF），转换效果通常很好，文字和段落结构都能完整保留。对于<strong>扫描版 PDF</strong>，OCR 识别准确率取决于原图清晰度——建议使用 300 DPI 以上的扫描件，确保文字清晰可辨。对于复杂排版（多栏、表格、图文混排），目前没有任何工具能做到 100% 还原，文字内容会完整提取但可能需要手动调整排版。</p>
 
-    <h3>PDF 转 Word 后文件会变大吗？</h3>
-    <p>通常不会。转换后的 Word 文档大小与原始 PDF 相当，甚至可能更小（因为 Word 的压缩效率更高）。但如果原始 PDF 包含大量高清图片，转换后的文件可能会比较大，这是正常的。建议在转换前对 PDF 进行适当压缩，或在转换后对 Word 文档中的图片进行优化。</p>
+    <h3 data-i18n="p2w.seo5_h">PDF 转 Word 后文件会变大吗？</h3>
+    <p data-i18n="p2w.seo5_p">通常不会。转换后的 Word 文档大小与原始 PDF 相当，甚至可能更小（因为 Word 的压缩效率更高）。但如果原始 PDF 包含大量高清图片，转换后的文件可能会比较大，这是正常的。建议在转换前对 PDF 进行适当压缩，或在转换后对 Word 文档中的图片进行优化。</p>
 
-    <h3>支持哪些类型的 PDF 文件？</h3>
-    <p>星球小捕手支持几乎所有类型的 PDF 文件，包括：文字版 PDF（可直接提取文字）、扫描版 PDF（通过 OCR 识别）、图片版 PDF（通过 OCR 识别）、加密 PDF（需先解除密码保护）。支持中英文及中英混合内容的识别，适合处理合同、论文、报告、教材等各类文档。</p>
+    <h3 data-i18n="p2w.seo6_h">支持哪些类型的 PDF 文件？</h3>
+    <p data-i18n="p2w.seo6_p">星球小捕手支持几乎所有类型的 PDF 文件，包括：文字版 PDF（可直接提取文字）、扫描版 PDF（通过 OCR 识别）、图片版 PDF（通过 OCR 识别）、加密 PDF（需先解除密码保护）。支持中英文及中英混合内容的识别，适合处理合同、论文、报告、教材等各类文档。</p>
   </div>
 </section>
 
 <!-- 博客预览 -->
 <section class="section" id="blog">
   <div class="section-title">
-    <h2>实用教程与<span class="grad">PDF 技巧</span></h2>
-    <p>关于 PDF 转换的一切，你想知道的都在这里</p>
+    <h2 data-i18n-html="p2w.blog_title">实用教程与<span class="grad">PDF 技巧</span></h2>
+    <p data-i18n="p2w.blog_sub">关于 PDF 转换的一切，你想知道的都在这里</p>
   </div>
   <div class="features-grid">
     <a href="blog/pdf-to-word-free-guide.html" class="feature-card" style="text-decoration:none;color:inherit;display:block">
       <div class="feature-icon fi-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-      <h3>PDF 转 Word 免费完整指南</h3>
-      <p style="color:var(--text-faint);font-size:13px;margin-bottom:8px">2026-07-27 · 8分钟阅读</p>
-      <p>盘点 5 种免费转换方法，对比在线工具、桌面软件、浏览器插件的优缺点，告诉你哪种最适合你的场景…</p>
+      <h3 data-i18n="p2w.blog1_title">PDF 转 Word 免费完整指南</h3>
+      <p style="color:var(--text-faint);font-size:13px;margin-bottom:8px" data-i18n="p2w.blog1_meta">2026-07-27 · 8分钟阅读</p>
+      <p data-i18n="p2w.blog1_desc">盘点 5 种免费转换方法，对比在线工具、桌面软件、浏览器插件的优缺点，告诉你哪种最适合你的场景…</p>
     </a>
     <a href="blog/scanned-pdf-ocr-tips.html" class="feature-card" style="text-decoration:none;color:inherit;display:block">
       <div class="feature-icon fi-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div>
-      <h3>扫描版 PDF 如何提取文字</h3>
-      <p style="color:var(--text-faint);font-size:13px;margin-bottom:8px">2026-07-27 · 6分钟阅读</p>
-      <p>拍照、扫描的 PDF 不能直接复制文字？教你用 OCR 技术把图片里的文字变成可编辑的 Word…</p>
+      <h3 data-i18n="p2w.blog2_title">扫描版 PDF 如何提取文字</h3>
+      <p style="color:var(--text-faint);font-size:13px;margin-bottom:8px" data-i18n="p2w.blog2_meta">2026-07-27 · 6分钟阅读</p>
+      <p data-i18n="p2w.blog2_desc">拍照、扫描的 PDF 不能直接复制文字？教你用 OCR 技术把图片里的文字变成可编辑的 Word…</p>
     </a>
     <a href="blog/pdf-conversion-quality.html" class="feature-card" style="text-decoration:none;color:inherit;display:block">
       <div class="feature-icon fi-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <h3>为什么转换后排版会乱</h3>
-      <p style="color:var(--text-faint);font-size:13px;margin-bottom:8px">2026-07-27 · 5分钟阅读</p>
-      <p>PDF 和 Word 的底层逻辑不同，这篇文章解释排版错乱的根本原因，以及如何尽量减少格式丢失…</p>
+      <h3 data-i18n="p2w.blog3_title">为什么转换后排版会乱</h3>
+      <p style="color:var(--text-faint);font-size:13px;margin-bottom:8px" data-i18n="p2w.blog3_meta">2026-07-27 · 5分钟阅读</p>
+      <p data-i18n="p2w.blog3_desc">PDF 和 Word 的底层逻辑不同，这篇文章解释排版错乱的根本原因，以及如何尽量减少格式丢失…</p>
     </a>
   </div>
   <div style="text-align:center;margin-top:32px">
-    <a href="blog.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border:1px solid var(--border-bright);border-radius:50px;color:var(--purple-light);text-decoration:none;font-size:15px;font-weight:600;transition:all 0.2s">查看全部文章 →</a>
+    <a href="blog.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border:1px solid var(--border-bright);border-radius:50px;color:var(--purple-light);text-decoration:none;font-size:15px;font-weight:600;transition:all 0.2s" data-i18n="p2w.blog_all">查看全部文章 →</a>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
   <div class="cta-box">
-    <h2>别再为 PDF 转换花钱了</h2>
-    <p>免费、安全、无水印，现在就开始你的第一次转换</p>
+    <h2 data-i18n="p2w.cta_title">别再为 PDF 转换花钱了</h2>
+    <p data-i18n="p2w.cta_sub">免费、安全、无水印，现在就开始你的第一次转换</p>
     <a href="#converter" class="cta-btn">
       <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      立即免费转换
+      <span data-i18n="p2w.cta_btn">立即免费转换</span>
     </a>
   </div>
 </section>
@@ -945,24 +945,24 @@ body{
 <!-- 更多工具 -->
 <section class="section" id="tools">
   <div class="section-title">
-    <h2>更多<span class="grad">免费工具</span></h2>
-    <p>星球小捕手工具箱，持续更新中</p>
+    <h2 data-i18n-html="p2w.tools_title">更多<span class="grad">免费工具</span></h2>
+    <p data-i18n="p2w.tools_sub">星球小捕手工具箱，持续更新中</p>
   </div>
   <div class="features-grid">
     <a href="pdf-to-image.html" class="feature-card" style="text-decoration:none;color:inherit;opacity:1">
       <div class="feature-icon fi-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-      <h3>PDF 转图片 <span style="font-size:11px;color:var(--green)">已上线</span></h3>
-      <p>把 PDF 每一页转成高清 PNG/JPG 图片，一键打包下载。</p>
+      <h3 data-i18n-html="p2w.tool1_title">PDF 转图片 <span style="font-size:11px;color:var(--green)">已上线</span></h3>
+      <p data-i18n="p2w.tool1_desc">把 PDF 每一页转成高清 PNG/JPG 图片，一键打包下载。</p>
     </a>
     <a href="pdf-merge.html" class="feature-card" style="text-decoration:none;color:inherit;opacity:1">
       <div class="feature-icon fi-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
-      <h3>PDF 合并 <span style="font-size:11px;color:var(--green)">已上线</span></h3>
-      <p>多个 PDF 合并为一个文件，调整顺序，本地完成不上传。</p>
+      <h3 data-i18n-html="p2w.tool2_title">PDF 合并 <span style="font-size:11px;color:var(--green)">已上线</span></h3>
+      <p data-i18n="p2w.tool2_desc">多个 PDF 合并为一个文件，调整顺序，本地完成不上传。</p>
     </a>
     <a href="pdf-split.html" class="feature-card" style="text-decoration:none;color:inherit;opacity:1">
       <div class="feature-icon fi-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
-      <h3>PDF 拆分 <span style="font-size:11px;color:var(--green)">已上线</span></h3>
-      <p>从 PDF 中提取指定页面，或按页码范围拆分成多个文件。</p>
+      <h3 data-i18n-html="p2w.tool3_title">PDF 拆分 <span style="font-size:11px;color:var(--green)">已上线</span></h3>
+      <p data-i18n="p2w.tool3_desc">从 PDF 中提取指定页面，或按页码范围拆分成多个文件。</p>
     </a>
   </div>
 </section>
@@ -973,31 +973,32 @@ body{
     <span class="logo-icon" style="width:32px;height:32px">
       <img src="logo.png" alt="星球小捕手" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
     </span>
-    <span class="logo-text">星球小捕手</span>
+    <span class="logo-text" data-i18n="p2w.brand">星球小捕手</span>
   </div>
-  <p>让每一个文档，都能自由转换</p>
+  <p data-i18n="footer.tagline">让每一个文档，都能自由转换</p>
   <div class="footer-links">
-    <a href="index.html">首页</a>
-    <a href="pdf-to-word.html" style="color:var(--purple-light);font-weight:600">PDF转Word</a>
-    <a href="pdf-to-image.html">PDF转图片</a>
-    <a href="pdf-merge.html">PDF合并</a>
-    <a href="pdf-split.html">PDF拆分</a>
-    <a href="pdf-delete-pages.html">PDF删除页面</a>
-    <a href="pdf-watermark.html">PDF加水印</a>
-    <a href="blog.html">博客教程</a>
-    <a href="changelog.html">更新日志</a>
-    <a href="about.html">关于我们</a>
+    <a href="index.html" data-i18n="footer.home">首页</a>
+    <a href="pdf-to-word.html" style="color:var(--purple-light);font-weight:600" data-i18n="nav.pdf_to_word">PDF转Word</a>
+    <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
+    <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a>
+    <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
+    <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
+    <a href="pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a>
+    <a href="blog.html" data-i18n="nav.blog">博客教程</a>
+    <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+    <a href="about.html" data-i18n="nav.about">关于我们</a>
   </div>
   <div class="footer-links" style="margin-top:12px;font-size:13px">
-    <a href="privacy.html">隐私政策</a>
-    <a href="terms.html">服务条款</a>
-    <a href="#faq">常见问题</a>
-    <a href="about.html">联系我们</a>
+    <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
+    <a href="terms.html" data-i18n="footer.terms">服务条款</a>
+    <a href="#faq" data-i18n="p2w.footer_faq">常见问题</a>
+    <a href="about.html" data-i18n="footer.contact">联系我们</a>
   </div>
-  <div class="copyright">
+  <div class="copyright" data-i18n-html="p2w.copyright">
     © 2026 星球小捕手 · 版权所有 · PDF转Word 永久免费工具 · 支持扫描版OCR<br>
     本站所有转换服务均在本地浏览器完成，不收集任何用户数据
   </div>
+  <div style="margin-top:8px;font-size:13px"><span data-i18n="footer.website_label">主网站</span>：<a href="https://planetgis.cn/" target="_blank" rel="noopener" style="color:var(--cyan);text-decoration:none">planetgis.cn</a></div>
 </footer>
 
 <div class="toast" id="toast"></div>
@@ -1402,6 +1403,339 @@ downloadBtn.addEventListener('click',()=>{
 window.addEventListener('beforeunload', async () => {
   if(ocrWorker){
     try{ await ocrWorker.terminate(); }catch(e){}
+  }
+});
+</script>
+<script src="i18n.js"></script>
+<script>
+I18N.register({
+  zh: {
+    'p2w.brand': '星球小捕手',
+    'p2w.hero_badge_pre': '已为',
+    'p2w.hero_badge_post': '位用户免费转换',
+    'p2w.hero_title': 'PDF 转 Word，<span class="grad">真正永久免费</span><br>\n<span class="free-tag">扫描版也能转</span>',
+    'p2w.hero_sub': '支持扫描版 OCR 文字识别 · 无水印 · 无次数限制 · 无需注册登录<br>你的文档，在浏览器里安全完成转换',
+    'p2w.hero_price': '其他工具 <s>¥19.9/月</s> &nbsp;→&nbsp; 星球小捕手 <span class="now">¥0 永久</span>',
+    'p2w.mode_auto': '自动识别<span class="auto-badge">推荐</span>',
+    'p2w.mode_text': '文字版 PDF',
+    'p2w.mode_scan': '扫描版 OCR',
+    'p2w.ocr_lang_label': '识别语言:',
+    'p2w.lang_chi_sim': '简体中文',
+    'p2w.lang_eng': '英文',
+    'p2w.lang_mix': '中英混合',
+    'p2w.drop_title': '把 PDF 拖到这里',
+    'p2w.drop_sub': '或 <span class="browse">点击选择文件</span>，开始免费转换',
+    'p2w.drop_hint': '支持文字版和扫描版 PDF · 自动识别类型 · 无大小限制',
+    'p2w.ocr_note': '<strong>💡 提示:</strong> 扫描版 OCR 首次使用会自动下载语言包（约 10-30MB），请耐心等待。之后即可离线使用。',
+    'p2w.ocr_page_progress': '第 1 页 / 共 1 页',
+    'p2w.btn_download': '下载 Word 文档',
+    'p2w.btn_again': '再转一个文件',
+    'p2w.trust_1': '文件不离开你的设备',
+    'p2w.trust_2': '零水印纯净输出',
+    'p2w.trust_3': '支持扫描版OCR',
+    'p2w.trust_4': '无限次免费使用',
+    'p2w.trust_5': '无需注册账号',
+    'p2w.trust_6': '秒级转换速度',
+    'p2w.features_title': '为什么大家都选 <span class="grad">星球小捕手</span>',
+    'p2w.features_sub': '我们把"免费"做到了极致，每一项承诺都经得起检验',
+    'p2w.f1_title': '真正 0 元，永不收费',
+    'p2w.f1_desc': '不是"前3次免费"的套路，不是"基础免费高级收费"的陷阱。连 OCR 都免费，所有功能全部免费，永久免费。',
+    'p2w.f2_title': '扫描版 OCR 识别',
+    'p2w.f2_desc': '拍照、扫描的 PDF 也能转！智能 OCR 文字识别，支持中英文识别，图片秒变可编辑的 Word 文档。',
+    'p2w.f3_title': '文件不上传，隐私零泄露',
+    'p2w.f3_desc': '所有转换和 OCR 识别都在你的浏览器本地完成，文件从不发送到任何服务器。你的合同、论文，只有你自己能看到。',
+    'p2w.f4_title': '零水印，干净利落',
+    'p2w.f4_desc': '转换后的 Word 文档干干净净，没有任何水印、广告、推广链接。直接就能用，直接就能交，跟付费的一样干净。',
+    'p2w.f5_title': '无次数限制，想转就转',
+    'p2w.f5_desc': '一天转 100 个也免费，一年转 10000 个也免费。文字版、扫描版都不限次数，没有每日额度，没有月度上限。',
+    'p2w.f6_title': '无需注册，打开即用',
+    'p2w.f6_desc': '不用手机号，不用邮箱，不用扫码关注。打开网页，上传文件，下载 Word，三步搞定，零门槛上手。',
+    'p2w.how_title': '三步搞定，<span class="grad">简单到离谱</span>',
+    'p2w.how_sub': '从上传到下载，文字版几秒完成，扫描版也能轻松搞定',
+    'p2w.step1_title': '上传 PDF',
+    'p2w.step1_desc': '拖拽文件到转换区，或点击选择，自动识别是文字版还是扫描版',
+    'p2w.step2_title': '智能转换',
+    'p2w.step2_desc': '文字版极速提取，扫描版自动 OCR 识别，全在你本地浏览器完成',
+    'p2w.step3_title': '下载 Word',
+    'p2w.step3_desc': '转换完成一键下载 .docx 文件，无水印，可直接编辑使用',
+    'p2w.compare_title': '一比就知道，<span class="grad">差距有多大</span>',
+    'p2w.compare_sub': '同样的 PDF 转 Word，别人收费我们免费，别人限制我们无限',
+    'p2w.compare_col1': '对比项',
+    'p2w.compare_col2': '其他转换工具',
+    'p2w.compare_col3': '星球小捕手',
+    'p2w.cmp_row1': '转换费用',
+    'p2w.cmp_row1_other': '按次/按月收费 ¥9-50',
+    'p2w.cmp_row1_ours': '永久免费',
+    'p2w.cmp_row2': '扫描版 OCR',
+    'p2w.cmp_row2_other': '需付费高级版',
+    'p2w.cmp_row2_ours': '免费支持',
+    'p2w.cmp_row3': '每日次数限制',
+    'p2w.cmp_row3_other': '限 1-3 次',
+    'p2w.cmp_row3_ours': '无限制',
+    'p2w.cmp_row4': '文件水印',
+    'p2w.cmp_row4_other': '有水印 / 需付费去除',
+    'p2w.cmp_row4_ours': '零水印',
+    'p2w.cmp_row5': '注册登录',
+    'p2w.cmp_row5_other': '必须注册',
+    'p2w.cmp_row5_ours': '免注册',
+    'p2w.cmp_row6': '文件上传服务器',
+    'p2w.cmp_row6_other': '上传，有泄露风险',
+    'p2w.cmp_row6_ours': '本地处理，不上传',
+    'p2w.cmp_row7': '文件大小限制',
+    'p2w.cmp_row7_other': '限 2-10MB',
+    'p2w.cmp_row7_ours': '无限制',
+    'p2w.cmp_row8': '转换速度',
+    'p2w.cmp_row8_other': '排队等待',
+    'p2w.cmp_row8_ours': '秒级完成',
+    'p2w.cmp_row9': '广告打扰',
+    'p2w.cmp_row9_other': '满屏广告',
+    'p2w.cmp_row9_ours': '零广告',
+    'p2w.faq_title': '你可能想问的，<span class="grad">都在这里</span>',
+    'p2w.faq1_q': '真的完全免费吗？OCR 也免费？',
+    'p2w.faq1_a': '100% 完全免费，OCR 也免费。没有任何隐藏收费，不设会员，不设付费版，不设增值服务。文字版和扫描版都可以无限次免费转换。网站的运营成本很低，因为所有转换都在你的浏览器本地完成，不需要昂贵的服务器。我们坚持免费，是因为我们相信好工具应该人人都能用。',
+    'p2w.faq2_q': '我的文件安全吗？会不会被泄露？',
+    'p2w.faq2_a': '绝对安全。这是我们最大的优势之一：你的 PDF 文件从上传到转换完成，全程都在你自己的浏览器里进行，包括 OCR 文字识别，不会上传到任何服务器，不会被任何人看到，转换完成后也不会有任何留存。比那些需要上传文件到服务器的工具安全得多。',
+    'p2w.faq3_q': '扫描版 PDF 也能转吗？识别准确率怎么样？',
+    'p2w.faq3_a': '可以的！我们支持扫描版 PDF 的 OCR 文字识别。对于清晰的扫描件和拍照件，中文识别准确率在 95% 以上。支持简体中文、英文以及中英混合文档。注意：如果扫描件模糊、倾斜或文字太小，识别准确率会下降，建议使用清晰的扫描件以获得最佳效果。',
+    'p2w.faq4_q': 'OCR 首次使用为什么要下载东西？',
+    'p2w.faq4_a': '因为 OCR 识别需要语言模型数据才能工作。首次使用扫描版转换时，浏览器会自动下载中文语言包（约 10-30MB），这是为了让识别在你本地完成、不上传文件所必需的。下载完成后会缓存在浏览器里，之后再用就不需要重新下载了，离线也能用。',
+    'p2w.faq5_q': '怎么判断我的 PDF 是文字版还是扫描版？',
+    'p2w.faq5_a': '最简单的方法：用 PDF 阅读器打开文件，试试能不能选中文字。能选中的就是文字版，选不中（像图片一样）的就是扫描版。我们的工具默认会自动检测文件类型，选择最合适的转换方式，你也可以手动切换模式。',
+    'p2w.faq6_q': '转换后的 Word 有水印吗？',
+    'p2w.faq6_a': '没有，干干净净，零水印。下载的 .docx 文件可以直接打开编辑，不会有任何星球小捕手的 logo、文字水印或推广信息。我们宁可你不记得我们，也不愿在你的文档上留下痕迹。',
+    'p2w.faq7_q': '有文件大小或次数限制吗？',
+    'p2w.faq7_a': '没有次数限制，想转多少次转多少次。文件大小方面，因为是在你的浏览器本地处理，理论上只受你电脑性能和内存限制，我们不设任何人为限制。不过超大文件（几百MB）转换和 OCR 识别速度会稍慢一些，这是浏览器性能决定的。',
+    'p2w.faq8_q': '转换效果怎么样？排版会乱吗？',
+    'p2w.faq8_a': '我们会尽力保留原文的文字内容和段落结构。对于纯文字 PDF，转换效果非常好。对于复杂排版（多栏、表格、图文混排），由于技术限制可能无法 100% 还原，文字内容会完整提取但排版需要手动微调。这是所有 PDF 转 Word 工具的共同挑战，但我们承诺文字内容不丢失。',
+    'p2w.faq9_q': '需要安装什么软件吗？',
+    'p2w.faq9_a': '完全不需要。打开浏览器，访问我们的网站，直接使用。支持 Chrome、Edge、Firefox、Safari 等主流浏览器，电脑和手机都能用。OCR 功能也不需要额外安装任何插件。',
+    'p2w.uc_title': '谁在<span class="grad">使用星球小捕手</span>',
+    'p2w.uc_sub': '无论你是学生、职场人还是自由职业者，都能从中受益',
+    'p2w.uc1_title': '学生党',
+    'p2w.uc1_desc': '把课件、论文、电子教材从 PDF 转成 Word，方便做笔记、修改内容、整理复习资料。扫描版教材也能 OCR 提取文字。',
+    'p2w.uc2_title': '职场办公',
+    'p2w.uc2_desc': '合同、报告、会议纪要从 PDF 转 Word 编辑修改。本地处理保证商业文件安全，不泄露给任何第三方。',
+    'p2w.uc3_title': '法律从业者',
+    'p2w.uc3_desc': '法院文书、合同扫描件需要提取文字编辑。OCR 识别 + 本地处理，既高效又保护客户隐私。',
+    'p2w.uc4_title': '研究人员',
+    'p2w.uc4_desc': '学术论文、研究报告转成 Word 进行引用整理和内容编辑。支持中英文混合识别，外语文献也能处理。',
+    'p2w.uc5_title': '自由撰稿人',
+    'p2w.uc5_desc': '客户发来的 PDF 资料需要转成 Word 编辑排版。免费无限次转换，不花一分钱就能搞定所有文档。',
+    'p2w.uc6_title': '日常使用',
+    'p2w.uc6_desc': '电子发票、银行账单、各类表格从 PDF 转 Word 填写修改。简单快捷，手机也能操作。',
+    'p2w.testi_title': '用户<span class="grad">真实评价</span>',
+    'p2w.testi_sub': '超过 12 万用户的共同选择',
+    'p2w.testi1_text': '"终于找到一个真正免费的 PDF 转 Word 工具了！之前用的那些要么有次数限制，要么转完带水印，这个完全没有，太良心了。"',
+    'p2w.testi1_name': '李同学',
+    'p2w.testi1_role': '大学生 · 北京',
+    'p2w.testi2_text': '"最打动我的是文件不上传服务器这一点。处理公司合同的时候特别安心，不用担心商业机密泄露。转换效果也很不错。"',
+    'p2w.testi2_name': '王经理',
+    'p2w.testi2_role': '市场总监 · 上海',
+    'p2w.testi3_text': '"扫描版的合同也能识别出来，太厉害了。之前都要手动打字，现在几秒钟搞定。中英文混合的也能正确识别。"',
+    'p2w.testi3_name': '张律师',
+    'p2w.testi3_role': '执业律师 · 深圳',
+    'p2w.seo_title': '关于<span class="grad">PDF 转 Word</span>你还需要了解的',
+    'p2w.seo1_h': '什么是 PDF 转 Word 转换？',
+    'p2w.seo1_p': 'PDF（便携式文档格式）和 Word（DOCX）是两种最常见的文档格式。PDF 适合分享和打印，因为它的排版在各种设备上都能保持一致；而 Word 则适合编辑和修改。PDF 转 Word 转换就是将不可编辑的 PDF 文件变成可以自由编辑的 Word 文档，方便你修改文字、调整排版、添加内容。',
+    'p2w.seo2_h': '为什么选择在线 PDF 转 Word 工具？',
+    'p2w.seo2_p': '在线 PDF 转 Word 工具不需要下载安装任何软件，打开浏览器就能使用，跨平台兼容 Windows、Mac、Linux 甚至手机。相比桌面软件，在线工具更轻量、更便捷。而<strong>星球小捕手</strong>更进一步，采用浏览器本地处理技术，文件不离开你的设备，兼顾了在线工具的便捷性和桌面软件的安全性。',
+    'p2w.seo3_h': 'OCR 文字识别是什么？',
+    'p2w.seo3_p': 'OCR（Optical Character Recognition，光学字符识别）是一种将图片中的文字转换为可编辑文本的技术。当你用手机拍照或扫描仪扫描文档时，得到的是图片格式的 PDF，里面的文字无法直接复制编辑。OCR 技术可以"读取"图片中的文字，将其变成可编辑的文本。星球小捕手集成了 Tesseract.js OCR 引擎，支持简体中文、英文及中英混合识别。',
+    'p2w.seo4_h': '如何提高 PDF 转 Word 的转换质量？',
+    'p2w.seo4_p': '转换质量取决于 PDF 文件的类型和质量。对于<strong>文字版 PDF</strong>（由 Word 等软件直接导出的 PDF），转换效果通常很好，文字和段落结构都能完整保留。对于<strong>扫描版 PDF</strong>，OCR 识别准确率取决于原图清晰度——建议使用 300 DPI 以上的扫描件，确保文字清晰可辨。对于复杂排版（多栏、表格、图文混排），目前没有任何工具能做到 100% 还原，文字内容会完整提取但可能需要手动调整排版。',
+    'p2w.seo5_h': 'PDF 转 Word 后文件会变大吗？',
+    'p2w.seo5_p': '通常不会。转换后的 Word 文档大小与原始 PDF 相当，甚至可能更小（因为 Word 的压缩效率更高）。但如果原始 PDF 包含大量高清图片，转换后的文件可能会比较大，这是正常的。建议在转换前对 PDF 进行适当压缩，或在转换后对 Word 文档中的图片进行优化。',
+    'p2w.seo6_h': '支持哪些类型的 PDF 文件？',
+    'p2w.seo6_p': '星球小捕手支持几乎所有类型的 PDF 文件，包括：文字版 PDF（可直接提取文字）、扫描版 PDF（通过 OCR 识别）、图片版 PDF（通过 OCR 识别）、加密 PDF（需先解除密码保护）。支持中英文及中英混合内容的识别，适合处理合同、论文、报告、教材等各类文档。',
+    'p2w.blog_title': '实用教程与<span class="grad">PDF 技巧</span>',
+    'p2w.blog_sub': '关于 PDF 转换的一切，你想知道的都在这里',
+    'p2w.blog1_title': 'PDF 转 Word 免费完整指南',
+    'p2w.blog1_meta': '2026-07-27 · 8分钟阅读',
+    'p2w.blog1_desc': '盘点 5 种免费转换方法，对比在线工具、桌面软件、浏览器插件的优缺点，告诉你哪种最适合你的场景…',
+    'p2w.blog2_title': '扫描版 PDF 如何提取文字',
+    'p2w.blog2_meta': '2026-07-27 · 6分钟阅读',
+    'p2w.blog2_desc': '拍照、扫描的 PDF 不能直接复制文字？教你用 OCR 技术把图片里的文字变成可编辑的 Word…',
+    'p2w.blog3_title': '为什么转换后排版会乱',
+    'p2w.blog3_meta': '2026-07-27 · 5分钟阅读',
+    'p2w.blog3_desc': 'PDF 和 Word 的底层逻辑不同，这篇文章解释排版错乱的根本原因，以及如何尽量减少格式丢失…',
+    'p2w.blog_all': '查看全部文章 →',
+    'p2w.cta_title': '别再为 PDF 转换花钱了',
+    'p2w.cta_sub': '免费、安全、无水印，现在就开始你的第一次转换',
+    'p2w.cta_btn': '立即免费转换',
+    'p2w.tools_title': '更多<span class="grad">免费工具</span>',
+    'p2w.tools_sub': '星球小捕手工具箱，持续更新中',
+    'p2w.tool1_title': 'PDF 转图片 <span style="font-size:11px;color:var(--green)">已上线</span>',
+    'p2w.tool1_desc': '把 PDF 每一页转成高清 PNG/JPG 图片，一键打包下载。',
+    'p2w.tool2_title': 'PDF 合并 <span style="font-size:11px;color:var(--green)">已上线</span>',
+    'p2w.tool2_desc': '多个 PDF 合并为一个文件，调整顺序，本地完成不上传。',
+    'p2w.tool3_title': 'PDF 拆分 <span style="font-size:11px;color:var(--green)">已上线</span>',
+    'p2w.tool3_desc': '从 PDF 中提取指定页面，或按页码范围拆分成多个文件。',
+    'p2w.footer_faq': '常见问题',
+    'p2w.copyright': '© 2026 星球小捕手 · 版权所有 · PDF转Word 永久免费工具 · 支持扫描版OCR<br>本站所有转换服务均在本地浏览器完成，不收集任何用户数据'
+  },
+  en: {
+    'p2w.brand': 'Planet Catcher',
+    'p2w.hero_badge_pre': 'Converted free for',
+    'p2w.hero_badge_post': 'users',
+    'p2w.hero_title': 'PDF to Word, <span class="grad">Truly Free Forever</span><br>\n<span class="free-tag">Scanned PDFs supported</span>',
+    'p2w.hero_sub': 'Scanned PDF OCR text recognition · No watermark · No limits · No registration required<br>Your documents are converted securely in your browser',
+    'p2w.hero_price': 'Other tools <s>¥19.9/month</s> &nbsp;→&nbsp; Planet Catcher <span class="now">¥0 forever</span>',
+    'p2w.mode_auto': 'Auto Detect<span class="auto-badge">Recommended</span>',
+    'p2w.mode_text': 'Text-based PDF',
+    'p2w.mode_scan': 'Scanned OCR',
+    'p2w.ocr_lang_label': 'Recognition Language:',
+    'p2w.lang_chi_sim': 'Simplified Chinese',
+    'p2w.lang_eng': 'English',
+    'p2w.lang_mix': 'Chinese + English',
+    'p2w.drop_title': 'Drag PDF here',
+    'p2w.drop_sub': 'or <span class="browse">click to select file</span> to start free conversion',
+    'p2w.drop_hint': 'Supports text-based and scanned PDFs · Auto-detect type · No size limit',
+    'p2w.ocr_note': '<strong>💡 Tip:</strong> Scanned OCR requires downloading a language pack (about 10-30MB) on first use. Please be patient. It will then work offline.',
+    'p2w.ocr_page_progress': 'Page 1 of 1',
+    'p2w.btn_download': 'Download Word Document',
+    'p2w.btn_again': 'Convert Another File',
+    'p2w.trust_1': 'Files never leave your device',
+    'p2w.trust_2': 'Zero watermark clean output',
+    'p2w.trust_3': 'Scanned PDF OCR supported',
+    'p2w.trust_4': 'Unlimited free usage',
+    'p2w.trust_5': 'No registration required',
+    'p2w.trust_6': 'Seconds-fast conversion',
+    'p2w.features_title': 'Why everyone chooses <span class="grad">Planet Catcher</span>',
+    'p2w.features_sub': 'We take "free" to the extreme — every promise stands up to scrutiny',
+    'p2w.f1_title': 'Truly $0, Never Charged',
+    'p2w.f1_desc': 'Not a "first 3 free" trick, not a "basic free, premium paid" trap. Even OCR is free. All features are completely free, forever.',
+    'p2w.f2_title': 'Scanned PDF OCR Recognition',
+    'p2w.f2_desc': 'Photos and scanned PDFs can be converted too! Smart OCR text recognition supports Chinese and English, turning images into editable Word documents in seconds.',
+    'p2w.f3_title': 'No Uploads, Zero Privacy Leaks',
+    'p2w.f3_desc': 'All conversion and OCR recognition happens locally in your browser. Files are never sent to any server. Your contracts and papers are visible only to you.',
+    'p2w.f4_title': 'Zero Watermark, Clean and Neat',
+    'p2w.f4_desc': 'The converted Word document is completely clean — no watermarks, ads, or promotional links. Ready to use, ready to submit, just as clean as paid tools.',
+    'p2w.f5_title': 'No Limits, Convert as Much as You Want',
+    'p2w.f5_desc': 'Convert 100 a day for free, 10,000 a year for free. Text-based and scanned PDFs have no limits — no daily quota, no monthly cap.',
+    'p2w.f6_title': 'No Registration, Just Open and Use',
+    'p2w.f6_desc': 'No phone number, no email, no QR code to follow. Open the page, upload a file, download Word — three steps, zero threshold.',
+    'p2w.how_title': 'Three Steps, <span class="grad">Ridiculously Simple</span>',
+    'p2w.how_sub': 'From upload to download, text PDFs take seconds, scanned PDFs are easy too',
+    'p2w.step1_title': 'Upload PDF',
+    'p2w.step1_desc': 'Drag a file to the converter or click to select — auto-detects whether it\'s text-based or scanned',
+    'p2w.step2_title': 'Smart Conversion',
+    'p2w.step2_desc': 'Fast text extraction for text PDFs, auto OCR for scanned PDFs — all done locally in your browser',
+    'p2w.step3_title': 'Download Word',
+    'p2w.step3_desc': 'One-click download of the .docx file after conversion — no watermark, ready to edit',
+    'p2w.compare_title': 'See the Difference, <span class="grad">It\'s Huge</span>',
+    'p2w.compare_sub': 'Same PDF to Word conversion — others charge, we\'re free; others limit, we\'re unlimited',
+    'p2w.compare_col1': 'Comparison',
+    'p2w.compare_col2': 'Other Tools',
+    'p2w.compare_col3': 'Planet Catcher',
+    'p2w.cmp_row1': 'Cost',
+    'p2w.cmp_row1_other': 'Per-use/monthly ¥9-50',
+    'p2w.cmp_row1_ours': 'Free forever',
+    'p2w.cmp_row2': 'Scanned OCR',
+    'p2w.cmp_row2_other': 'Requires paid premium',
+    'p2w.cmp_row2_ours': 'Free support',
+    'p2w.cmp_row3': 'Daily usage limit',
+    'p2w.cmp_row3_other': '1-3 times',
+    'p2w.cmp_row3_ours': 'Unlimited',
+    'p2w.cmp_row4': 'File watermark',
+    'p2w.cmp_row4_other': 'Watermarked / pay to remove',
+    'p2w.cmp_row4_ours': 'Zero watermark',
+    'p2w.cmp_row5': 'Registration',
+    'p2w.cmp_row5_other': 'Required',
+    'p2w.cmp_row5_ours': 'Not required',
+    'p2w.cmp_row6': 'Server upload',
+    'p2w.cmp_row6_other': 'Uploaded, leak risk',
+    'p2w.cmp_row6_ours': 'Local processing, no upload',
+    'p2w.cmp_row7': 'File size limit',
+    'p2w.cmp_row7_other': '2-10MB',
+    'p2w.cmp_row7_ours': 'No limit',
+    'p2w.cmp_row8': 'Conversion speed',
+    'p2w.cmp_row8_other': 'Queue wait',
+    'p2w.cmp_row8_ours': 'Seconds',
+    'p2w.cmp_row9': 'Ads',
+    'p2w.cmp_row9_other': 'Full-screen ads',
+    'p2w.cmp_row9_ours': 'Zero ads',
+    'p2w.faq_title': 'Questions You Might Have, <span class="grad">All Answered</span>',
+    'p2w.faq1_q': 'Is it really completely free? Is OCR also free?',
+    'p2w.faq1_a': '100% completely free, OCR included. No hidden fees, no memberships, no paid versions, no premium services. Both text-based and scanned PDFs can be converted unlimited times for free. The site\'s operating costs are low because all conversions happen locally in your browser, requiring no expensive servers. We stay free because we believe good tools should be accessible to everyone.',
+    'p2w.faq2_q': 'Are my files safe? Will they be leaked?',
+    'p2w.faq2_a': 'Absolutely safe. This is one of our biggest advantages: your PDF files are processed entirely in your own browser from upload to conversion, including OCR text recognition. Nothing is uploaded to any server, no one can see your files, and nothing is retained after conversion. This is much safer than tools that require uploading files to servers.',
+    'p2w.faq3_q': 'Can scanned PDFs be converted? How accurate is the recognition?',
+    'p2w.faq3_a': 'Yes! We support OCR text recognition for scanned PDFs. For clear scans and photos, Chinese recognition accuracy is over 95%. Simplified Chinese, English, and mixed Chinese-English documents are supported. Note: if the scan is blurry, skewed, or has very small text, accuracy will decrease. We recommend using clear scans for best results.',
+    'p2w.faq4_q': 'Why does OCR need to download something on first use?',
+    'p2w.faq4_a': 'Because OCR recognition requires language model data to work. On first use of scanned conversion, the browser automatically downloads a Chinese language pack (about 10-30MB). This is necessary to perform recognition locally without uploading files. Once downloaded, it\'s cached in the browser — no re-download needed, and it works offline too.',
+    'p2w.faq5_q': 'How do I tell if my PDF is text-based or scanned?',
+    'p2w.faq5_a': 'The simplest method: open the file in a PDF reader and try to select text. If you can select it, it\'s text-based; if you can\'t (like an image), it\'s scanned. Our tool auto-detects the file type by default and chooses the best conversion method. You can also manually switch modes.',
+    'p2w.faq6_q': 'Does the converted Word have a watermark?',
+    'p2w.faq6_a': 'No — completely clean, zero watermark. The downloaded .docx file can be opened and edited directly, with no Planet Catcher logo, text watermark, or promotional content. We\'d rather you not remember us than leave a mark on your document.',
+    'p2w.faq7_q': 'Are there file size or usage limits?',
+    'p2w.faq7_a': 'No usage limits — convert as many times as you want. For file size, since processing happens locally in your browser, it\'s theoretically only limited by your computer\'s performance and memory. We impose no artificial limits. However, very large files (hundreds of MB) will be somewhat slower for conversion and OCR, depending on browser performance.',
+    'p2w.faq8_q': 'How is the conversion quality? Will the layout be messed up?',
+    'p2w.faq8_a': 'We do our best to preserve the original text content and paragraph structure. For plain text PDFs, the conversion quality is excellent. For complex layouts (multi-column, tables, mixed text and images), 100% reproduction may not be possible due to technical limitations — text content will be fully extracted but layout may need manual adjustment. This is a common challenge for all PDF to Word tools, but we promise no text content is lost.',
+    'p2w.faq9_q': 'Do I need to install any software?',
+    'p2w.faq9_a': 'Not at all. Open your browser, visit our website, and use it directly. Supports Chrome, Edge, Firefox, Safari and other mainstream browsers, on both desktop and mobile. OCR functionality also requires no additional plugins.',
+    'p2w.uc_title': 'Who <span class="grad">Uses Planet Catcher</span>',
+    'p2w.uc_sub': 'Whether you\'re a student, professional, or freelancer, you\'ll benefit',
+    'p2w.uc1_title': 'Students',
+    'p2w.uc1_desc': 'Convert courseware, papers, and e-textbooks from PDF to Word for note-taking, content editing, and study material organization. Scanned textbooks can also be OCR-extracted.',
+    'p2w.uc2_title': 'Office Professionals',
+    'p2w.uc2_desc': 'Convert contracts, reports, and meeting minutes from PDF to Word for editing. Local processing ensures business document security with no third-party leaks.',
+    'p2w.uc3_title': 'Legal Professionals',
+    'p2w.uc3_desc': 'Court documents and contract scans need text extraction for editing. OCR recognition + local processing — efficient and privacy-protecting for clients.',
+    'p2w.uc4_title': 'Researchers',
+    'p2w.uc4_desc': 'Convert academic papers and research reports to Word for citation management and content editing. Supports mixed Chinese-English recognition for foreign-language literature.',
+    'p2w.uc5_title': 'Freelance Writers',
+    'p2w.uc5_desc': 'Client PDF materials need conversion to Word for editing and layout. Free unlimited conversion handles all documents without spending a penny.',
+    'p2w.uc6_title': 'Everyday Use',
+    'p2w.uc6_desc': 'Convert electronic invoices, bank statements, and forms from PDF to Word for filling and editing. Simple, fast, and works on mobile too.',
+    'p2w.testi_title': 'User <span class="grad">Reviews</span>',
+    'p2w.testi_sub': 'The choice of over 120,000 users',
+    'p2w.testi1_text': '"Finally found a truly free PDF to Word tool! The ones I used before either had usage limits or watermarks after conversion — this one has none. So generous."',
+    'p2w.testi1_name': 'Student Li',
+    'p2w.testi1_role': 'University Student · Beijing',
+    'p2w.testi2_text': '"What impressed me most is that files aren\'t uploaded to a server. I feel especially secure when handling company contracts — no worry about trade secret leaks. The conversion quality is also quite good."',
+    'p2w.testi2_name': 'Manager Wang',
+    'p2w.testi2_role': 'Marketing Director · Shanghai',
+    'p2w.testi3_text': '"It can even recognize scanned contracts — amazing. I used to type everything manually, now it\'s done in seconds. Mixed Chinese-English is recognized correctly too."',
+    'p2w.testi3_name': 'Lawyer Zhang',
+    'p2w.testi3_role': 'Practicing Lawyer · Shenzhen',
+    'p2w.seo_title': 'What Else You Need to Know About <span class="grad">PDF to Word</span>',
+    'p2w.seo1_h': 'What is PDF to Word conversion?',
+    'p2w.seo1_p': 'PDF (Portable Document Format) and Word (DOCX) are the two most common document formats. PDF is great for sharing and printing because its layout stays consistent across devices; Word is better for editing and modification. PDF to Word conversion turns an uneditable PDF into a freely editable Word document, making it easy to modify text, adjust layout, and add content.',
+    'p2w.seo2_h': 'Why choose an online PDF to Word tool?',
+    'p2w.seo2_p': 'Online PDF to Word tools require no software download or installation — just open your browser and use them, cross-platform compatible with Windows, Mac, Linux, and even mobile. Compared to desktop software, online tools are lighter and more convenient. <strong>Planet Catcher</strong> goes further with browser local processing technology — files never leave your device, combining the convenience of online tools with the security of desktop software.',
+    'p2w.seo3_h': 'What is OCR text recognition?',
+    'p2w.seo3_p': 'OCR (Optical Character Recognition) is a technology that converts text in images into editable text. When you photograph or scan a document, you get an image-based PDF where the text cannot be directly copied or edited. OCR technology can "read" text in images and turn it into editable text. Planet Catcher integrates the Tesseract.js OCR engine, supporting Simplified Chinese, English, and mixed Chinese-English recognition.',
+    'p2w.seo4_h': 'How to improve PDF to Word conversion quality?',
+    'p2w.seo4_p': 'Conversion quality depends on the PDF file type and quality. For <strong>text-based PDFs</strong> (exported directly from Word and similar software), conversion is usually excellent with text and paragraph structure fully preserved. For <strong>scanned PDFs</strong>, OCR accuracy depends on the original image clarity — we recommend using scans of 300 DPI or higher to ensure text is clearly legible. For complex layouts (multi-column, tables, mixed text and images), no tool can achieve 100% reproduction — text content will be fully extracted but layout may need manual adjustment.',
+    'p2w.seo5_h': 'Will the file get larger after PDF to Word conversion?',
+    'p2w.seo5_p': 'Usually not. The converted Word document is about the same size as the original PDF, possibly even smaller (since Word has better compression efficiency). However, if the original PDF contains many high-resolution images, the converted file may be larger — this is normal. We recommend compressing the PDF before conversion or optimizing images in the Word document after conversion.',
+    'p2w.seo6_h': 'What types of PDF files are supported?',
+    'p2w.seo6_p': 'Planet Catcher supports almost all types of PDF files, including: text-based PDFs (direct text extraction), scanned PDFs (via OCR), image-based PDFs (via OCR), and encrypted PDFs (password must be removed first). Supports Chinese, English, and mixed Chinese-English content recognition, suitable for contracts, papers, reports, textbooks, and other documents.',
+    'p2w.blog_title': 'Tutorials & <span class="grad">PDF Tips</span>',
+    'p2w.blog_sub': 'Everything about PDF conversion — what you want to know is all here',
+    'p2w.blog1_title': 'Complete Free PDF to Word Guide',
+    'p2w.blog1_meta': '2026-07-27 · 8 min read',
+    'p2w.blog1_desc': 'A roundup of 5 free conversion methods, comparing the pros and cons of online tools, desktop software, and browser extensions…',
+    'p2w.blog2_title': 'How to Extract Text from Scanned PDFs',
+    'p2w.blog2_meta': '2026-07-27 · 6 min read',
+    'p2w.blog2_desc': 'Can\'t copy text from photographed or scanned PDFs? Learn how to use OCR technology to turn image text into editable Word…',
+    'p2w.blog3_title': 'Why Does the Layout Get Messy After Conversion?',
+    'p2w.blog3_meta': '2026-07-27 · 5 min read',
+    'p2w.blog3_desc': 'PDF and Word have different underlying logic. This article explains the root cause of layout errors and how to minimize format loss…',
+    'p2w.blog_all': 'View all articles →',
+    'p2w.cta_title': 'Stop Paying for PDF Conversion',
+    'p2w.cta_sub': 'Free, secure, no watermark — start your first conversion now',
+    'p2w.cta_btn': 'Convert Now for Free',
+    'p2w.tools_title': 'More <span class="grad">Free Tools</span>',
+    'p2w.tools_sub': 'Planet Catcher toolkit, continuously updated',
+    'p2w.tool1_title': 'PDF to Image <span style="font-size:11px;color:var(--green)">Live</span>',
+    'p2w.tool1_desc': 'Convert each PDF page to high-resolution PNG/JPG images, one-click batch download.',
+    'p2w.tool2_title': 'Merge PDF <span style="font-size:11px;color:var(--green)">Live</span>',
+    'p2w.tool2_desc': 'Merge multiple PDFs into one file, adjust order, all done locally with no uploads.',
+    'p2w.tool3_title': 'Split PDF <span style="font-size:11px;color:var(--green)">Live</span>',
+    'p2w.tool3_desc': 'Extract specific pages from PDF or split by page ranges into multiple files.',
+    'p2w.footer_faq': 'FAQ',
+    'p2w.copyright': '© 2026 Planet Catcher · All Rights Reserved · Free PDF to Word Tool · Scanned OCR Supported<br>All conversion services run locally in your browser. No user data is collected.'
   }
 });
 </script>

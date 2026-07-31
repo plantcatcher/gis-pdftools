@@ -514,19 +514,19 @@ body{
       <span class="logo-icon">
         <img src="logo.png" alt="星球小捕手" style="width:38px;height:38px;border-radius:50%;object-fit:cover;">
       </span>
-      <span class="logo-text">星球小捕手</span>
+      <span class="logo-text" data-i18n="pmg.brand">星球小捕手</span>
     </a>
     <div class="nav-links">
-      <a href="index.html">首页</a>
-      <a href="pdf-to-word.html">PDF转Word</a>
-      <a href="pdf-to-image.html">PDF转图片</a>
-      <a href="pdf-merge.html" class="active-link">PDF合并</a>
-      <a href="pdf-split.html">PDF拆分</a>
-      <a href="pdf-delete-pages.html">PDF删除页面</a>
-      <a href="pdf-watermark.html">PDF加水印</a>
-      <a href="blog.html">博客教程</a>
-      <a href="changelog.html">更新日志</a>
-      <a href="about.html">关于我们</a>
+      <a href="index.html" data-i18n="nav.home">首页</a>
+      <a href="pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a>
+      <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
+      <a href="pdf-merge.html" class="active-link" data-i18n="nav.pdf_merge">PDF合并</a>
+      <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
+      <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
+      <a href="pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a>
+      <a href="blog.html" data-i18n="nav.blog">博客教程</a>
+      <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+      <a href="about.html" data-i18n="nav.about">关于我们</a>
     </div>
   </div>
 </nav>
@@ -535,10 +535,10 @@ body{
 <section class="hero">
   <div class="hero-badge">
     <span class="dot"></span>
-    <span>永久免费 · 无水印 · 浏览器本地处理</span>
+    <span data-i18n="pmg.hero_badge">永久免费 · 无水印 · 浏览器本地处理</span>
   </div>
-  <h1>PDF 合并，<span class="grad">多文件一键拼接</span></h1>
-  <p class="sub">支持拖拽排序调整合并顺序，不限文件数量和大小<br>所有操作在浏览器本地完成，文件不离开你的设备</p>
+  <h1 data-i18n-html="pmg.hero_title">PDF 合并，<span class="grad">多文件一键拼接</span></h1>
+  <p class="sub" data-i18n-html="pmg.hero_sub">支持拖拽排序调整合并顺序，不限文件数量和大小<br>所有操作在浏览器本地完成，文件不离开你的设备</p>
 </section>
 
 <!-- 工具区域 -->
@@ -551,19 +551,19 @@ body{
       <div class="drop-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
       </div>
-      <h3>拖拽 PDF 文件到这里</h3>
-      <p>或 <span class="browse">点击选择文件</span>（支持多选）</p>
-      <p class="hint">支持任意数量的 PDF 文件，所有处理在本地完成</p>
+      <h3 data-i18n="pmg.drop_title">拖拽 PDF 文件到这里</h3>
+      <p data-i18n-html="pmg.drop_sub">或 <span class="browse">点击选择文件</span>（支持多选）</p>
+      <p class="hint" data-i18n="pmg.drop_hint">支持任意数量的 PDF 文件，所有处理在本地完成</p>
     </div>
 
     <!-- 文件列表 -->
     <div class="file-list" id="fileList" style="display:none">
       <div class="file-list-header">
         <div>
-          <h3>已添加的文件</h3>
-          <span class="file-list-count" id="fileListCount">0 个文件 · 共 0 页</span>
+          <h3 data-i18n="pmg.file_list_title">已添加的文件</h3>
+          <span class="file-list-count" id="fileListCount" data-i18n="pmg.file_list_count">0 个文件 · 共 0 页</span>
         </div>
-        <button class="clear-all-btn" onclick="clearAllFiles()">全部清除</button>
+        <button class="clear-all-btn" onclick="clearAllFiles()" data-i18n="pmg.clear_all">全部清除</button>
       </div>
       <div class="file-list-items" id="fileListItems"></div>
     </div>
@@ -572,7 +572,7 @@ body{
     <div class="convert-progress" id="convertProgress">
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
       <div class="progress-text">
-        <span id="progressLabel"><span class="spinner"></span>正在合并...</span>
+        <span id="progressLabel" data-i18n-html="pmg.progress_merging"><span class="spinner"></span>正在合并...</span>
         <span id="progressPercent">0%</span>
       </div>
     </div>
@@ -581,22 +581,22 @@ body{
     <div class="action-bar" id="actionBar">
       <button class="btn btn-primary" id="mergeBtn" onclick="startMerge()" disabled>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8" rx="2"/><rect x="14" y="2" width="8" height="8" rx="2"/><rect x="8" y="14" width="8" height="8" rx="2"/><path d="M6 10v4h4"/></svg>
-        开始合并
+        <span data-i18n="pmg.btn_merge">开始合并</span>
       </button>
       <button class="btn btn-outline" onclick="resetTool()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
-        重新开始
+        <span data-i18n="pmg.btn_reset">重新开始</span>
       </button>
     </div>
 
     <!-- 下载区域 -->
     <div class="download-area" id="downloadArea">
       <div class="download-result">
-        <h3>合并完成！</h3>
+        <h3 data-i18n="pmg.merge_done">合并完成！</h3>
         <p id="downloadInfo">-</p>
         <button class="download-btn" id="downloadBtn" onclick="downloadMerged()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          下载合并后的 PDF
+          <span data-i18n="pmg.btn_download">下载合并后的 PDF</span>
         </button>
       </div>
     </div>
@@ -607,51 +607,51 @@ body{
 <!-- 特性 -->
 <section class="section" id="features">
   <div class="section-title">
-    <h2>为什么选择 <span class="grad">星球小捕手</span></h2>
-    <p>一款真正免费、好用的 PDF 合并工具</p>
+    <h2 data-i18n-html="pmg.features_title">为什么选择 <span class="grad">星球小捕手</span></h2>
+    <p data-i18n="pmg.features_sub">一款真正免费、好用的 PDF 合并工具</p>
   </div>
   <div class="features-grid">
     <div class="feature-card">
       <div class="feature-icon fi-purple">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
-      <h3>隐私安全</h3>
-      <p>所有合并操作在浏览器本地完成，PDF 文件从不离开你的设备。不上传服务器，不收集数据，最大程度保护隐私。</p>
+      <h3 data-i18n="pmg.f1_title">隐私安全</h3>
+      <p data-i18n="pmg.f1_desc">所有合并操作在浏览器本地完成，PDF 文件从不离开你的设备。不上传服务器，不收集数据，最大程度保护隐私。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-cyan">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
       </div>
-      <h3>拖拽排序</h3>
-      <p>支持拖拽文件自由调整合并顺序，上下拖拽即可重排。合并将严格按照你设置的顺序拼接所有文件。</p>
+      <h3 data-i18n="pmg.f2_title">拖拽排序</h3>
+      <p data-i18n="pmg.f2_desc">支持拖拽文件自由调整合并顺序，上下拖拽即可重排。合并将严格按照你设置的顺序拼接所有文件。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-green">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
       </div>
-      <h3>无限制</h3>
-      <p>不限制文件数量和大小，你可以同时添加任意多个 PDF 进行合并，满足各种批量处理需求。</p>
+      <h3 data-i18n="pmg.f3_title">无限制</h3>
+      <p data-i18n="pmg.f3_desc">不限制文件数量和大小，你可以同时添加任意多个 PDF 进行合并，满足各种批量处理需求。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-pink">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       </div>
-      <h3>无水印</h3>
-      <p>合并后的 PDF 完全干净，不添加任何水印或标识。保留原始页面内容和排版，你可以自由使用。</p>
+      <h3 data-i18n="pmg.f4_title">无水印</h3>
+      <p data-i18n="pmg.f4_desc">合并后的 PDF 完全干净，不添加任何水印或标识。保留原始页面内容和排版，你可以自由使用。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-amber">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
       </div>
-      <h3>快速合并</h3>
-      <p>基于 pdf-lib 高性能引擎，在浏览器本地秒级完成合并。无需等待服务器处理，即刻获得结果。</p>
+      <h3 data-i18n="pmg.f5_title">快速合并</h3>
+      <p data-i18n="pmg.f5_desc">基于 pdf-lib 高性能引擎，在浏览器本地秒级完成合并。无需等待服务器处理，即刻获得结果。</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon fi-blue">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
       </div>
-      <h3>无需注册</h3>
-      <p>打开网页就能用，无需注册登录，无次数限制。添加文件、调整顺序、一键合并，三步搞定。</p>
+      <h3 data-i18n="pmg.f6_title">无需注册</h3>
+      <p data-i18n="pmg.f6_desc">打开网页就能用，无需注册登录，无次数限制。添加文件、调整顺序、一键合并，三步搞定。</p>
     </div>
   </div>
 </section>
@@ -659,36 +659,36 @@ body{
 <!-- FAQ -->
 <section class="section" id="faq">
   <div class="section-title">
-    <h2>常见问题</h2>
+    <h2 data-i18n="pmg.faq_title">常见问题</h2>
   </div>
   <div class="faq-list">
     <details class="faq-item">
-      <summary class="faq-q"><span>PDF合并是免费的吗？</span><span class="arrow">+</span></summary>
-      <div class="faq-a">是的，星球小捕手的 PDF 合并功能永久免费，无水印，无次数限制，无需注册。所有合并操作在浏览器本地完成，不收取任何费用。</div>
+      <summary class="faq-q"><span data-i18n="pmg.faq1_q">PDF合并是免费的吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="pmg.faq1_a">是的，星球小捕手的 PDF 合并功能永久免费，无水印，无次数限制，无需注册。所有合并操作在浏览器本地完成，不收取任何费用。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q"><span>支持合并多少个文件？</span><span class="arrow">+</span></summary>
-      <div class="faq-a">没有硬性数量限制，你可以同时添加任意多个 PDF 文件进行合并。不过由于在浏览器本地处理，文件过多或过大可能会占用较多内存，建议一次合并不超过 50 个文件。</div>
+      <summary class="faq-q"><span data-i18n="pmg.faq2_q">支持合并多少个文件？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="pmg.faq2_a">没有硬性数量限制，你可以同时添加任意多个 PDF 文件进行合并。不过由于在浏览器本地处理，文件过多或过大可能会占用较多内存，建议一次合并不超过 50 个文件。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q"><span>可以调整合并顺序吗？</span><span class="arrow">+</span></summary>
-      <div class="faq-a">可以。在文件列表中，你可以通过拖拽文件卡片来自由调整顺序。合并将严格按照你在列表中设置的顺序拼接所有文件。</div>
+      <summary class="faq-q"><span data-i18n="pmg.faq3_q">可以调整合并顺序吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="pmg.faq3_a">可以。在文件列表中，你可以通过拖拽文件卡片来自由调整顺序。合并将严格按照你在列表中设置的顺序拼接所有文件。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q"><span>合并后的PDF有水印吗？</span><span class="arrow">+</span></summary>
-      <div class="faq-a">没有。合并后的 PDF 完全干净，不添加任何水印或标识，保留原始页面内容和排版，你可以自由使用和分享。</div>
+      <summary class="faq-q"><span data-i18n="pmg.faq4_q">合并后的PDF有水印吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="pmg.faq4_a">没有。合并后的 PDF 完全干净，不添加任何水印或标识，保留原始页面内容和排版，你可以自由使用和分享。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q"><span>文件会被上传到服务器吗？</span><span class="arrow">+</span></summary>
-      <div class="faq-a">不会。所有合并操作都在你的浏览器本地完成，PDF 文件从不离开你的设备，服务器不存储任何文件数据，最大程度保护你的隐私。</div>
+      <summary class="faq-q"><span data-i18n="pmg.faq5_q">文件会被上传到服务器吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="pmg.faq5_a">不会。所有合并操作都在你的浏览器本地完成，PDF 文件从不离开你的设备，服务器不存储任何文件数据，最大程度保护你的隐私。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q"><span>支持加密的PDF吗？</span><span class="arrow">+</span></summary>
-      <div class="faq-a">目前不支持加密 PDF 的合并。如果你的 PDF 文件设置了打开密码保护，需要先解密后再添加到合并列表中。</div>
+      <summary class="faq-q"><span data-i18n="pmg.faq6_q">支持加密的PDF吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="pmg.faq6_a">目前不支持加密 PDF 的合并。如果你的 PDF 文件设置了打开密码保护，需要先解密后再添加到合并列表中。</div>
     </details>
     <details class="faq-item">
-      <summary class="faq-q"><span>合并后PDF的页面大小会统一吗？</span><span class="arrow">+</span></summary>
-      <div class="faq-a">不会。合并后的 PDF 会保留每个原始文件各自的页面大小和方向，不做统一调整。这样可以确保原始文档的排版和格式不被改变。</div>
+      <summary class="faq-q"><span data-i18n="pmg.faq7_q">合并后PDF的页面大小会统一吗？</span><span class="arrow">+</span></summary>
+      <div class="faq-a" data-i18n="pmg.faq7_a">不会。合并后的 PDF 会保留每个原始文件各自的页面大小和方向，不做统一调整。这样可以确保原始文档的排版和格式不被改变。</div>
     </details>
   </div>
 </section>
@@ -696,11 +696,11 @@ body{
 <!-- CTA -->
 <section style="text-align:center;padding:60px 24px">
   <div style="max-width:760px;margin:0 auto;background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(6,182,212,0.1));border:1px solid var(--border-bright);border-radius:28px;padding:50px 36px">
-    <h2 style="font-size:clamp(24px,4vw,34px);font-weight:800;margin-bottom:14px">还需要其他 PDF 工具？</h2>
-    <p style="color:var(--text-dim);font-size:16px;margin-bottom:28px">星球小捕手提供多种 PDF 处理工具，同样永久免费、无水印</p>
+    <h2 style="font-size:clamp(24px,4vw,34px);font-weight:800;margin-bottom:14px" data-i18n="pmg.cta_title">还需要其他 PDF 工具？</h2>
+    <p style="color:var(--text-dim);font-size:16px;margin-bottom:28px" data-i18n="pmg.cta_sub">星球小捕手提供多种 PDF 处理工具，同样永久免费、无水印</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-      <a href="pdf-to-word.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:50px;background:linear-gradient(135deg,var(--purple-deep),var(--blue));color:#fff;text-decoration:none;font-size:16px;font-weight:700;box-shadow:0 8px 30px rgba(124,58,237,0.5);transition:transform 0.2s,box-shadow 0.2s">PDF 转 Word</a>
-      <a href="pdf-to-image.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:50px;background:linear-gradient(135deg,rgba(6,182,212,0.8),rgba(59,130,246,0.8));color:#fff;text-decoration:none;font-size:16px;font-weight:700;box-shadow:0 8px 30px rgba(6,182,212,0.4);transition:transform 0.2s,box-shadow 0.2s">PDF 转图片</a>
+      <a href="pdf-to-word.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:50px;background:linear-gradient(135deg,var(--purple-deep),var(--blue));color:#fff;text-decoration:none;font-size:16px;font-weight:700;box-shadow:0 8px 30px rgba(124,58,237,0.5);transition:transform 0.2s,box-shadow 0.2s" data-i18n="pmg.cta_btn1">PDF 转 Word</a>
+      <a href="pdf-to-image.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:50px;background:linear-gradient(135deg,rgba(6,182,212,0.8),rgba(59,130,246,0.8));color:#fff;text-decoration:none;font-size:16px;font-weight:700;box-shadow:0 8px 30px rgba(6,182,212,0.4);transition:transform 0.2s,box-shadow 0.2s" data-i18n="pmg.cta_btn2">PDF 转图片</a>
     </div>
   </div>
 </section>
@@ -711,30 +711,31 @@ body{
     <span class="logo-icon" style="width:32px;height:32px">
       <img src="logo.png" alt="星球小捕手" style="width:32px;height:32px;border-radius:50%;object-fit:cover;">
     </span>
-    <span class="logo-text">星球小捕手</span>
+    <span class="logo-text" data-i18n="pmg.brand">星球小捕手</span>
   </div>
-  <p>让每一个文档，都能自由转换</p>
+  <p data-i18n="footer.tagline">让每一个文档，都能自由转换</p>
   <div class="footer-links">
-    <a href="index.html">首页</a>
-    <a href="pdf-to-word.html">PDF转Word</a>
-    <a href="pdf-to-image.html">PDF转图片</a>
-    <a href="pdf-merge.html" style="color:var(--purple-light);font-weight:600">PDF合并</a>
-    <a href="pdf-split.html">PDF拆分</a>
-    <a href="pdf-delete-pages.html">PDF删除页面</a>
-    <a href="pdf-watermark.html">PDF加水印</a>
-    <a href="blog.html">博客教程</a>
-    <a href="changelog.html">更新日志</a>
-    <a href="about.html">关于我们</a>
+    <a href="index.html" data-i18n="footer.home">首页</a>
+    <a href="pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a>
+    <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
+    <a href="pdf-merge.html" style="color:var(--purple-light);font-weight:600" data-i18n="nav.pdf_merge">PDF合并</a>
+    <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
+    <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
+    <a href="pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a>
+    <a href="blog.html" data-i18n="nav.blog">博客教程</a>
+    <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+    <a href="about.html" data-i18n="nav.about">关于我们</a>
   </div>
   <div class="footer-links" style="margin-top:12px;font-size:13px">
-    <a href="privacy.html">隐私政策</a>
-    <a href="terms.html">服务条款</a>
-    <a href="about.html">联系我们</a>
+    <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
+    <a href="terms.html" data-i18n="footer.terms">服务条款</a>
+    <a href="about.html" data-i18n="footer.contact">联系我们</a>
   </div>
-  <div class="copyright">
+  <div class="copyright" data-i18n-html="pmg.copyright">
     &copy; 2026 星球小捕手 &middot; 版权所有 &middot; PDF合并 永久免费工具<br>
     本站所有转换服务均在本地浏览器完成，不收集任何用户数据
   </div>
+  <div style="margin-top:8px;font-size:13px"><span data-i18n="footer.website_label">主网站</span>：<a href="https://planetgis.cn/" target="_blank" rel="noopener" style="color:var(--cyan);text-decoration:none">planetgis.cn</a></div>
 </footer>
 
 <div class="toast" id="toast"></div>
@@ -1071,6 +1072,113 @@ function resetTool(){
 
   fileInput.value = '';
 }
+</script>
+<script src="i18n.js"></script>
+<script>
+I18N.register({
+  zh: {
+    'pmg.brand': '星球小捕手',
+    'pmg.hero_badge': '永久免费 · 无水印 · 浏览器本地处理',
+    'pmg.hero_title': 'PDF 合并，<span class="grad">多文件一键拼接</span>',
+    'pmg.hero_sub': '支持拖拽排序调整合并顺序，不限文件数量和大小<br>所有操作在浏览器本地完成，文件不离开你的设备',
+    'pmg.drop_title': '拖拽 PDF 文件到这里',
+    'pmg.drop_sub': '或 <span class="browse">点击选择文件</span>（支持多选）',
+    'pmg.drop_hint': '支持任意数量的 PDF 文件，所有处理在本地完成',
+    'pmg.file_list_title': '已添加的文件',
+    'pmg.file_list_count': '0 个文件 · 共 0 页',
+    'pmg.clear_all': '全部清除',
+    'pmg.progress_merging': '<span class="spinner"></span>正在合并...',
+    'pmg.btn_merge': '开始合并',
+    'pmg.btn_reset': '重新开始',
+    'pmg.merge_done': '合并完成！',
+    'pmg.btn_download': '下载合并后的 PDF',
+    'pmg.features_title': '为什么选择 <span class="grad">星球小捕手</span>',
+    'pmg.features_sub': '一款真正免费、好用的 PDF 合并工具',
+    'pmg.f1_title': '隐私安全',
+    'pmg.f1_desc': '所有合并操作在浏览器本地完成，PDF 文件从不离开你的设备。不上传服务器，不收集数据，最大程度保护隐私。',
+    'pmg.f2_title': '拖拽排序',
+    'pmg.f2_desc': '支持拖拽文件自由调整合并顺序，上下拖拽即可重排。合并将严格按照你设置的顺序拼接所有文件。',
+    'pmg.f3_title': '无限制',
+    'pmg.f3_desc': '不限制文件数量和大小，你可以同时添加任意多个 PDF 进行合并，满足各种批量处理需求。',
+    'pmg.f4_title': '无水印',
+    'pmg.f4_desc': '合并后的 PDF 完全干净，不添加任何水印或标识。保留原始页面内容和排版，你可以自由使用。',
+    'pmg.f5_title': '快速合并',
+    'pmg.f5_desc': '基于 pdf-lib 高性能引擎，在浏览器本地秒级完成合并。无需等待服务器处理，即刻获得结果。',
+    'pmg.f6_title': '无需注册',
+    'pmg.f6_desc': '打开网页就能用，无需注册登录，无次数限制。添加文件、调整顺序、一键合并，三步搞定。',
+    'pmg.faq_title': '常见问题',
+    'pmg.faq1_q': 'PDF合并是免费的吗？',
+    'pmg.faq1_a': '是的，星球小捕手的 PDF 合并功能永久免费，无水印，无次数限制，无需注册。所有合并操作在浏览器本地完成，不收取任何费用。',
+    'pmg.faq2_q': '支持合并多少个文件？',
+    'pmg.faq2_a': '没有硬性数量限制，你可以同时添加任意多个 PDF 文件进行合并。不过由于在浏览器本地处理，文件过多或过大可能会占用较多内存，建议一次合并不超过 50 个文件。',
+    'pmg.faq3_q': '可以调整合并顺序吗？',
+    'pmg.faq3_a': '可以。在文件列表中，你可以通过拖拽文件卡片来自由调整顺序。合并将严格按照你在列表中设置的顺序拼接所有文件。',
+    'pmg.faq4_q': '合并后的PDF有水印吗？',
+    'pmg.faq4_a': '没有。合并后的 PDF 完全干净，不添加任何水印或标识，保留原始页面内容和排版，你可以自由使用和分享。',
+    'pmg.faq5_q': '文件会被上传到服务器吗？',
+    'pmg.faq5_a': '不会。所有合并操作都在你的浏览器本地完成，PDF 文件从不离开你的设备，服务器不存储任何文件数据，最大程度保护你的隐私。',
+    'pmg.faq6_q': '支持加密的PDF吗？',
+    'pmg.faq6_a': '目前不支持加密 PDF 的合并。如果你的 PDF 文件设置了打开密码保护，需要先解密后再添加到合并列表中。',
+    'pmg.faq7_q': '合并后PDF的页面大小会统一吗？',
+    'pmg.faq7_a': '不会。合并后的 PDF 会保留每个原始文件各自的页面大小和方向，不做统一调整。这样可以确保原始文档的排版和格式不被改变。',
+    'pmg.cta_title': '还需要其他 PDF 工具？',
+    'pmg.cta_sub': '星球小捕手提供多种 PDF 处理工具，同样永久免费、无水印',
+    'pmg.cta_btn1': 'PDF 转 Word',
+    'pmg.cta_btn2': 'PDF 转图片',
+    'pmg.copyright': '&copy; 2026 星球小捕手 &middot; 版权所有 &middot; PDF合并 永久免费工具<br>本站所有转换服务均在本地浏览器完成，不收集任何用户数据'
+  },
+  en: {
+    'pmg.brand': 'Planet Catcher',
+    'pmg.hero_badge': 'Free Forever · No Watermark · Browser Local Processing',
+    'pmg.hero_title': 'Merge PDF, <span class="grad">Multi-file One-click Combine</span>',
+    'pmg.hero_sub': 'Supports drag-and-drop reordering, unlimited file count and size<br>All operations run locally in your browser, files never leave your device',
+    'pmg.drop_title': 'Drag PDF files here',
+    'pmg.drop_sub': 'or <span class="browse">click to select files</span> (multi-select supported)',
+    'pmg.drop_hint': 'Supports any number of PDF files, all processing done locally',
+    'pmg.file_list_title': 'Added Files',
+    'pmg.file_list_count': '0 files · 0 pages total',
+    'pmg.clear_all': 'Clear All',
+    'pmg.progress_merging': '<span class="spinner"></span>Merging...',
+    'pmg.btn_merge': 'Start Merge',
+    'pmg.btn_reset': 'Start Over',
+    'pmg.merge_done': 'Merge Complete!',
+    'pmg.btn_download': 'Download Merged PDF',
+    'pmg.features_title': 'Why Choose <span class="grad">Planet Catcher</span>',
+    'pmg.features_sub': 'A truly free, easy-to-use PDF merge tool',
+    'pmg.f1_title': 'Privacy & Security',
+    'pmg.f1_desc': 'All merge operations run locally in your browser. PDF files never leave your device. No server uploads, no data collection, maximum privacy protection.',
+    'pmg.f2_title': 'Drag to Reorder',
+    'pmg.f2_desc': 'Drag files to freely adjust merge order. Reorder by dragging up or down. Merging follows the exact order you set.',
+    'pmg.f3_title': 'No Limits',
+    'pmg.f3_desc': 'No limits on file count or size. Add as many PDFs as you want for merging, meeting all batch processing needs.',
+    'pmg.f4_title': 'No Watermark',
+    'pmg.f4_desc': 'Merged PDF is completely clean with no watermarks or labels. Original page content and layout are preserved for free use.',
+    'pmg.f5_title': 'Fast Merge',
+    'pmg.f5_desc': 'Powered by the high-performance pdf-lib engine, merging completes in seconds locally in your browser. No server waiting, instant results.',
+    'pmg.f6_title': 'No Registration',
+    'pmg.f6_desc': 'Just open the page and start using. No registration, no login, no usage limits. Add files, reorder, merge — three steps done.',
+    'pmg.faq_title': 'FAQ',
+    'pmg.faq1_q': 'Is PDF merge free?',
+    'pmg.faq1_a': 'Yes, Planet Catcher\'s PDF merge feature is free forever, with no watermark, no usage limits, and no registration required. All merge operations run locally in your browser at no cost.',
+    'pmg.faq2_q': 'How many files can I merge?',
+    'pmg.faq2_a': 'There is no hard limit on the number of files. You can add as many PDFs as you want for merging. However, since processing runs locally in the browser, too many or too large files may consume significant memory. We recommend merging no more than 50 files at a time.',
+    'pmg.faq3_q': 'Can I adjust the merge order?',
+    'pmg.faq3_a': 'Yes. In the file list, you can freely adjust the order by dragging file cards. Merging will strictly follow the order you set in the list.',
+    'pmg.faq4_q': 'Do merged PDFs have watermarks?',
+    'pmg.faq4_a': 'No. The merged PDF is completely clean with no watermarks or labels. Original page content and layout are preserved for free use and sharing.',
+    'pmg.faq5_q': 'Will files be uploaded to a server?',
+    'pmg.faq5_a': 'No. All merge operations run locally in your browser. PDF files never leave your device. The server stores no file data, maximizing your privacy protection.',
+    'pmg.faq6_q': 'Are encrypted PDFs supported?',
+    'pmg.faq6_a': 'Encrypted PDF merging is not currently supported. If your PDF has an open password, you need to decrypt it first before adding it to the merge list.',
+    'pmg.faq7_q': 'Will merged PDF page sizes be unified?',
+    'pmg.faq7_a': 'No. The merged PDF preserves each original file\'s page size and orientation without any uniform adjustment. This ensures the original document layout and format remain unchanged.',
+    'pmg.cta_title': 'Need other PDF tools?',
+    'pmg.cta_sub': 'Planet Catcher offers multiple PDF processing tools, also free forever with no watermark',
+    'pmg.cta_btn1': 'PDF to Word',
+    'pmg.cta_btn2': 'PDF to Image',
+    'pmg.copyright': '&copy; 2026 Planet Catcher &middot; All Rights Reserved &middot; Free PDF Merge Tool<br>All conversion services run locally in your browser. No user data is collected.'
+  }
+});
 </script>
 </body>
 </html>

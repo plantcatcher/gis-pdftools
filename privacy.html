@@ -56,81 +56,165 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <nav class="nav"><div class="nav-inner">
   <a href="index.html" class="logo"><span class="logo-icon"><img src="logo.png" alt="星球小捕手" style="width:38px;height:38px;border-radius:50%;object-fit:cover;"></span><span class="logo-text">星球小捕手</span></a>
   <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a href="pdf-to-word.html">PDF转Word</a>
-    <a href="pdf-to-image.html">PDF转图片</a>
-    <a href="pdf-merge.html">PDF合并</a>
-    <a href="pdf-split.html">PDF拆分</a>
-    <a href="pdf-delete-pages.html">PDF删除页面</a>
-    <a href="pdf-watermark.html">PDF加水印</a>
-    <a href="blog.html">博客教程</a>
-    <a href="changelog.html">更新日志</a>
-    <a href="about.html" class="active-link">关于我们</a>
+    <a href="index.html" data-i18n="nav.home">首页</a>
+    <a href="pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a>
+    <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
+    <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a>
+    <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
+    <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
+    <a href="pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a>
+    <a href="blog.html" data-i18n="nav.blog">博客教程</a>
+    <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+    <a href="about.html" class="active-link" data-i18n="nav.about">关于我们</a>
   </div>
 </div></nav>
 
 <div class="page">
-  <h1>隐私政策</h1>
-  <p class="updated">最后更新日期：2026年7月27日</p>
+  <h1 data-i18n="privacy.h1">隐私政策</h1>
+  <p class="updated" data-i18n="privacy.updated">最后更新日期：2026年7月27日</p>
 
   <div class="highlight-box">
-    <p><strong>核心承诺：</strong>星球小捕手所有的文件转换和 OCR 识别均在你的浏览器本地完成。你的 PDF 文件不会上传到我们的服务器，不会被存储，不会被任何人查看。</p>
+    <p data-i18n-html="privacy.highlight"><strong>核心承诺：</strong>星球小捕手所有的文件转换和 OCR 识别均在你的浏览器本地完成。你的 PDF 文件不会上传到我们的服务器，不会被存储，不会被任何人查看。</p>
   </div>
 
-  <h2>1. 我们不收集什么</h2>
-  <p>星球小捕手是一款纯客户端工具，以下数据<strong>绝不会</strong>被收集或上传：</p>
+  <h2 data-i18n="privacy.s1_title">1. 我们不收集什么</h2>
+  <p data-i18n-html="privacy.s1_p">星球小捕手是一款纯客户端工具，以下数据<strong>绝不会</strong>被收集或上传：</p>
   <ul>
-    <li>你上传的 PDF 文件及其内容</li>
-    <li>转换后生成的 Word 文档</li>
-    <li>你的 IP 地址（我们不记录访问日志）</li>
-    <li>你的浏览历史和操作记录</li>
-    <li>Cookie 追踪信息（我们不使用追踪 Cookie）</li>
+    <li data-i18n="privacy.s1_li1">你上传的 PDF 文件及其内容</li>
+    <li data-i18n="privacy.s1_li2">转换后生成的 Word 文档</li>
+    <li data-i18n="privacy.s1_li3">你的 IP 地址（我们不记录访问日志）</li>
+    <li data-i18n="privacy.s1_li4">你的浏览历史和操作记录</li>
+    <li data-i18n="privacy.s1_li5">Cookie 追踪信息（我们不使用追踪 Cookie）</li>
   </ul>
 
-  <h2>2. 文件处理方式</h2>
-  <p>所有文件处理（包括 PDF 解析、文字提取、OCR 识别、Word 生成）完全在你的浏览器中通过 JavaScript 本地执行。文件数据仅存在于你的设备内存中，关闭页面后即被清除。我们无法访问、恢复或查看你的任何文件。</p>
+  <h2 data-i18n="privacy.s2_title">2. 文件处理方式</h2>
+  <p data-i18n="privacy.s2_p">所有文件处理（包括 PDF 解析、文字提取、OCR 识别、Word 生成）完全在你的浏览器中通过 JavaScript 本地执行。文件数据仅存在于你的设备内存中，关闭页面后即被清除。我们无法访问、恢复或查看你的任何文件。</p>
 
-  <h2>3. 第三方服务</h2>
-  <p>本网站使用了以下第三方开源库（通过 CDN 加载），它们同样不在服务器端处理你的文件：</p>
+  <h2 data-i18n="privacy.s3_title">3. 第三方服务</h2>
+  <p data-i18n="privacy.s3_p">本网站使用了以下第三方开源库（通过 CDN 加载），它们同样不在服务器端处理你的文件：</p>
   <ul>
-    <li><strong>PDF.js</strong>（Mozilla）：用于在浏览器中解析 PDF 文件</li>
-    <li><strong>docx.js</strong>：用于在浏览器中生成 Word 文档</li>
-    <li><strong>Tesseract.js</strong>：用于在浏览器中执行 OCR 文字识别</li>
+    <li data-i18n-html="privacy.s3_li1"><strong>PDF.js</strong>（Mozilla）：用于在浏览器中解析 PDF 文件</li>
+    <li data-i18n-html="privacy.s3_li2"><strong>docx.js</strong>：用于在浏览器中生成 Word 文档</li>
+    <li data-i18n-html="privacy.s3_li3"><strong>Tesseract.js</strong>：用于在浏览器中执行 OCR 文字识别</li>
   </ul>
-  <p>OCR 首次使用时，浏览器会从公共 CDN 下载语言模型数据（约 10-30MB）并缓存到本地，之后可离线使用。此过程不涉及你的文件内容上传。</p>
+  <p data-i18n="privacy.s3_p2">OCR 首次使用时，浏览器会从公共 CDN 下载语言模型数据（约 10-30MB）并缓存到本地，之后可离线使用。此过程不涉及你的文件内容上传。</p>
 
-  <h2>4. 可能使用的分析工具</h2>
-  <p>如果我们未来接入网站流量分析工具（如 Google Analytics），我们将：</p>
+  <h2 data-i18n="privacy.s4_title">4. 可能使用的分析工具</h2>
+  <p data-i18n="privacy.s4_p">如果我们未来接入网站流量分析工具（如 Google Analytics），我们将：</p>
   <ul>
-    <li>仅收集匿名的访问统计数据（页面访问量、访问时长等）</li>
-    <li>不会收集任何与文件内容相关的信息</li>
-    <li>在页面显著位置告知用户并征得同意</li>
-    <li>遵守 GDPR 和相关隐私法规的要求</li>
+    <li data-i18n="privacy.s4_li1">仅收集匿名的访问统计数据（页面访问量、访问时长等）</li>
+    <li data-i18n="privacy.s4_li2">不会收集任何与文件内容相关的信息</li>
+    <li data-i18n="privacy.s4_li3">在页面显著位置告知用户并征得同意</li>
+    <li data-i18n="privacy.s4_li4">遵守 GDPR 和相关隐私法规的要求</li>
   </ul>
 
-  <h2>5. 广告服务</h2>
-  <p>如果我们未来接入 Google AdSense 等广告服务，第三方广告商可能会使用 Cookie 来展示与你兴趣相关的广告。你可以通过浏览器设置管理或禁用 Cookie。广告商的行为受其各自隐私政策约束。</p>
+  <h2 data-i18n="privacy.s5_title">5. 广告服务</h2>
+  <p data-i18n="privacy.s5_p">如果我们未来接入 Google AdSense 等广告服务，第三方广告商可能会使用 Cookie 来展示与你兴趣相关的广告。你可以通过浏览器设置管理或禁用 Cookie。广告商的行为受其各自隐私政策约束。</p>
 
-  <h2>6. 你的权利</h2>
-  <p>由于我们不收集任何用户数据，实际上你无需行使数据访问、更正或删除的权利。如果你有任何疑问，欢迎通过下方联系方式与我们沟通。</p>
+  <h2 data-i18n="privacy.s6_title">6. 你的权利</h2>
+  <p data-i18n="privacy.s6_p">由于我们不收集任何用户数据，实际上你无需行使数据访问、更正或删除的权利。如果你有任何疑问，欢迎通过下方联系方式与我们沟通。</p>
 
-  <h2>7. 儿童隐私</h2>
-  <p>本网站不针对 13 岁以下儿童，也不会 knowingly 收集儿童的个人信息。所有功能均可无需注册直接使用。</p>
+  <h2 data-i18n="privacy.s7_title">7. 儿童隐私</h2>
+  <p data-i18n="privacy.s7_p">本网站不针对 13 岁以下儿童，也不会 knowingly 收集儿童的个人信息。所有功能均可无需注册直接使用。</p>
 
-  <h2>8. 隐私政策更新</h2>
-  <p>我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并更新顶部的"最后更新日期"。建议你定期查阅本页面以了解任何变化。</p>
+  <h2 data-i18n="privacy.s8_title">8. 隐私政策更新</h2>
+  <p data-i18n-html="privacy.s8_p">我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并更新顶部的"最后更新日期"。建议你定期查阅本页面以了解任何变化。</p>
 
-  <h2>9. 联系我们</h2>
-  <p>如果你对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+  <h2 data-i18n="privacy.s9_title">9. 联系我们</h2>
+  <p data-i18n="privacy.s9_p">如果你对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
   <ul>
-    <li>邮箱：planetcatcher@163.com</li>
-    <li>品牌名称：星球小捕手</li>
+    <li data-i18n="privacy.s9_li1">邮箱：planetcatcher@163.com</li>
+    <li data-i18n="privacy.s9_li2">品牌名称：星球小捕手</li>
   </ul>
 </div>
 
 <footer class="footer">
-  © 2026 星球小捕手 · 版权所有<br>
-  <a href="index.html">首页</a> <a href="pdf-to-word.html">PDF转Word</a> <a href="pdf-to-image.html">PDF转图片</a> <a href="pdf-merge.html">PDF合并</a> <a href="pdf-split.html">PDF拆分</a> <a href="pdf-delete-pages.html">PDF删除页面</a> <a href="pdf-watermark.html">PDF加水印</a> <a href="terms.html">服务条款</a> <a href="changelog.html">更新日志</a> <a href="about.html">关于我们</a> <a href="blog.html">博客</a>
+  <span data-i18n="privacy.footer_copyright">© 2026 星球小捕手 · 版权所有</span><br>
+  <span data-i18n="footer.website_label">主网站</span>：<a href="https://planetgis.cn/" target="_blank" rel="noopener" style="color:var(--cyan);text-decoration:none">planetgis.cn</a><br>
+  <a href="index.html" data-i18n="footer.home">首页</a> <a href="pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a> <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a> <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a> <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a> <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a> <a href="pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a> <a href="terms.html" data-i18n="footer.terms">服务条款</a> <a href="changelog.html" data-i18n="nav.changelog">更新日志</a> <a href="about.html" data-i18n="nav.about">关于我们</a> <a href="blog.html" data-i18n="nav.blog">博客</a>
 </footer>
+<script src="i18n.js"></script>
+<script>
+I18N.register({
+  zh: {
+    'privacy.h1': '隐私政策',
+    'privacy.updated': '最后更新日期：2026年7月27日',
+    'privacy.highlight': '<strong>核心承诺：</strong>星球小捕手所有的文件转换和 OCR 识别均在你的浏览器本地完成。你的 PDF 文件不会上传到我们的服务器，不会被存储，不会被任何人查看。',
+    'privacy.s1_title': '1. 我们不收集什么',
+    'privacy.s1_p': '星球小捕手是一款纯客户端工具，以下数据<strong>绝不会</strong>被收集或上传：',
+    'privacy.s1_li1': '你上传的 PDF 文件及其内容',
+    'privacy.s1_li2': '转换后生成的 Word 文档',
+    'privacy.s1_li3': '你的 IP 地址（我们不记录访问日志）',
+    'privacy.s1_li4': '你的浏览历史和操作记录',
+    'privacy.s1_li5': 'Cookie 追踪信息（我们不使用追踪 Cookie）',
+    'privacy.s2_title': '2. 文件处理方式',
+    'privacy.s2_p': '所有文件处理（包括 PDF 解析、文字提取、OCR 识别、Word 生成）完全在你的浏览器中通过 JavaScript 本地执行。文件数据仅存在于你的设备内存中，关闭页面后即被清除。我们无法访问、恢复或查看你的任何文件。',
+    'privacy.s3_title': '3. 第三方服务',
+    'privacy.s3_p': '本网站使用了以下第三方开源库（通过 CDN 加载），它们同样不在服务器端处理你的文件：',
+    'privacy.s3_li1': '<strong>PDF.js</strong>（Mozilla）：用于在浏览器中解析 PDF 文件',
+    'privacy.s3_li2': '<strong>docx.js</strong>：用于在浏览器中生成 Word 文档',
+    'privacy.s3_li3': '<strong>Tesseract.js</strong>：用于在浏览器中执行 OCR 文字识别',
+    'privacy.s3_p2': 'OCR 首次使用时，浏览器会从公共 CDN 下载语言模型数据（约 10-30MB）并缓存到本地，之后可离线使用。此过程不涉及你的文件内容上传。',
+    'privacy.s4_title': '4. 可能使用的分析工具',
+    'privacy.s4_p': '如果我们未来接入网站流量分析工具（如 Google Analytics），我们将：',
+    'privacy.s4_li1': '仅收集匿名的访问统计数据（页面访问量、访问时长等）',
+    'privacy.s4_li2': '不会收集任何与文件内容相关的信息',
+    'privacy.s4_li3': '在页面显著位置告知用户并征得同意',
+    'privacy.s4_li4': '遵守 GDPR 和相关隐私法规的要求',
+    'privacy.s5_title': '5. 广告服务',
+    'privacy.s5_p': '如果我们未来接入 Google AdSense 等广告服务，第三方广告商可能会使用 Cookie 来展示与你兴趣相关的广告。你可以通过浏览器设置管理或禁用 Cookie。广告商的行为受其各自隐私政策约束。',
+    'privacy.s6_title': '6. 你的权利',
+    'privacy.s6_p': '由于我们不收集任何用户数据，实际上你无需行使数据访问、更正或删除的权利。如果你有任何疑问，欢迎通过下方联系方式与我们沟通。',
+    'privacy.s7_title': '7. 儿童隐私',
+    'privacy.s7_p': '本网站不针对 13 岁以下儿童，也不会 knowingly 收集儿童的个人信息。所有功能均可无需注册直接使用。',
+    'privacy.s8_title': '8. 隐私政策更新',
+    'privacy.s8_p': '我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并更新顶部的"最后更新日期"。建议你定期查阅本页面以了解任何变化。',
+    'privacy.s9_title': '9. 联系我们',
+    'privacy.s9_p': '如果你对本隐私政策有任何疑问，请通过以下方式联系我们：',
+    'privacy.s9_li1': '邮箱：planetcatcher@163.com',
+    'privacy.s9_li2': '品牌名称：星球小捕手',
+    'privacy.footer_copyright': '© 2026 星球小捕手 · 版权所有'
+  },
+  en: {
+    'privacy.h1': 'Privacy Policy',
+    'privacy.updated': 'Last updated: July 27, 2026',
+    'privacy.highlight': '<strong>Core Promise:</strong> All file conversions and OCR recognition in Planet Catcher are performed locally in your browser. Your PDF files are never uploaded to our servers, never stored, and never viewed by anyone.',
+    'privacy.s1_title': '1. What We Do Not Collect',
+    'privacy.s1_p': 'Planet Catcher is a purely client-side tool. The following data is <strong>never</strong> collected or uploaded:',
+    'privacy.s1_li1': 'The PDF files you upload and their contents',
+    'privacy.s1_li2': 'The Word documents generated after conversion',
+    'privacy.s1_li3': 'Your IP address (we do not log access)',
+    'privacy.s1_li4': 'Your browsing history and activity records',
+    'privacy.s1_li5': 'Cookie tracking information (we do not use tracking cookies)',
+    'privacy.s2_title': '2. How Files Are Processed',
+    'privacy.s2_p': 'All file processing (including PDF parsing, text extraction, OCR recognition, and Word generation) is executed entirely locally in your browser via JavaScript. File data exists only in your device\'s memory and is cleared when you close the page. We cannot access, recover, or view any of your files.',
+    'privacy.s3_title': '3. Third-Party Services',
+    'privacy.s3_p': 'This website uses the following third-party open-source libraries (loaded via CDN), which also do not process your files on the server side:',
+    'privacy.s3_li1': '<strong>PDF.js</strong> (Mozilla): used to parse PDF files in the browser',
+    'privacy.s3_li2': '<strong>docx.js</strong>: used to generate Word documents in the browser',
+    'privacy.s3_li3': '<strong>Tesseract.js</strong>: used to perform OCR text recognition in the browser',
+    'privacy.s3_p2': 'When OCR is used for the first time, the browser downloads language model data (approximately 10-30MB) from a public CDN and caches it locally for offline use afterward. This process does not involve uploading your file contents.',
+    'privacy.s4_title': '4. Analytics Tools We May Use',
+    'privacy.s4_p': 'If we integrate website traffic analytics tools (such as Google Analytics) in the future, we will:',
+    'privacy.s4_li1': 'Only collect anonymous visit statistics (page views, visit duration, etc.)',
+    'privacy.s4_li2': 'Never collect any information related to file contents',
+    'privacy.s4_li3': 'Notify users prominently on the page and obtain consent',
+    'privacy.s4_li4': 'Comply with GDPR and relevant privacy regulations',
+    'privacy.s5_title': '5. Advertising Services',
+    'privacy.s5_p': 'If we integrate advertising services such as Google AdSense in the future, third-party advertisers may use cookies to display ads relevant to your interests. You can manage or disable cookies through your browser settings. Advertisers\' practices are governed by their respective privacy policies.',
+    'privacy.s6_title': '6. Your Rights',
+    'privacy.s6_p': 'Since we do not collect any user data, you do not actually need to exercise your rights to access, correct, or delete data. If you have any questions, feel free to contact us using the information below.',
+    'privacy.s7_title': '7. Children\'s Privacy',
+    'privacy.s7_p': 'This website is not directed at children under 13, nor do we knowingly collect personal information from children. All features can be used directly without registration.',
+    'privacy.s8_title': '8. Privacy Policy Updates',
+    'privacy.s8_p': 'We may update this privacy policy from time to time. The updated policy will be published on this page, along with an updated "Last updated" date at the top. We recommend that you check this page periodically to stay informed of any changes.',
+    'privacy.s9_title': '9. Contact Us',
+    'privacy.s9_p': 'If you have any questions about this privacy policy, please contact us via:',
+    'privacy.s9_li1': 'Email: planetcatcher@163.com',
+    'privacy.s9_li2': 'Brand name: Planet Catcher',
+    'privacy.footer_copyright': '© 2026 Planet Catcher · All Rights Reserved'
+  }
+});
+</script>
 </body>
 </html>

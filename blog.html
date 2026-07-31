@@ -57,117 +57,187 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <nav class="nav"><div class="nav-inner">
   <a href="index.html" class="logo"><span class="logo-icon"><img src="logo.png" alt="星球小捕手" style="width:38px;height:38px;border-radius:50%;object-fit:cover;"></span><span class="logo-text">星球小捕手</span></a>
   <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a href="pdf-to-word.html">PDF转Word</a>
-    <a href="pdf-to-image.html">PDF转图片</a>
-    <a href="pdf-merge.html">PDF合并</a>
-    <a href="pdf-split.html">PDF拆分</a>
-    <a href="pdf-delete-pages.html">PDF删除页面</a>
-    <a href="pdf-watermark.html">PDF加水印</a>
-    <a href="blog.html" class="active-link">博客教程</a>
-    <a href="changelog.html">更新日志</a>
-    <a href="about.html">关于我们</a>
+    <a href="index.html" data-i18n="nav.home">首页</a>
+    <a href="pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a>
+    <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
+    <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a>
+    <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
+    <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
+    <a href="pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a>
+    <a href="blog.html" class="active-link" data-i18n="nav.blog">博客教程</a>
+    <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+    <a href="about.html" data-i18n="nav.about">关于我们</a>
   </div>
 </div></nav>
 
 <section class="hero">
-  <h1>博客与<span class="grad">PDF 技巧</span></h1>
-  <p>关于 PDF 转 Word、OCR 识别、文档处理的实用教程和经验分享</p>
+  <h1 data-i18n-html="blog.hero_title">博客与<span class="grad">PDF 技巧</span></h1>
+  <p data-i18n="blog.hero_desc">关于 PDF 转 Word、OCR 识别、文档处理的实用教程和经验分享</p>
 </section>
 
 <div class="blog-list">
   <a href="blog/pdf-delete-pages-guide.html" class="blog-card">
     <div class="blog-meta">
-      <span class="blog-tag">教程</span>
+      <span class="blog-tag" data-i18n="blog.tag_tutorial">教程</span>
       <span>2026-07-30</span>
-      <span>· 6分钟阅读</span>
+      <span data-i18n="blog.read_6">· 6分钟阅读</span>
     </div>
-    <h2>PDF 怎么删除不需要的页面？3 种方法对比与技巧</h2>
-    <p>PDF 里有多余的空白页、封面页或敏感信息页想删掉？本文对比在线工具、专业软件、虚拟打印三种删页方法，教你用可视化点选精准移除页面，免费无水印。</p>
-    <span class="read-more">阅读全文 →</span>
+    <h2 data-i18n="blog.card1_title">PDF 怎么删除不需要的页面？3 种方法对比与技巧</h2>
+    <p data-i18n="blog.card1_desc">PDF 里有多余的空白页、封面页或敏感信息页想删掉？本文对比在线工具、专业软件、虚拟打印三种删页方法，教你用可视化点选精准移除页面，免费无水印。</p>
+    <span class="read-more" data-i18n="blog.read_more">阅读全文 →</span>
   </a>
 
   <a href="blog/pdf-watermark-guide.html" class="blog-card">
     <div class="blog-meta">
-      <span class="blog-tag">教程</span>
+      <span class="blog-tag" data-i18n="blog.tag_tutorial">教程</span>
       <span>2026-07-30</span>
-      <span>· 7分钟阅读</span>
+      <span data-i18n="blog.read_7">· 7分钟阅读</span>
     </div>
-    <h2>如何给 PDF 加水印？保护文档版权的完整指南</h2>
-    <p>原创作品、内部资料、作品集怎么防止被盗用？本文详解 PDF 加水印的作用、文字水印与图片水印的区别，以及如何用在线工具免费添加平铺水印保护版权。</p>
-    <span class="read-more">阅读全文 →</span>
+    <h2 data-i18n="blog.card2_title">如何给 PDF 加水印？保护文档版权的完整指南</h2>
+    <p data-i18n="blog.card2_desc">原创作品、内部资料、作品集怎么防止被盗用？本文详解 PDF 加水印的作用、文字水印与图片水印的区别，以及如何用在线工具免费添加平铺水印保护版权。</p>
+    <span class="read-more" data-i18n="blog.read_more">阅读全文 →</span>
   </a>
 
   <a href="blog/pdf-merge-split-guide.html" class="blog-card">
     <div class="blog-meta">
-      <span class="blog-tag">效率</span>
+      <span class="blog-tag" data-i18n="blog.tag_efficiency">效率</span>
       <span>2026-07-30</span>
-      <span>· 7分钟阅读</span>
+      <span data-i18n="blog.read_7">· 7分钟阅读</span>
     </div>
-    <h2>PDF 合并与拆分怎么做？整理文档的实用技巧</h2>
-    <p>多个报告要合成一份、大文件要拆成章节、从不同 PDF 各取几页拼新文档——本文教你 PDF 合并与拆分的实用技巧，以及先拆分再合并的进阶玩法。</p>
-    <span class="read-more">阅读全文 →</span>
+    <h2 data-i18n="blog.card3_title">PDF 合并与拆分怎么做？整理文档的实用技巧</h2>
+    <p data-i18n="blog.card3_desc">多个报告要合成一份、大文件要拆成章节、从不同 PDF 各取几页拼新文档——本文教你 PDF 合并与拆分的实用技巧，以及先拆分再合并的进阶玩法。</p>
+    <span class="read-more" data-i18n="blog.read_more">阅读全文 →</span>
   </a>
 
   <a href="blog/pdf-to-word-free-guide.html" class="blog-card">
     <div class="blog-meta">
-      <span class="blog-tag">教程</span>
+      <span class="blog-tag" data-i18n="blog.tag_tutorial">教程</span>
       <span>2026-07-27</span>
-      <span>· 8分钟阅读</span>
+      <span data-i18n="blog.read_8">· 8分钟阅读</span>
     </div>
-    <h2>PDF 转 Word 免费完整指南：5 种方法对比</h2>
-    <p>盘点目前可用的 5 种免费 PDF 转 Word 方法，从在线工具到桌面软件，从浏览器插件到命令行工具，详细对比各自的优缺点、适用场景和注意事项，帮你找到最适合的方案。</p>
-    <span class="read-more">阅读全文 →</span>
+    <h2 data-i18n="blog.card4_title">PDF 转 Word 免费完整指南：5 种方法对比</h2>
+    <p data-i18n="blog.card4_desc">盘点目前可用的 5 种免费 PDF 转 Word 方法，从在线工具到桌面软件，从浏览器插件到命令行工具，详细对比各自的优缺点、适用场景和注意事项，帮你找到最适合的方案。</p>
+    <span class="read-more" data-i18n="blog.read_more">阅读全文 →</span>
   </a>
 
   <a href="blog/scanned-pdf-ocr-tips.html" class="blog-card">
     <div class="blog-meta">
-      <span class="blog-tag">OCR</span>
+      <span class="blog-tag" data-i18n="blog.tag_ocr">OCR</span>
       <span>2026-07-27</span>
-      <span>· 6分钟阅读</span>
+      <span data-i18n="blog.read_6">· 6分钟阅读</span>
     </div>
-    <h2>扫描版 PDF 如何提取文字？OCR 识别实用技巧</h2>
-    <p>拍照、扫描的 PDF 不能直接复制文字怎么办？本文详解 OCR 文字识别技术的原理，教你如何把图片里的文字变成可编辑的 Word 文档，以及如何提高识别准确率。</p>
-    <span class="read-more">阅读全文 →</span>
+    <h2 data-i18n="blog.card5_title">扫描版 PDF 如何提取文字？OCR 识别实用技巧</h2>
+    <p data-i18n="blog.card5_desc">拍照、扫描的 PDF 不能直接复制文字怎么办？本文详解 OCR 文字识别技术的原理，教你如何把图片里的文字变成可编辑的 Word 文档，以及如何提高识别准确率。</p>
+    <span class="read-more" data-i18n="blog.read_more">阅读全文 →</span>
   </a>
 
   <a href="blog/pdf-conversion-quality.html" class="blog-card">
     <div class="blog-meta">
-      <span class="blog-tag">原理</span>
+      <span class="blog-tag" data-i18n="blog.tag_principle">原理</span>
       <span>2026-07-27</span>
-      <span>· 5分钟阅读</span>
+      <span data-i18n="blog.read_5">· 5分钟阅读</span>
     </div>
-    <h2>为什么 PDF 转 Word 后排版会乱？根本原因解析</h2>
-    <p>几乎所有人在转换 PDF 后都遇到过排版错乱的问题。这篇文章从 PDF 和 Word 的底层格式差异讲起，解释为什么 100% 还原几乎不可能，以及如何尽量减少格式丢失。</p>
-    <span class="read-more">阅读全文 →</span>
+    <h2 data-i18n="blog.card6_title">为什么 PDF 转 Word 后排版会乱？根本原因解析</h2>
+    <p data-i18n="blog.card6_desc">几乎所有人在转换 PDF 后都遇到过排版错乱的问题。这篇文章从 PDF 和 Word 的底层格式差异讲起，解释为什么 100% 还原几乎不可能，以及如何尽量减少格式丢失。</p>
+    <span class="read-more" data-i18n="blog.read_more">阅读全文 →</span>
   </a>
 
   <a href="blog/pdf-security-and-privacy.html" class="blog-card">
     <div class="blog-meta">
-      <span class="blog-tag">安全</span>
+      <span class="blog-tag" data-i18n="blog.tag_security">安全</span>
       <span>2026-07-27</span>
-      <span>· 5分钟阅读</span>
+      <span data-i18n="blog.read_5">· 5分钟阅读</span>
     </div>
-    <h2>在线 PDF 转换工具安全吗？如何保护你的文档隐私</h2>
-    <p>把合同、论文、报告上传到在线转换工具，会不会泄露？本文分析主流转换工具的隐私风险，教你如何选择安全的转换方案，以及为什么本地处理才是最安全的方式。</p>
-    <span class="read-more">阅读全文 →</span>
+    <h2 data-i18n="blog.card7_title">在线 PDF 转换工具安全吗？如何保护你的文档隐私</h2>
+    <p data-i18n="blog.card7_desc">把合同、论文、报告上传到在线转换工具，会不会泄露？本文分析主流转换工具的隐私风险，教你如何选择安全的转换方案，以及为什么本地处理才是最安全的方式。</p>
+    <span class="read-more" data-i18n="blog.read_more">阅读全文 →</span>
   </a>
 
   <a href="blog/batch-pdf-to-word.html" class="blog-card">
     <div class="blog-meta">
-      <span class="blog-tag">效率</span>
+      <span class="blog-tag" data-i18n="blog.tag_efficiency">效率</span>
       <span>2026-07-27</span>
-      <span>· 4分钟阅读</span>
+      <span data-i18n="blog.read_4">· 4分钟阅读</span>
     </div>
-    <h2>如何批量转换 PDF 为 Word？提高办公效率的技巧</h2>
-    <p>需要转换几十个 PDF 文件？一个一个转太慢了。本文分享几种批量转换 PDF 的方法，以及如何用自动化工具提升文档处理效率。</p>
-    <span class="read-more">阅读全文 →</span>
+    <h2 data-i18n="blog.card8_title">如何批量转换 PDF 为 Word？提高办公效率的技巧</h2>
+    <p data-i18n="blog.card8_desc">需要转换几十个 PDF 文件？一个一个转太慢了。本文分享几种批量转换 PDF 的方法，以及如何用自动化工具提升文档处理效率。</p>
+    <span class="read-more" data-i18n="blog.read_more">阅读全文 →</span>
   </a>
 </div>
 
 <footer class="footer">
-  © 2026 星球小捕手 · 版权所有<br>
-  <a href="index.html">首页</a> <a href="pdf-to-word.html">PDF转Word</a> <a href="pdf-to-image.html">PDF转图片</a> <a href="pdf-merge.html">PDF合并</a> <a href="pdf-split.html">PDF拆分</a> <a href="pdf-delete-pages.html">PDF删除页面</a> <a href="pdf-watermark.html">PDF加水印</a> <a href="privacy.html">隐私政策</a> <a href="terms.html">服务条款</a> <a href="changelog.html">更新日志</a> <a href="about.html">关于我们</a>
+  <span data-i18n="blog.footer_copyright">© 2026 星球小捕手 · 版权所有</span><br>
+  <span data-i18n="footer.website_label">主网站</span>：<a href="https://planetgis.cn/" target="_blank" rel="noopener" style="color:var(--cyan);text-decoration:none">planetgis.cn</a><br>
+  <a href="index.html" data-i18n="footer.home">首页</a> <a href="pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a> <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a> <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a> <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a> <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a> <a href="pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a> <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a> <a href="terms.html" data-i18n="footer.terms">服务条款</a> <a href="changelog.html" data-i18n="nav.changelog">更新日志</a> <a href="about.html" data-i18n="nav.about">关于我们</a>
 </footer>
+<script src="i18n.js"></script>
+<script>
+I18N.register({
+  zh: {
+    'blog.hero_title': '博客与<span class="grad">PDF 技巧</span>',
+    'blog.hero_desc': '关于 PDF 转 Word、OCR 识别、文档处理的实用教程和经验分享',
+    'blog.tag_tutorial': '教程',
+    'blog.tag_efficiency': '效率',
+    'blog.tag_ocr': 'OCR',
+    'blog.tag_principle': '原理',
+    'blog.tag_security': '安全',
+    'blog.read_4': '· 4分钟阅读',
+    'blog.read_5': '· 5分钟阅读',
+    'blog.read_6': '· 6分钟阅读',
+    'blog.read_7': '· 7分钟阅读',
+    'blog.read_8': '· 8分钟阅读',
+    'blog.read_more': '阅读全文 →',
+    'blog.card1_title': 'PDF 怎么删除不需要的页面？3 种方法对比与技巧',
+    'blog.card1_desc': 'PDF 里有多余的空白页、封面页或敏感信息页想删掉？本文对比在线工具、专业软件、虚拟打印三种删页方法，教你用可视化点选精准移除页面，免费无水印。',
+    'blog.card2_title': '如何给 PDF 加水印？保护文档版权的完整指南',
+    'blog.card2_desc': '原创作品、内部资料、作品集怎么防止被盗用？本文详解 PDF 加水印的作用、文字水印与图片水印的区别，以及如何用在线工具免费添加平铺水印保护版权。',
+    'blog.card3_title': 'PDF 合并与拆分怎么做？整理文档的实用技巧',
+    'blog.card3_desc': '多个报告要合成一份、大文件要拆成章节、从不同 PDF 各取几页拼新文档——本文教你 PDF 合并与拆分的实用技巧，以及先拆分再合并的进阶玩法。',
+    'blog.card4_title': 'PDF 转 Word 免费完整指南：5 种方法对比',
+    'blog.card4_desc': '盘点目前可用的 5 种免费 PDF 转 Word 方法，从在线工具到桌面软件，从浏览器插件到命令行工具，详细对比各自的优缺点、适用场景和注意事项，帮你找到最适合的方案。',
+    'blog.card5_title': '扫描版 PDF 如何提取文字？OCR 识别实用技巧',
+    'blog.card5_desc': '拍照、扫描的 PDF 不能直接复制文字怎么办？本文详解 OCR 文字识别技术的原理，教你如何把图片里的文字变成可编辑的 Word 文档，以及如何提高识别准确率。',
+    'blog.card6_title': '为什么 PDF 转 Word 后排版会乱？根本原因解析',
+    'blog.card6_desc': '几乎所有人在转换 PDF 后都遇到过排版错乱的问题。这篇文章从 PDF 和 Word 的底层格式差异讲起，解释为什么 100% 还原几乎不可能，以及如何尽量减少格式丢失。',
+    'blog.card7_title': '在线 PDF 转换工具安全吗？如何保护你的文档隐私',
+    'blog.card7_desc': '把合同、论文、报告上传到在线转换工具，会不会泄露？本文分析主流转换工具的隐私风险，教你如何选择安全的转换方案，以及为什么本地处理才是最安全的方式。',
+    'blog.card8_title': '如何批量转换 PDF 为 Word？提高办公效率的技巧',
+    'blog.card8_desc': '需要转换几十个 PDF 文件？一个一个转太慢了。本文分享几种批量转换 PDF 的方法，以及如何用自动化工具提升文档处理效率。',
+    'blog.footer_copyright': '© 2026 星球小捕手 · 版权所有'
+  },
+  en: {
+    'blog.hero_title': 'Blog & <span class="grad">PDF Tips</span>',
+    'blog.hero_desc': 'Practical tutorials and insights on PDF to Word, OCR recognition, and document processing',
+    'blog.tag_tutorial': 'Tutorial',
+    'blog.tag_efficiency': 'Efficiency',
+    'blog.tag_ocr': 'OCR',
+    'blog.tag_principle': 'Principles',
+    'blog.tag_security': 'Security',
+    'blog.read_4': '· 4 min read',
+    'blog.read_5': '· 5 min read',
+    'blog.read_6': '· 6 min read',
+    'blog.read_7': '· 7 min read',
+    'blog.read_8': '· 8 min read',
+    'blog.read_more': 'Read more →',
+    'blog.card1_title': 'How to Delete Unwanted PDF Pages? 3 Methods Compared',
+    'blog.card1_desc': 'Want to remove extra blank pages, cover pages, or sensitive pages from a PDF? This article compares three page-deletion methods—online tools, pro software, and virtual printing—and shows you how to precisely remove pages with visual selection, free and watermark-free.',
+    'blog.card2_title': 'How to Add a Watermark to PDF? A Complete Guide to Copyright Protection',
+    'blog.card2_desc': 'How do you prevent your original works, internal materials, or portfolios from being misused? This article explains the purpose of PDF watermarks, the difference between text and image watermarks, and how to add tiled watermarks for free with online tools to protect your copyright.',
+    'blog.card3_title': 'How to Merge and Split PDFs? Practical Tips for Organizing Documents',
+    'blog.card3_desc': 'Need to combine several reports into one, split a large file into chapters, or pick pages from different PDFs to build a new document? This article teaches you practical PDF merge and split techniques, plus the advanced trick of splitting first, then merging.',
+    'blog.card4_title': 'Free PDF to Word Guide: 5 Methods Compared',
+    'blog.card4_desc': 'A rundown of 5 free PDF to Word methods available today, from online tools to desktop software, browser plugins to command-line tools, with detailed comparisons of pros, cons, use cases, and caveats to help you find the best fit.',
+    'blog.card5_title': 'How to Extract Text from Scanned PDFs? Practical OCR Tips',
+    'blog.card5_desc': 'Can\'t copy text from a photo or scanned PDF? This article explains how OCR technology works, teaches you how to turn text in images into editable Word documents, and how to improve recognition accuracy.',
+    'blog.card6_title': 'Why Does the Layout Get Messy After PDF to Word? Root Causes Explained',
+    'blog.card6_desc': 'Almost everyone has encountered layout issues after converting PDF to Word. This article starts from the fundamental format differences between PDF and Word, explains why 100% reproduction is nearly impossible, and how to minimize format loss.',
+    'blog.card7_title': 'Are Online PDF Converters Safe? How to Protect Your Document Privacy',
+    'blog.card7_desc': 'Will uploading contracts, papers, or reports to online converters leak your data? This article analyzes the privacy risks of mainstream conversion tools, teaches you how to choose a secure solution, and why local processing is the safest approach.',
+    'blog.card8_title': 'How to Batch Convert PDF to Word? Tips to Boost Office Efficiency',
+    'blog.card8_desc': 'Need to convert dozens of PDF files? Converting them one by one is too slow. This article shares several batch PDF conversion methods and how to use automation tools to improve document processing efficiency.',
+    'blog.footer_copyright': '© 2026 Planet Catcher · All Rights Reserved'
+  }
+});
+</script>
 </body>
 </html>
