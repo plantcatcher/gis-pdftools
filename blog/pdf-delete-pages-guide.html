@@ -12,28 +12,46 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDF怎么删除不需要的页面？3种方法对比与技巧 - 星球小捕手</title>
+<title>PDF怎么删除不需要的页面？3种方法对比 | 星球小捕手</title>
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="星球小捕手">
+<meta property="og:title" content="PDF怎么删除不需要的页面？3种方法对比 | 星球小捕手">
+<meta property="og:description" content="PDF怎么删除多余页面？详解删除PDF页面、移除空白页和敏感信息页的3种方法对比，包括在线工具、Adobe Acrobat和打印为PDF，教你精简文档不踩坑。">
+<meta property="og:url" content="https://pdftools.planetgis.cn/blog/pdf-delete-pages-guide.html">
+<meta property="og:image" content="https://pdftools.planetgis.cn/og-blog.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PDF怎么删除不需要的页面？3种方法对比 | 星球小捕手">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PDF怎么删除不需要的页面？3种方法对比 | 星球小捕手">
+<meta name="twitter:description" content="PDF怎么删除多余页面？详解删除PDF页面、移除空白页和敏感信息页的3种方法对比，包括在线工具、Adobe Acrobat和打印为PDF，教你精简文档不踩坑。">
+<meta name="twitter:image" content="https://pdftools.planetgis.cn/og-blog.png">
+
+<link rel="stylesheet" href="../theme.css">
 <meta name="description" content="PDF怎么删除多余页面？详解删除PDF页面、移除空白页和敏感信息页的3种方法对比，包括在线工具、Adobe Acrobat和打印为PDF，教你精简文档不踩坑。">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg-deep:#070716;--purple:#8b5cf6;--purple-light:#a78bfa;--cyan:#06b6d4;--blue:#3b82f6;--text:#f1f5f9;--text-dim:#94a3b8;--text-faint:#64748b;--border:rgba(139,92,246,0.18);--border-bright:rgba(139,92,246,0.4)}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg-deep);color:var(--text);line-height:1.8;overflow-x:hidden}
+:root{--bg-deep:#f5f7fb;--purple:#2563eb;--purple-light:#2563eb;--cyan:#0ea5e9;--blue:#2563eb;--text:#0f172a;--text-dim:#475569;--text-faint:#94a3b8;--border:#e5e9f1;--border-bright:#cbd5e1;background:var(--bg-deep);color:var(--text);line-height:1.8;overflow-x:hidden}
 .starfield{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;overflow:hidden;pointer-events:none}
 .starfield .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.3}
-.starfield .orb-1{width:400px;height:400px;background:radial-gradient(circle,#7c3aed,transparent);top:-100px;left:-100px}
-.starfield .orb-2{width:500px;height:500px;background:radial-gradient(circle,#06b6d4,transparent);bottom:-150px;right:-100px}
-.nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:18px 0;background:rgba(7,7,22,0.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:padding 0.3s}
+.starfield .orb-1{width:400px;height:400px;background:radial-gradient(circle,#1d4ed8,transparent);top:-100px;left:-100px}
+.starfield .orb-2{width:500px;height:500px;background:radial-gradient(circle,#0ea5e9,transparent);bottom:-150px;right:-100px}
+.nav{position:fixed;top:0;left:0;width:100%;z-index:100;padding:18px 0;background:rgba(255,255,255,0.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:padding 0.3s}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
-.logo-icon{width:38px;height:38px;border-radius:50%;overflow:hidden;box-shadow:0 0 20px rgba(139,92,246,0.3);display:flex;align-items:center;justify-content:center;position:relative}
-.logo-text{background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.logo-icon{width:38px;height:38px;border-radius:50%;overflow:hidden;box-shadow:0 0 20px rgba(37,99,235,0.3);display:flex;align-items:center;justify-content:center;position:relative}
+.logo-text{background:linear-gradient(90deg,#2563eb,#4f46e5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .nav-links{display:flex;gap:32px;align-items:center}
 .nav-links a{color:var(--text-dim);text-decoration:none;font-size:15px;transition:color 0.2s}
 .nav-links a:hover{color:var(--text)}
 .nav-links a.active-link{color:var(--purple-light);font-weight:600}
 .article{max-width:720px;margin:0 auto;padding:120px 24px 60px}
 .article .meta{color:var(--text-faint);font-size:14px;margin-bottom:16px}
-.article .tag{display:inline-block;padding:3px 10px;border-radius:6px;background:rgba(139,92,246,0.15);color:var(--purple-light);font-weight:600;font-size:12px;margin-right:10px}
+.article .tag{display:inline-block;padding:3px 10px;border-radius:6px;background:rgba(37,99,235,0.15);color:var(--purple-light);font-weight:600;font-size:12px;margin-right:10px}
 .article h1{font-size:32px;font-weight:800;margin-bottom:20px;line-height:1.3}
 .article h2{font-size:23px;font-weight:700;margin-top:36px;margin-bottom:14px;color:var(--purple-light)}
 .article h3{font-size:18px;font-weight:600;margin-top:24px;margin-bottom:10px;color:var(--text)}
@@ -41,33 +59,89 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .article ul,.article ol{margin:0 0 16px 22px;color:var(--text-dim);font-size:16px}
 .article li{margin-bottom:8px}
 .article strong{color:var(--text)}
-.article blockquote{border-left:3px solid var(--purple);padding:12px 20px;margin:20px 0;background:rgba(139,92,246,0.06);border-radius:0 8px 8px 0;color:var(--text-dim)}
-.cta-box{background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(6,182,212,0.1));border:1px solid var(--border-bright);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.article blockquote{border-left:3px solid var(--purple);padding:12px 20px;margin:20px 0;background:rgba(37,99,235,0.06);border-radius:0 8px 8px 0;color:var(--text-dim)}
+.cta-box{background:linear-gradient(135deg,rgba(29,78,216,0.15),rgba(14,165,233,0.1));border:1px solid var(--border-bright);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
 .cta-box h3{margin-top:0;color:var(--text)}
-.cta-box a{display:inline-block;padding:12px 28px;border-radius:50px;background:linear-gradient(135deg,#7c3aed,#3b82f6);color:#fff;text-decoration:none;font-weight:600;margin-top:12px}
+.cta-box a{display:inline-block;padding:12px 28px;border-radius:50px;background:linear-gradient(135deg,#1d4ed8,#2563eb);color:#fff;text-decoration:none;font-weight:600;margin-top:12px}
 .related{margin-top:40px;padding-top:30px;border-top:1px solid var(--border)}
 .related h3{color:var(--text);margin-bottom:14px}
 .related a{display:block;color:var(--cyan);text-decoration:none;padding:8px 0;font-size:15px}
 .related a:hover{text-decoration:underline}
 .footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;color:var(--text-faint);font-size:13px}
 .footer a{color:var(--text-dim);text-decoration:none;margin:0 12px}
+
+/* 隐藏旧星空背景（已废弃） */
+.starfield,.stars,.star{display:none!important}
 </style>
+
+<!-- 结构化数据: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "PDF 怎么删除不需要的页面？3 种方法对比与技巧",
+  "description": "PDF怎么删除多余页面？详解删除PDF页面、移除空白页和敏感信息页的3种方法对比，包括在线工具、Adobe Acrobat和打印为PDF，教你精简文档不踩坑。",
+  "inLanguage": "zh-CN",
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-07-30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://pdftools.planetgis.cn/blog/pdf-delete-pages-guide.html"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "星球小捕手",
+    "url": "https://pdftools.planetgis.cn/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "星球小捕手",
+    "url": "https://pdftools.planetgis.cn/"
+  },
+  "keywords": "教程",
+  "articleSection": "教程"
+}
+</script>
+<!-- 结构化数据: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://pdftools.planetgis.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "博客教程",
+      "item": "https://pdftools.planetgis.cn/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PDF 怎么删除不需要的页面？3 种方法对比与技巧",
+      "item": "https://pdftools.planetgis.cn/blog/pdf-delete-pages-guide.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="starfield"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
 <nav class="nav"><div class="nav-inner">
   <a href="../index.html" class="logo"><span class="logo-icon"><img src="../logo.png" alt="星球小捕手" style="width:38px;height:38px;border-radius:50%;object-fit:cover;"></span><span class="logo-text">星球小捕手</span></a>
-  <div class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <div class="nav-links" id="navLinks">
     <a href="../index.html" data-i18n="nav.home">首页</a>
     <a href="../pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a>
     <a href="../pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
     <a href="../pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a>
     <a href="../pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
-    <a href="../pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
-    <a href="../pdf-watermark.html" data-i18n="nav.pdf_watermark">PDF加水印</a>
-    <a href="../blog.html" data-i18n="nav.blog">博客教程</a>
-    <a href="../changelog.html" data-i18n="nav.changelog">更新日志</a>
-    <a href="../about.html" data-i18n="nav.about">关于我们</a>
+    <div class="nav-drop"><button class="nav-drop-btn" data-i18n="nav.more">更多工具<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-drop-menu"><a href="../pdf-delete-pages.html" data-i18n="nav.pdf_delete"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="15" y1="18" x2="9" y2="18"/></svg>PDF删除页面</a><a href="../pdf-watermark.html" data-i18n="nav.pdf_watermark"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>PDF加水印</a><a href="../caj-to-pdf.html" data-i18n="nav.caj_to_pdf"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>CAJ转PDF</a><a href="../blog.html" data-i18n="nav.blog"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>博客教程</a><a href="../changelog.html" data-i18n="nav.changelog"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>更新日志</a><a href="../about.html" data-i18n="nav.about"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>关于我们</a></div></div>
   </div>
 </div></nav>
 
@@ -122,7 +196,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 
   <h2>三种方法对比</h2>
   <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:14px">
-    <tr style="background:rgba(139,92,246,0.1)"><th style="padding:12px;border:1px solid var(--border);text-align:left">特征</th><th style="padding:12px;border:1px solid var(--border);text-align:left">星球小捕手</th><th style="padding:12px;border:1px solid var(--border);text-align:left">Adobe Acrobat</th><th style="padding:12px;border:1px solid var(--border);text-align:left">打印为 PDF</th></tr>
+    <tr style="background:rgba(37,99,235,0.1)"><th style="padding:12px;border:1px solid var(--border);text-align:left">特征</th><th style="padding:12px;border:1px solid var(--border);text-align:left">星球小捕手</th><th style="padding:12px;border:1px solid var(--border);text-align:left">Adobe Acrobat</th><th style="padding:12px;border:1px solid var(--border);text-align:left">打印为 PDF</th></tr>
     <tr><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是否免费</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">免费</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">付费</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">免费</td></tr>
     <tr><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">是否本地处理</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">本地，不上传</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">本地</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">本地</td></tr>
     <tr><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">操作难度</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">简单</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">简单</td><td style="padding:12px;border:1px solid var(--border);color:var(--text-dim)">较繁琐</td></tr>
@@ -195,6 +269,26 @@ I18N.register({
     'blog_article.footer_blog': 'Blog'
   }
 });
+</script>
+
+<script>
+// 移动端菜单 & 导航滚动阴影
+(function(){
+  var tg = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks");
+  if(tg && links){
+    tg.addEventListener("click", function(){
+      links.classList.toggle("open");
+      tg.setAttribute("aria-expanded", links.classList.contains("open") ? "true" : "false");
+    });
+  }
+  var nav = document.querySelector(".nav");
+  if(nav){
+    function onScroll(){ nav.classList.toggle("scrolled", window.scrollY > 8); }
+    window.addEventListener("scroll", onScroll, {passive:true});
+    onScroll();
+  }
+})();
 </script>
 </body>
 </html>

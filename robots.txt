@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://planet-catcher.example.com/sitemap.xml
+Sitemap: https://pdftools.planetgis.cn/sitemap.xml

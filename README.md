@@ -16,12 +16,24 @@
 
 ```
 .
-├── index.html                              # 首页（核心转换功能）
+├── index.html                              # 首页（工具合集 + 热门场景入口）
+├── theme.css                               # 全局设计系统（配色/组件/导航，唯一样式真源）
+├── pdf-to-word.html                        # PDF 转 Word（支持扫描版OCR）
+├── pdf-to-image.html                       # PDF 转图片
+├── pdf-merge.html                          # PDF 合并
+├── pdf-split.html                          # PDF 拆分
+├── pdf-delete-pages.html                   # PDF 删除页面
+├── pdf-watermark.html                      # PDF 加水印
+├── caj-to-pdf.html                         # CAJ 转 PDF（本地校验 + 官方方法指引）
 ├── about.html                              # 关于我们
 ├── blog.html                               # 博客文章列表
+├── changelog.html                          # 更新日志
 ├── privacy.html                            # 隐私政策
 ├── terms.html                              # 服务条款
 ├── logo.png                                # 品牌Logo
+├── og-home.png                             # 社交分享图（首页）
+├── og-tool.png                             # 社交分享图（工具页通用）
+├── og-blog.png                             # 社交分享图（博客）
 ├── robots.txt                              # 搜索引擎爬虫配置
 ├── sitemap.xml                             # 站点地图
 ├── ads.txt                                 # Google AdSense 广告配置
@@ -39,9 +51,21 @@
 - **PDF解析** - pdf.js（Mozilla）
 - **文档生成** - docx.js
 - **OCR引擎** - Tesseract.js v5（支持中文/英文/混合识别）
-- **样式** - 深色太空主题，CSS变量驱动，响应式设计
-- **SEO** - JSON-LD结构化数据、Open Graph、Sitemap、Robots.txt
+- **样式** - 浅色专业主题，`theme.css` 单一设计系统驱动（CSS 变量 + 组件库），响应式
+- **SEO** - JSON-LD 结构化数据（WebApplication / Article / FAQPage / BreadcrumbList）、Open Graph + Twitter Card（含 og:image）、Sitemap、Robots.txt
 - **分析** - Google Analytics (gtag.js)
+
+## 设计系统
+
+全站样式由根目录 `theme.css` 统一管理（唯一真源），页面仅引用不重复定义：
+
+```html
+<link rel="stylesheet" href="theme.css">   <!-- blog/ 子目录用 ../theme.css -->
+```
+
+- **设计令牌**：`:root` 中定义品牌色/中性色/圆角/阴影/动效变量，改配色只改此处
+- **组件层**：导航（下拉收纳 + 移动端汉堡）、Hero、按钮、卡片、工具网格、场景卡、上传区、Toast
+- **导航结构**：首页 / PDF转Word / PDF转图片 / PDF合并 / PDF拆分 + 「更多工具▾」下拉
 
 ## 部署方式
 

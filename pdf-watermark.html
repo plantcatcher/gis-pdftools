@@ -11,25 +11,32 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>星球小捕手 · PDF加水印 - 永久免费 · 自定义文字/图片水印 · 无限制</title>
-<meta name="description" content="星球小捕手PDF加水印工具，永久免费，支持自定义文字水印、平铺水印，可调透明度、角度、颜色。文件本地处理，隐私安全，无水印无限制。">
+<title>PDF加水印免费 - 自定义文字/平铺水印 | 星球小捕手</title>
+<link rel="stylesheet" href="theme.css">
+<meta name="description" content="PDF加水印免费工具：自定义文字水印与平铺水印，保护文档版权防盗用。本地处理不上传，永久免费无限制。 | 星球小捕手">
 <meta name="keywords" content="PDF加水印,免费PDF水印,PDF水印工具,文字水印,平铺水印,星球小捕手,在线PDF工具">
 <meta name="author" content="星球小捕手">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link rel="canonical" href="https://planet-catcher.example.com/pdf-watermark.html">
+<link rel="canonical" href="https://pdftools.planetgis.cn/pdf-watermark.html">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="星球小捕手">
-<meta property="og:title" content="星球小捕手 · PDF加水印 - 永久免费 · 自定义水印">
-<meta property="og:description" content="免费PDF加水印工具，支持自定义文字、平铺水印，可调透明度、角度、颜色，文件本地处理。">
-<meta property="og:url" content="https://planet-catcher.example.com/pdf-watermark.html">
+<meta property="og:title" content="PDF加水印免费 - 自定义文字/平铺水印 | 星球小捕手">
+<meta property="og:image" content="https://pdftools.planetgis.cn/og-tool.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PDF加水印免费 - 自定义文字/平铺水印 | 星球小捕手">
+<meta name="twitter:image" content="https://pdftools.planetgis.cn/og-tool.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="PDF加水印免费工具：自定义文字水印与平铺水印，保护文档版权防盗用。本地处理不上传，永久免费无限制。 | 星球小捕手">
+<meta property="og:url" content="https://pdftools.planetgis.cn/pdf-watermark.html">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="星球小捕手 · PDF加水印 - 永久免费">
-<meta name="twitter:description" content="免费PDF加水印工具，自定义文字水印、平铺水印，文件本地处理。">
+<meta name="twitter:title" content="PDF加水印免费 - 自定义文字/平铺水印 | 星球小捕手">
+<meta name="twitter:description" content="PDF加水印免费工具：自定义文字水印与平铺水印，保护文档版权防盗用。本地处理不上传，永久免费无限制。 | 星球小捕手">
 
 <!-- 结构化数据 -->
 <script type="application/ld+json">
@@ -37,7 +44,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "星球小捕手 PDF加水印",
-  "url": "https://planet-catcher.example.com/pdf-watermark.html",
+  "url": "https://pdftools.planetgis.cn/pdf-watermark.html",
   "description": "永久免费的PDF加水印在线工具，支持自定义文字水印、平铺水印，可调透明度、角度、颜色，文件本地处理保护隐私。",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web Browser",
@@ -61,25 +68,25 @@
 /* ===== 重置与基础 ===== */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg-deep:#070716;
-  --bg-card:rgba(20,20,45,0.65);
-  --bg-card-hover:rgba(30,30,65,0.8);
-  --purple:#8b5cf6;
-  --purple-light:#a78bfa;
-  --purple-deep:#7c3aed;
-  --cyan:#06b6d4;
-  --blue:#3b82f6;
-  --pink:#ec4899;
-  --green:#22c55e;
+  --bg-deep:#f5f7fb;
+  --bg-card:#ffffff;
+  --bg-card-hover:#ffffff;
+  --purple:#2563eb;
+  --purple-light:#2563eb;
+  --purple-deep:#1d4ed8;
+  --cyan:#0ea5e9;
+  --blue:#2563eb;
+  --pink:#e11d48;
+  --green:#16a34a;
   --amber:#f59e0b;
-  --text:#f1f5f9;
-  --text-dim:#94a3b8;
-  --text-faint:#64748b;
-  --border:rgba(139,92,246,0.18);
-  --border-bright:rgba(139,92,246,0.4);
+  --text:#0f172a;
+  --text-dim:#475569;
+  --text-faint:#94a3b8;
+  --border:#e5e9f1;
+  --border-bright:#cbd5e1;
   --radius:18px;
-  --shadow:0 8px 32px rgba(0,0,0,0.4);
-  --shadow-glow:0 0 40px rgba(139,92,246,0.25);
+  --shadow:0 1px 3px rgba(15,23,42,0.06),0 6px 20px rgba(15,23,42,0.06);
+  --shadow-glow:0 8px 30px rgba(37,99,235,0.12);
 }
 html{scroll-behavior:smooth}
 body{
@@ -94,9 +101,9 @@ body{
 /* ===== 星空背景 ===== */
 .starfield{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;overflow:hidden;pointer-events:none}
 .starfield .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.4}
-.starfield .orb-1{width:500px;height:500px;background:radial-gradient(circle,#7c3aed,transparent);top:-100px;left:-100px;animation:float1 20s ease-in-out infinite}
-.starfield .orb-2{width:600px;height:600px;background:radial-gradient(circle,#06b6d4,transparent);bottom:-200px;right:-150px;animation:float2 25s ease-in-out infinite}
-.starfield .orb-3{width:400px;height:400px;background:radial-gradient(circle,#ec4899,transparent);top:40%;left:50%;animation:float3 18s ease-in-out infinite;opacity:0.25}
+.starfield .orb-1{width:500px;height:500px;background:radial-gradient(circle,#1d4ed8,transparent);top:-100px;left:-100px;animation:float1 20s ease-in-out infinite}
+.starfield .orb-2{width:600px;height:600px;background:radial-gradient(circle,#0ea5e9,transparent);bottom:-200px;right:-150px;animation:float2 25s ease-in-out infinite}
+.starfield .orb-3{width:400px;height:400px;background:radial-gradient(circle,#e11d48,transparent);top:40%;left:50%;animation:float3 18s ease-in-out infinite;opacity:0.25}
 @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
 @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,-30px)}}
 @keyframes float3{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-50px)}}
@@ -108,7 +115,7 @@ body{
 .nav{
   position:fixed;top:0;left:0;width:100%;z-index:100;
   padding:18px 0;
-  background:rgba(7,7,22,0.7);
+  background:rgba(255,255,255,0.7);
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
@@ -120,10 +127,10 @@ body{
   width:38px;height:38px;border-radius:50%;
   overflow:hidden;
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 0 20px rgba(139,92,246,0.3);
+  box-shadow:0 0 20px rgba(37,99,235,0.3);
   position:relative;
 }
-.logo-text{background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.logo-text{background:linear-gradient(90deg,#2563eb,#4f46e5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{color:var(--text-dim);text-decoration:none;font-size:15px;transition:color 0.2s}
 .nav-links a:hover{color:var(--text)}
@@ -132,23 +139,23 @@ body{
   padding:9px 22px;border-radius:50px;
   background:linear-gradient(135deg,var(--purple-deep),var(--blue));
   color:#fff;text-decoration:none;font-size:14px;font-weight:600;
-  box-shadow:0 4px 16px rgba(124,58,237,0.4);
+  box-shadow:0 4px 16px rgba(29,78,216,0.4);
   transition:transform 0.2s,box-shadow 0.2s;
 }
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(124,58,237,0.55)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(29,78,216,0.55)}
 
 /* ===== Hero ===== */
-.hero{padding:140px 24px 50px;max-width:900px;margin:0 auto;text-align:center;position:relative}
+.hero{padding:112px 24px 50px;max-width:900px;margin:0 auto;text-align:center;position:relative}
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
   padding:7px 18px;border-radius:50px;
-  background:rgba(139,92,246,0.12);
+  background:rgba(37,99,235,0.12);
   border:1px solid var(--border-bright);
   font-size:13px;color:var(--purple-light);
   margin-bottom:28px;
   animation:fadeInUp 0.8s ease;
 }
-.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:pulse 2s infinite}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;box-shadow:0 0 10px #16a34a;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 .hero h1{
   font-size:clamp(30px,5vw,52px);
@@ -158,7 +165,7 @@ body{
   margin-bottom:18px;
   animation:fadeInUp 0.8s ease 0.1s both;
 }
-.hero h1 .grad{background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero h1 .grad{background:linear-gradient(90deg,#2563eb,#4f46e5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .hero p.sub{
   font-size:clamp(14px,2vw,18px);
   color:var(--text-dim);
@@ -192,11 +199,11 @@ body{
 }
 .drop-zone:hover,.drop-zone.dragover{
   border-color:var(--purple-light);
-  background:rgba(139,92,246,0.05);
+  background:rgba(37,99,235,0.05);
 }
 .drop-zone-icon{
   width:72px;height:72px;border-radius:20px;
-  background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(6,182,212,0.2));
+  background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(14,165,233,0.2));
   display:flex;align-items:center;justify-content:center;
   margin:0 auto 20px;
 }
@@ -211,14 +218,14 @@ body{
   align-items:center;
   gap:16px;
   padding:20px 24px;
-  background:rgba(139,92,246,0.06);
+  background:rgba(37,99,235,0.06);
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
 }
 .file-info.show{display:flex}
 .file-info-icon{
   width:44px;height:44px;border-radius:12px;
-  background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(139,92,246,0.2));
+  background:linear-gradient(135deg,rgba(239,68,68,0.2),rgba(37,99,235,0.2));
   display:flex;align-items:center;justify-content:center;
   flex-shrink:0;
 }
@@ -268,7 +275,7 @@ body{
 .setting-group input[type="color"],
 .setting-group select{
   padding:10px 14px;
-  background:rgba(7,7,22,0.6);
+  background:rgba(255,255,255,0.6);
   border:1px solid var(--border);
   border-radius:10px;
   color:var(--text);
@@ -301,7 +308,7 @@ body{
   border-radius:50%;
   background:linear-gradient(135deg,var(--purple-deep),var(--blue));
   cursor:pointer;
-  box-shadow:0 2px 8px rgba(124,58,237,0.4);
+  box-shadow:0 2px 8px rgba(29,78,216,0.4);
 }
 .setting-group .range-value{
   font-size:13px;
@@ -351,12 +358,12 @@ body{
   border:1px solid var(--border);
   border-radius:12px;
   overflow:hidden;
-  background:rgba(7,7,22,0.4);
+  background:rgba(255,255,255,0.4);
 }
 .preview-area.show{display:block}
 .preview-header{
   padding:12px 16px;
-  background:rgba(139,92,246,0.08);
+  background:rgba(37,99,235,0.08);
   border-bottom:1px solid var(--border);
   font-size:13px;font-weight:600;
   color:var(--text-dim);
@@ -372,7 +379,7 @@ body{
   max-width:100%;
   max-height:360px;
   border-radius:8px;
-  box-shadow:0 4px 20px rgba(0,0,0,0.3);
+  box-shadow:0 4px 20px rgba(15,23,42,0.3);
 }
 
 /* 操作按钮区 */
@@ -396,16 +403,16 @@ body{
 .btn-primary{
   background:linear-gradient(135deg,var(--purple-deep),var(--blue));
   color:#fff;
-  box-shadow:0 4px 20px rgba(124,58,237,0.4);
+  box-shadow:0 4px 20px rgba(29,78,216,0.4);
 }
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(124,58,237,0.55)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(29,78,216,0.55)}
 .btn-primary:disabled{opacity:0.5;cursor:not-allowed;transform:none;box-shadow:none}
 .btn-secondary{
-  background:rgba(139,92,246,0.1);
+  background:rgba(37,99,235,0.1);
   color:var(--purple-light);
   border:1px solid var(--border);
 }
-.btn-secondary:hover{background:rgba(139,92,246,0.2);border-color:var(--border-bright)}
+.btn-secondary:hover{background:rgba(37,99,235,0.2);border-color:var(--border-bright)}
 
 /* 进度条 */
 .progress-wrap{
@@ -416,7 +423,7 @@ body{
 .progress-wrap.show{display:block}
 .progress-bar-bg{
   height:8px;border-radius:4px;
-  background:rgba(139,92,246,0.15);
+  background:rgba(37,99,235,0.15);
   overflow:hidden;
 }
 .progress-bar{
@@ -465,7 +472,7 @@ body{
 .section{max-width:900px;margin:0 auto;padding:60px 24px}
 .section-title{text-align:center;margin-bottom:40px}
 .section-title h2{font-size:clamp(24px,4vw,34px);font-weight:800;margin-bottom:12px}
-.section-title h2 .grad{background:linear-gradient(90deg,var(--purple-light),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.section-title h2 .grad{background:linear-gradient(90deg,#2563eb,#4f46e5);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .section-title p{color:var(--text-dim);font-size:15px}
 .faq-list{display:flex;flex-direction:column;gap:14px}
 .faq-item{
@@ -482,7 +489,7 @@ body{
   display:flex;align-items:center;justify-content:space-between;
   transition:background 0.2s;
 }
-.faq-q:hover{background:rgba(139,92,246,0.06)}
+.faq-q:hover{background:rgba(37,99,235,0.06)}
 .faq-q svg{width:18px;height:18px;color:var(--text-dim);transition:transform 0.3s;flex-shrink:0}
 .faq-item.open .faq-q svg{transform:rotate(180deg)}
 .faq-a{
@@ -517,11 +524,14 @@ body{
 @media(max-width:768px){
   .nav-links{display:none}
   .settings-grid{grid-template-columns:1fr}
-  .hero{padding:130px 20px 40px}
+  .hero{padding:112px 20px 40px}
   .drop-zone{padding:40px 20px}
   .converter-card{margin:16px}
   .section{padding:50px 20px}
 }
+
+/* 隐藏旧星空背景（已废弃） */
+.starfield,.stars,.star{display:none!important}
 </style>
 </head>
 <body>
@@ -543,18 +553,15 @@ body{
       </span>
       <span class="logo-text">星球小捕手</span>
     </a>
-    <div class="nav-links">
-      <a href="index.html" data-i18n="nav.home">首页</a>
-      <a href="pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a>
-      <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
-      <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a>
-      <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
-      <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
-      <a href="pdf-watermark.html" class="active-link" data-i18n="nav.pdf_watermark">PDF加水印</a>
-      <a href="blog.html" data-i18n="nav.blog">博客教程</a>
-      <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
-      <a href="about.html" data-i18n="nav.about">关于我们</a>
-    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html" data-i18n="nav.home">首页</a>
+    <a href="pdf-to-word.html" data-i18n="nav.pdf_to_word">PDF转Word</a>
+    <a href="pdf-to-image.html" data-i18n="nav.pdf_to_image">PDF转图片</a>
+    <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a>
+    <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
+    <div class="nav-drop"><button class="nav-drop-btn" data-i18n="nav.more">更多工具<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-drop-menu"><a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="15" y1="18" x2="9" y2="18"/></svg>PDF删除页面</a><a href="pdf-watermark.html" class="active-link" data-i18n="nav.pdf_watermark"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>PDF加水印</a><a href="caj-to-pdf.html" data-i18n="nav.caj_to_pdf"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>CAJ转PDF</a><a href="blog.html" data-i18n="nav.blog"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>博客教程</a><a href="changelog.html" data-i18n="nav.changelog"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>更新日志</a><a href="about.html" data-i18n="nav.about"><svg class="mdi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>关于我们</a></div></div>
+  </div>
   </div>
 </nav>
 
@@ -630,7 +637,7 @@ body{
         </div>
         <div class="setting-group">
           <label data-i18n="pwm.label_color">水印颜色</label>
-          <input type="color" id="wmColor" value="#8b5cf6">
+          <input type="color" id="wmColor" value="#2563eb">
         </div>
         <div class="setting-group">
           <label data-i18n="pwm.label_position">水印位置（非平铺模式）</label>
@@ -706,6 +713,11 @@ body{
 </section>
 
 <!-- FAQ -->
+
+<div class="related-tools">
+  <div class="rt-label">常用工具</div>
+  <div class="related-grid"><a href="pdf-merge.html" class="related-card"><span class="rc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8" rx="1"/><rect x="14" y="2" width="8" height="8" rx="1"/><rect x="8" y="14" width="8" height="8" rx="1"/><path d="M14 6l-4 4"/><path d="M12 10l4 4"/></svg></span><span class="rc-text"><b>PDF合并</b><small>免费 · 本地处理</small></span></a><a href="pdf-delete-pages.html" class="related-card"><span class="rc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="15" y1="18" x2="9" y2="18"/></svg></span><span class="rc-text"><b>PDF删除页面</b><small>免费 · 本地处理</small></span></a><a href="pdf-to-image.html" class="related-card"><span class="rc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span><span class="rc-text"><b>PDF转图片</b><small>免费 · 本地处理</small></span></a></div>
+</div>
 <section class="section" id="faq">
   <div class="section-title">
     <h2 data-i18n-html="pwm.faq_title">常见<span class="grad">问题</span></h2>
@@ -766,7 +778,8 @@ body{
     <a href="pdf-merge.html" data-i18n="nav.pdf_merge">PDF合并</a>
     <a href="pdf-split.html" data-i18n="nav.pdf_split">PDF拆分</a>
     <a href="pdf-delete-pages.html" data-i18n="nav.pdf_delete">PDF删除页面</a>
-    <a href="blog.html" data-i18n="nav.blog">博客教程</a>
+    <a href="caj-to-pdf.html" data-i18n="nav.caj_to_pdf">CAJ转PDF</a>
+      <a href="blog.html" data-i18n="nav.blog">博客教程</a>
     <a href="changelog.html" data-i18n="nav.changelog">更新日志</a>
     <a href="about.html" data-i18n="nav.about">关于我们</a>
   </div>
@@ -1310,6 +1323,95 @@ I18N.register({
     'pwm.faq_a5': 'Since all processing is done locally in the browser, the file size depends on your device\'s memory. We generally recommend files under 50MB for the best experience; larger files may be slightly slower.'
   }
 });
+</script>
+
+<script>
+// 移动端菜单 & 导航滚动阴影
+(function(){
+  var tg = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks");
+  if(tg && links){
+    tg.addEventListener("click", function(){
+      links.classList.toggle("open");
+      tg.setAttribute("aria-expanded", links.classList.contains("open") ? "true" : "false");
+    });
+  }
+  var nav = document.querySelector(".nav");
+  if(nav){
+    function onScroll(){ nav.classList.toggle("scrolled", window.scrollY > 8); }
+    window.addEventListener("scroll", onScroll, {passive:true});
+    onScroll();
+  }
+})();
+</script>
+<!-- 结构化数据: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "PDF 加水印是免费的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，完全免费！无水印、无次数限制、无隐藏收费。所有处理在浏览器本地完成，不需要注册登录。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我的 PDF 文件会上传到服务器吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不会。所有 PDF 处理都在你的浏览器中本地完成，文件不会离开你的设备，我们不收集任何数据，隐私完全有保障。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "支持哪些水印样式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "目前支持文字水印，可自定义文字内容、字体大小、颜色、透明度、旋转角度。支持单个水印（可选位置）和平铺水印（铺满整页）两种模式。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "加水印后 PDF 的清晰度会降低吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不会降低。水印是作为矢量文本叠加在 PDF 页面上的，不会影响原有内容的清晰度和质量。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "支持多大的 PDF 文件？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "由于所有处理在浏览器本地完成，文件大小取决于你设备的内存。一般建议 50MB 以内体验最佳，超大文件可能会稍慢一些。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://pdftools.planetgis.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "PDF 加水印",
+      "item": "https://pdftools.planetgis.cn/pdf-watermark.html"
+    }
+  ]
+}
 </script>
 </body>
 </html>

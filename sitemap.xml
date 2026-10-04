@@ -1,121 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://planet-catcher.example.com/</loc>
+    <loc>https://pdftools.planetgis.cn/</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/pdf-to-word.html</loc>
+    <loc>https://pdftools.planetgis.cn/pdf-to-word.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/about.html</loc>
+    <loc>https://pdftools.planetgis.cn/about.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/privacy.html</loc>
+    <loc>https://pdftools.planetgis.cn/privacy.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/terms.html</loc>
+    <loc>https://pdftools.planetgis.cn/terms.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog/pdf-to-word-free-guide.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog/pdf-to-word-free-guide.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog/pdf-delete-pages-guide.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog/pdf-delete-pages-guide.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog/pdf-watermark-guide.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog/pdf-watermark-guide.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog/pdf-merge-split-guide.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog/pdf-merge-split-guide.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog/scanned-pdf-ocr-tips.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog/scanned-pdf-ocr-tips.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog/pdf-conversion-quality.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog/pdf-conversion-quality.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog/pdf-security-and-privacy.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog/pdf-security-and-privacy.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/blog/batch-pdf-to-word.html</loc>
+    <loc>https://pdftools.planetgis.cn/blog/batch-pdf-to-word.html</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/pdf-to-image.html</loc>
+    <loc>https://pdftools.planetgis.cn/pdf-to-image.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/pdf-merge.html</loc>
+    <loc>https://pdftools.planetgis.cn/pdf-merge.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/pdf-split.html</loc>
+    <loc>https://pdftools.planetgis.cn/pdf-split.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/pdf-delete-pages.html</loc>
+    <loc>https://pdftools.planetgis.cn/pdf-delete-pages.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/pdf-watermark.html</loc>
+    <loc>https://pdftools.planetgis.cn/pdf-watermark.html</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://planet-catcher.example.com/changelog.html</loc>
+    <loc>https://pdftools.planetgis.cn/caj-to-pdf.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pdftools.planetgis.cn/changelog.html</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.4</priority>
